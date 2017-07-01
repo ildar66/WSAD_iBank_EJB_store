@@ -1,0 +1,77 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01 Transitional//EN">
+<HTML>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/IClientInputForm.html">
+<TITLE>Input Form</TITLE>
+
+<!--Styles-->
+<STYLE TYPE="text/css">
+<!--
+BODY
+{
+background-color: #f8f7cd;
+}
+H1
+{
+color: #0000ff;
+text-align: center;
+}
+TH
+{
+text-align:left;
+color: #993333;
+}
+-->
+</STYLE>
+
+<!--Style Sheet-->
+<LINK href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/theme/Master.css" rel="stylesheet" type="text/css">
+
+</head> 
+
+<body>  
+<!--Java Script-->
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function submitForm(){
+   document.myForm.submit()
+}
+//-->
+</SCRIPT>
+   
+
+<!--Banner-->
+<H1>Input Form</H1>
+   
+<!--Form-->
+<FORM name="myForm" method="POST" action="IClientController">
+   <INPUT TYPE="hidden" NAME="command" VALUE="IClientResults">
+   <A href="javascript:submitForm()">Submit</A>
+
+<BR><BR>
+   
+<!--Input Fields-->      
+<TABLE border="0">
+<TBODY>
+   <TR>
+      <TH COLSPAN="2">
+         <B>findWithIClientPK(java.lang.String)</B>
+      </TH>
+   </TR> 
+   <TR>
+      <TH>
+         anIdStr
+      </TH>
+      <TD>
+         <INPUT NAME="anIdStr" TYPE="text" SIZE="20" MAXLENGTH="40" VALUE="">
+      </TD>
+   </TR>
+</TBODY>
+</TABLE>
+
+<!--Hidden Fields-->      
+   
+</FORM>
+</body>
+</HTML>

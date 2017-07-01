@@ -1,0 +1,75 @@
+
+<HTML>
+<HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/refselect[].html">
+
+<TITLE>Справочник Корреспондентов</TITLE>
+<link rel="stylesheet" type="text/css" href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/include/cb.css">
+<script language="javascript" type="text/javascript" src="include/common.js"></script>
+<script language="javascript" type="text/javascript">
+function Go(strval) {
+	var thisform = document.refform;
+	var outform = window.opener.document.forms[thisform.formname.value];
+	
+	if(outform != null)
+	{
+		var names = thisform.fieldnames.value.split('|'), values = strval.split('|');
+		for(var i in names)
+			if(names[i].length > 0)
+				outform[names[i]].value = unescape(values[i]);
+	}
+	if(outform.onrefselect)
+		outform.onrefselect(thisform.referenceid.value);
+
+	Close();
+}
+
+function Close()
+{
+	if(window.opener)
+		window.opener.focus();
+	window.close();
+}
+
+function SortBy(field)
+{
+	var e = document.refform.sort;
+	e.value = (e.value == field)?field + ' desc':field;
+	e.form.submit();
+}
+</script>
+</HEAD>
+
+<BODY>
+
+<FORM action="refselect.asp" method=post name=refform>
+
+<p class="gridtitle">Параметры поиска</p>
+<table class="inputbar">
+<TR><TD class=label>Наименование</TD><TD class=input><INPUT name=Title size=53 maxlength=80 value="Отделение Федерального Казначейства" title="Наименование"></TD>
+<TD class=button rowspan="4">
+<INPUT type=submit value="Показать" name=btnfind>&nbsp;<INPUT type=reset value="Сбросить" name=btnreset>&nbsp;<INPUT type=button value="Закрыть" onclick="Close();">
+</TD>
+</TR>
+<TR><TD class=label>ИНН</TD><TD class=input><INPUT name=INN size=14 maxlength=12 value="2901061108" title="ИНН"></TD></TR>
+<TR><TD class=label>Расчетный счет</TD><TD class=input><INPUT name=Account size=23 maxlength=20 value="40101810300000" title="Расчетный счет"></TD></TR>
+<TR><TD class=label>БИК</TD><TD class=input><INPUT name=BIC size=10 maxlength=9 value="041117001" title="БИК"></TD></TR>
+</TABLE>
+
+	<INPUT type="hidden" name="referenceid" value="2">
+	<INPUT type="hidden" name="fieldnames" value="receiver|receiverinn|receiveracc|receiverbic|receiverbank|receivercoracc">
+	<INPUT type="hidden" name="formname" value="docform">
+	<INPUT type="hidden" name="sort" value="">
+</FORM>
+
+<p class="gridtitle">Справочник Корреспондентов</p>
+<table class="grid">
+<TR><th nowrap><a href="javascript:SortBy('Title')" title="Сортировать по полю 'Наименование'">Наименование</a></th><th nowrap><a href="javascript:SortBy('INN')" title="Сортировать по полю 'ИНН'">ИНН</a></th><th nowrap><a href="javascript:SortBy('Account')" title="Сортировать по полю 'Расчетный счет'">Расчетный счет</a></th><th nowrap><a href="javascript:SortBy('BIC')" title="Сортировать по полю 'БИК'">БИК</a></th></TR>
+<TR><TD align=center colspan=8>Нет данных для показа</TD></TR>
+</TABLE>
+
+
+<P align=right>Всего записей 0.</P>
+
+</BODY>
+</HTML>

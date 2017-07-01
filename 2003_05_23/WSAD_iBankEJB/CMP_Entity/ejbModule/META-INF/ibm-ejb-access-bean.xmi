@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:accessbean="accessbean.xmi" xmlns:ejb="ejb.xmi">
+  <accessbean:EJBShadow xmi:id="EJBShadow_1" name="BankAccount">
+    <accessBeans xmi:type="accessbean:DataClass" xmi:id="DataClass_2" name="BankAccountData" package="itso.ejb35.cmp" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_9" name="balance" type="java.math.BigDecimal" getterName="getBalance" setterName="setBalance"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_2" name="Customer">
+    <accessBeans xmi:type="accessbean:DataClass" xmi:id="DataClass_1" name="CustomerData" package="itso.ejb35.cmp" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1" name="address" type="itso.ejb35.util.CustomerAddress" getterName="getAddress" setterName="setAddress"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_2" name="customerID" type="int" getterName="getCustomerID"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_3" name="firstName" type="java.lang.String" getterName="getFirstName" setterName="setFirstName"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_4" name="lastName" type="java.lang.String" getterName="getLastName" setterName="setLastName"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_5" name="name" type="java.lang.String" getterName="getName"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_6" name="password" type="java.lang.String" getterName="getPassword" setterName="setPassword"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_7" name="title" type="java.lang.String" getterName="getTitle" setterName="setTitle"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_8" name="userID" type="java.lang.String" getterName="getUserID" setterName="setUserID"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_3" name="TransRecord">
+    <accessBeans xmi:type="accessbean:DataClass" xmi:id="DataClass_3" name="TransRecordData" package="itso.ejb35.cmp" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_10" name="accID" type="java.lang.String" getterName="getAccID" setterName="setAccID"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_11" name="transamt" type="java.math.BigDecimal" getterName="getTransamt" setterName="setTransamt"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_12" name="transtype" type="java.lang.String" getterName="getTranstype" setterName="setTranstype"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+  </accessbean:EJBShadow>
+</xmi:XMI>

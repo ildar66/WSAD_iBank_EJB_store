@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0058)http://banking.guta.ru/cb_demo/refbrowse.asp?referenceid=1 -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Справочники Банков.htm"><TITLE>Банк Клиент Онлайн - Справочники</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Справочники Банков_files/cb.css" type=text/css 
+rel=stylesheet>
+<SCRIPT language=javascript 
+src="Банк Клиент Онлайн - Справочники Банков_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Справочники Банков_files/bgtop.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><IMG height=51 alt="ГУТА БАНК" 
+      src="Банк Клиент Онлайн - Справочники Банков_files/logo.gif" width=171 
+      border=0></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • Тестовый филиал • ООО "Все в 
+      порядке"</TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Справочники Банков_files/hr2.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 
+    background="Банк Клиент Онлайн - Справочники Банков_files/hr1.gif"><IMG 
+      height=15 alt="" 
+      src="Банк Клиент Онлайн - Справочники Банков_files/zagl1.gif" width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0><A 
+      href="http://banking.guta.ru/cb_demo/client.asp">Клиент</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/accounts.asp">Счета</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/documents.asp">Документы</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/statements.asp">Выписки</A><BR><A 
+      class=current 
+      href="http://banking.guta.ru/cb_demo/references.asp">Справочники</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/messages.asp">Сообщения</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/reports.asp">Отчеты</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/setup.asp">Настройки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/logout.asp">Выход</A><BR></TD>
+    <TD>
+      <DIV class=title>Справочники</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Справочники Банков_files/validate.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript>
+function MoveTo(n)
+{ 
+	var theForm = document.navform;
+	theForm.pagenumber.value = n;
+	theForm.submit();
+}
+
+function SortBy(field)
+{
+	var theForm = document.navform;
+	theForm.sort.value = theForm.sort.value == field ? field + ' desc' : field;
+	theForm.submit();
+}
+
+function AddNew()
+{
+	window.navigate('?referenceid=' + document.navform.referenceid.value);
+}	
+
+function Edit(id)
+{
+	window.navigate('?referenceid=' + document.navform.referenceid.value + '&rowid=' + escape(id));
+}
+
+function EditSel()
+{
+	var id, e = document.navform.elements;
+	for(var i=0; i < e.length && id == null; i++)
+		if(e[i].name=='rowid' && e[i].checked==true)
+			id = e[i].value;
+	if(id != null)
+		Edit(id);
+	else
+		alert('Выберите строку для изменения.');
+}
+</SCRIPT>
+
+      <FORM name=navform action=refbrowse.asp method=post>
+      <P class=gridtitle>Параметры поиска</P>
+      <TABLE class=inputbar>
+        <TBODY>
+        <TR>
+          <TD class=label>БИК</TD>
+          <TD class=input><INPUT title=БИК maxLength=9 size=10 name=bic></TD>
+          <TD class=button rowSpan=3><INPUT type=submit value=Показать name=btnfind>&nbsp;<INPUT type=reset value=Сбросить name=btnreset> 
+          </TD></TR>
+        <TR>
+          <TD class=label>Наименование</TD>
+          <TD class=input><INPUT title=Наименование maxLength=30 size=34 
+            name=bankname></TD></TR>
+        <TR>
+          <TD class=label>Кор. счет</TD>
+          <TD class=input><INPUT title="Кор. счет" maxLength=20 size=23 
+            name=bankacc></TD></TR></TBODY></TABLE><BR>
+      <P class=gridtitle>Справочник Банков</P>
+      <TABLE class=grid>
+        <TBODY>
+        <TR>
+          <TH noWrap><A title="Сортировать по полю 'БИК'" 
+            href="javascript:SortBy('bic')">БИК</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Наименование'" 
+            href="javascript:SortBy('bankname')">Наименование</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Кор. счет'" 
+            href="javascript:SortBy('bankacc')">Кор. счет</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'РКЦ'" 
+            href="javascript:SortBy('rkc')">РКЦ</A></TH></TR>
+        <TR>
+          <TD>040009002</TD>
+          <TD>ПУ ЦБ РФ N 10462 Г. СЕВАСТОПОЛЬ</TD>
+          <TD></TD>
+          <TD>044587002</TD></TR>
+        <TR>
+          <TD>040037469</TD>
+          <TD>ФИЛИАЛ "БАЙКОНУР" АБ "СОБИНБАНК" Г. БАЙКОНУР</TD>
+          <TD>30101810900000000469</TD>
+          <TD>040037002</TD></TR>
+        <TR>
+          <TD>040037470</TD>
+          <TD>БАЙКОНУРСКИЙ ФИЛИАЛ "ФОНДСЕРВИСБАНКА" Г. БАЙКОНУР</TD>
+          <TD>30101810300000000470</TD>
+          <TD>040037002</TD></TR>
+        <TR>
+          <TD>040041002</TD>
+          <TD>ПУ ЦБ РФ N 10513 Г. БИШКЕК</TD>
+          <TD></TD>
+          <TD>044587002</TD></TR>
+        <TR>
+          <TD>040113000</TD>
+          <TD>РКЦ ПАНКРУШИХА С. ПАНКРУШИХА</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040115000</TD>
+          <TD>РКЦ РЕБРИХА С. РЕБРИХА</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040116000</TD>
+          <TD>РКЦ НОВИЧИХА С. НОВИЧИХА</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040117000</TD>
+          <TD>РКЦ РОМАНОВО С. РОМАНОВО</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040118000</TD>
+          <TD>РКЦ СОЛОНЕШНОЕ С. СОЛОНЕШНОЕ</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040119000</TD>
+          <TD>РКЦ БЫСТРЫЙ ИСТОК С. БЫСТРЫЙ ИСТОК</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040120000</TD>
+          <TD>РКЦ ВОЛЧИХА С. ВОЛЧИХА</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040122000</TD>
+          <TD>РКЦ СОЛТОН С. СОЛТОН</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040123000</TD>
+          <TD>РКЦ ЗАВЬЯЛОВО С. ЗАВЬЯЛОВО</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040125000</TD>
+          <TD>РКЦ ЗМЕИНОГОРСК Г. ЗМЕИНОГОРСК</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR>
+        <TR>
+          <TD>040126000</TD>
+          <TD>РКЦ ЦЕЛИННОЕ С. ЦЕЛИННОЕ</TD>
+          <TD></TD>
+          <TD>040173001</TD></TR></TBODY></TABLE><BR>
+      <TABLE class=gridfoot>
+        <TBODY>
+        <TR>
+          <TD><INPUT disabled onclick=MoveTo(1) type=button value='   ВНАЧАЛО   '>
+              <INPUT disabled onclick=MoveTo(0) type=button value="   ВЛЕВО    "> 
+              <INPUT onclick=MoveTo(2) type=button value="    ВПРАВО   "> 
+              <INPUT onclick=MoveTo(328) type=button value="   ВКОНЕЦ   "> 
+              <INPUT type=submit value=Обновить name=btnrefresh> 
+              <INPUT type=hidden value=1 name=pagenumber> 
+              <INPUT type=hidden value=328 name=pagecount> 
+              <INPUT type=hidden name=filter> 
+              <INPUT type=hidden name=sort> 
+              <INPUT type=hidden value=1 name=referenceid> 
+          </TD>
+          <TD align=right>Страница 1 из 328. </TD></TR></TBODY></TABLE></FORM>
+      <P></P><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,53 @@
+###################################################################
+# Auto generated configuration. Dated: Tue Apr 01 11:21:50 GMT+04:00 2003
+###################################################################
+
+#
+# You will need to merge the content of this file with your 
+# regular obj.conf and then restart (=stop + start) your Netscape server. 
+#
+
+#
+# Loading the redirector into your server
+#
+
+Init fn="load-modules" funcs="jk_init,jk_service" shlib="<put full path to the redirector here>"
+Init fn="jk_init" worker_file="C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/conf/workers.properties" log_level="debug" log_file="C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/logs/netscape_redirect.log"
+
+<Object name=default>
+#
+# Redirecting the root context requests to tomcat.
+#
+NameTrans fn="assign-name" from="/servlet/*" name="servlet"
+NameTrans fn="assign-name" from="/*.jsp" name="servlet"
+
+#########################################################
+# Auto configuration for the /uddiexplorer context starts.
+#########################################################
+
+#
+# The following line mounts all JSP file and the /servlet/ uri to tomcat
+#
+NameTrans fn="assign-name" from="/uddiexplorer/servlet/*" name="servlet"
+NameTrans fn="assign-name" from="/uddiexplorer/*.jsp" name="servlet"
+NameTrans fn=pfx2dir from="/uddiexplorer" dir="C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/webapps/uddiexplorer"
+
+#######################################################
+# Auto configuration for the /uddiexplorer context ends.
+#######################################################
+
+#######################################################
+# Protecting the web inf directory.
+#######################################################
+PathCheck fn="deny-existence" path="*/WEB-INF/*"
+
+</Object>
+
+#######################################################
+# New object to execute your servlet requests.
+#######################################################
+<Object name=servlet>
+ObjectType fn=force-type type=text/html
+Service fn="jk_service" worker="ajp12" path="/*"
+</Object>
+

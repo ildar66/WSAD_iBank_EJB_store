@@ -1,0 +1,303 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/IClientResults.jsp">
+<TITLE>Result Form</TITLE>
+
+<!--Styles-->
+<STYLE TYPE="text/css">
+<!--
+BODY
+{
+background-color: #f8f7cd;
+}
+H1
+{
+color: #0000ff;
+text-align: center;
+}
+TH
+{
+text-align:left;
+color: #993333;
+}
+-->
+</STYLE>
+
+<!--Style Sheet-->
+<LINK href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/theme/Master.css" rel="stylesheet" type="text/css">
+
+<META name="GENERATOR" content="IBM WebSphere Studio">
+</head> 
+
+<body>  
+
+<!--Java Script-->
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function submitForm(){
+   document.myForm.submit()
+}
+//-->
+</SCRIPT>
+ 
+
+<%@ page import="com.overstar.ildar.ibank.model.IClient" %>
+
+<jsp:useBean id="IClientBean" scope="session" class="com.overstar.ildar.ibank.model.IClient" type="com.overstar.ildar.ibank.model.IClient"/>
+
+<%
+//Execute Bean Methods 
+IClientBean = IClientBean.findWithIClientPK(new java.lang.String(request.getParameter("anIdStr"))); 
+String method1 = IClientBean.rtPhone_cln(); 
+String method2 = IClientBean.rtStatus().toString(); 
+String method3 = IClientBean.rtSoato(); 
+String method4 = IClientBean.rtResident_flag(); 
+String method5 = IClientBean.rtReg_date().toString(); 
+String method6 = IClientBean.rtPerms(); 
+String method7 = IClientBean.rtOrdering_customer(); 
+String method8 = IClientBean.rtOkpo(); 
+String method9 = IClientBean.rtNum_dogov(); 
+String method10 = IClientBean.rtName_cln(); 
+String method11 = IClientBean.rtLock_word(); 
+String method12 = IClientBean.rtKpp(); 
+String method13 = IClientBean.rtInn_cln(); 
+String method14 = IClientBean.rtFio_cln(); 
+String method15 = IClientBean.rtFax_cln(); 
+String method16 = IClientBean.rtExt_client_id(); 
+String method17 = IClientBean.rtEmail_cln(); 
+String method18 = IClientBean.rtDoc_sign_num(); 
+String method19 = IClientBean.rtCountry_code(); 
+String method20 = IClientBean.rtCln_type(); 
+String method21 = IClientBean.rtCity_latin(); 
+String method22 = IClientBean.rtCity(); 
+String method23 = IClientBean.rtAddress_latin(); 
+String method24 = IClientBean.rtAddr_cln(); 
+String method25 = IClientBean.getClient_id().getIdAsString(); 
+String method26 = IClientBean.toStringFull();
+%>
+
+<!--Banner-->
+<H1>Result Form</H1>
+
+<!--Form-->
+<FORM name="myForm" method="POST">
+
+<BR><BR>
+      
+<TABLE border="0">
+<TBODY>
+        <TR>
+      <TH>
+         rtPhone_cln: 
+      </TH>
+      <TD>
+         <%=method1%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtStatus: 
+      </TH>
+      <TD>
+         <%=method2%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtSoato: 
+      </TH>
+      <TD>
+         <%=method3%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtResident_flag: 
+      </TH>
+      <TD>
+         <%=method4%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtReg_date: 
+      </TH>
+      <TD>
+         <%=method5%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtPerms: 
+      </TH>
+      <TD>
+         <%=method6%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtOrdering_customer: 
+      </TH>
+      <TD>
+         <%=method7%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtOkpo: 
+      </TH>
+      <TD>
+         <%=method8%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtNum_dogov: 
+      </TH>
+      <TD>
+         <%=method9%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtName_cln: 
+      </TH>
+      <TD>
+         <%=method10%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtLock_word: 
+      </TH>
+      <TD>
+         <%=method11%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtKpp: 
+      </TH>
+      <TD>
+         <%=method12%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtInn_cln: 
+      </TH>
+      <TD>
+         <%=method13%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtFio_cln: 
+      </TH>
+      <TD>
+         <%=method14%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtFax_cln: 
+      </TH>
+      <TD>
+         <%=method15%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtExt_client_id: 
+      </TH>
+      <TD>
+         <%=method16%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtEmail_cln: 
+      </TH>
+      <TD>
+         <%=method17%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtDoc_sign_num: 
+      </TH>
+      <TD>
+         <%=method18%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtCountry_code: 
+      </TH>
+      <TD>
+         <%=method19%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtCln_type: 
+      </TH>
+      <TD>
+         <%=method20%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtCity_latin: 
+      </TH>
+      <TD>
+         <%=method21%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtCity: 
+      </TH>
+      <TD>
+         <%=method22%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtAddress_latin: 
+      </TH>
+      <TD>
+         <%=method23%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         rtAddr_cln: 
+      </TH>
+      <TD>
+         <%=method24%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         getClient_id: 
+      </TH>
+      <TD>
+         <%=method25%> 
+      </TD>
+   </TR> 
+   <TR>
+      <TH>
+         toStringFull: 
+      </TH>
+      <TD>
+         <%=method26%> 
+      </TD>
+   </TR>
+</TBODY>
+</TABLE >
+</FORM>
+</body>
+</html>

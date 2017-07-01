@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="var" path="SERVERJDK_PLUGINDIR/jre/lib/rt.jar"
+        rootpath="src" sourcepath="SERVERJDK_PLUGINDIR/src.jar"/>
+    <classpathentry kind="src" path="appClientModule"/>
+    <classpathentry kind="var" path="WAS_PLUGINDIR/lib/j2ee.jar"/>
+    <classpathentry kind="var" path="WAS_PLUGINDIR/lib/ivjejb35.jar"/>
+    <classpathentry kind="output" path="bin"/>
+</classpath>

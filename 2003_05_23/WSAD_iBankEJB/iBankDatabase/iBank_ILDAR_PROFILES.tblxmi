@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1" name="PROFILES" primaryKey="SQLReference_1">
+  <columns xmi:id="RDBColumn_1" name="APP_NAME" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_2" name="PROFILE_NAME" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_2" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_3" name="ID_KEY" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1" precision="20" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_4" name="CONTENT" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterLargeObject" xmi:id="SQLCharacterLargeObject_1" length="32700">
+      <originatingType xmi:type="RDBSchema:SQLCharacterLargeObject" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterLargeObject_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_5" name="STORE_DATE" allowNull="false">
+    <type xmi:type="RDBSchema:SQLDate" xmi:id="SQLDate_1">
+      <originatingType xmi:type="RDBSchema:SQLDate" href="DB2UDBNT_V72_Primitives.xmi#SQLDate_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1" name="XPKPROFILES" members="RDBColumn_1 RDBColumn_2 RDBColumn_3" table="RDBTable_1" constraint="SQLConstraint_1"/>
+  <constraints xmi:id="SQLConstraint_1" name="XPKPROFILES" type="PRIMARYKEY" primaryKey="SQLReference_1"/>
+  <database href="iBankDatabase/iBank.dbxmi#RDBDatabase_1"/>
+  <schema href="iBankDatabase/iBank_ILDAR.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

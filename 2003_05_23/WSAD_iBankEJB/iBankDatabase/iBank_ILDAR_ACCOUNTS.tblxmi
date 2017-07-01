@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1" name="ACCOUNTS" primaryKey="SQLReference_1">
+  <columns xmi:id="RDBColumn_1" name="BRANCH_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_2" name="ACCOUNT" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_2" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_3" name="CLIENT_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1" precision="20" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_4" name="TYPE_ACCOUNT" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_2" precision="1" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_5" name="CREATE_DATE" allowNull="false">
+    <type xmi:type="RDBSchema:SQLDate" xmi:id="SQLDate_1">
+      <originatingType xmi:type="RDBSchema:SQLDate" href="DB2UDBNT_V72_Primitives.xmi#SQLDate_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_6" name="CREATE_AMOUNT" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_3" precision="28" scale="10">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_7" name="CURRENCY" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_3" length="3">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1" name="XPKACCOUNTS" members="RDBColumn_1 RDBColumn_2" table="RDBTable_1" constraint="SQLConstraint_1"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1" name="R_5" onDelete="CASCADE" members="RDBColumn_3" constraint="SQLConstraint_2">
+    <onUpdate>NO ACTION</onUpdate>
+    <target href="iBankDatabase/iBank_ILDAR_CLIENTS.tblxmi#SQLReference_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_2" name="R_4" members="RDBColumn_1" constraint="SQLConstraint_3">
+    <onDelete>NO ACTION</onDelete>
+    <onUpdate>NO ACTION</onUpdate>
+    <target href="iBankDatabase/iBank_ILDAR_INIT_AS.tblxmi#SQLReference_1"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1" name="XPKACCOUNTS" type="PRIMARYKEY" primaryKey="SQLReference_1"/>
+  <constraints xmi:id="SQLConstraint_2" name="R_5" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1"/>
+  <constraints xmi:id="SQLConstraint_3" name="R_4" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_2"/>
+  <database href="iBankDatabase/iBank.dbxmi#RDBDatabase_1"/>
+  <schema href="iBankDatabase/iBank_ILDAR.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

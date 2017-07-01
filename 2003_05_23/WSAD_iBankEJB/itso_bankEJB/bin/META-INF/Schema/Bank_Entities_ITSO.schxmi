@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBSchema_1" name="ITSO">
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#Savings"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#Checking"/>
+  <tables href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcct"/>
+</RDBSchema:RDBSchema>

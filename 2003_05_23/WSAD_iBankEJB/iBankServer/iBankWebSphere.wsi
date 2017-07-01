@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webSphere-instance
+   INSTANCE_CONFIG_REF="/iBankServer/iBankWebSphere.wsc"
+   INSTANCE_DEBUG_PORT_NUM_ID="-1"
+   INSTANCE_EXTRA_WS_EXT_DIRS_APPEND_FLAG_ID="0"
+   INSTANCE_FILE_KEY="WebSphere v4.0 Test Environment Server Instance"
+   INSTANCE_JSP_SRC_DEBUG_ID="true" INSTANCE_PROFILE_PROCESS="false" name="iBankWebSphere">
+   <configuration-ref ref="/iBankServer/iBankWebSphere.wsc"/>
+   <classpath/>
+   <system-properties/>
+   <vm-arguments/>
+   <wsExtDirs/>
+</webSphere-instance>

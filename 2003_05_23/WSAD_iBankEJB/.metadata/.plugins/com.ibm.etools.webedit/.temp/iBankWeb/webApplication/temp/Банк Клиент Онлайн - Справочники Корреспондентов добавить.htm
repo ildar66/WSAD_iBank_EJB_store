@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0057)http://banking.guta.ru/cb_demo/receiver.asp?referenceid=2 -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Справочники Корреспондентов добавить.htm"><TITLE>Банк Клиент Онлайн - Справочники</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/cb.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=javascript 
+src="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/bgtop.gif" 
+border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><IMG height=51 alt="ГУТА БАНК" 
+      src="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/logo.gif" 
+      width=171 border=0></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • Тестовый филиал • ООО "Все в 
+      порядке"</TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/hr2.gif" 
+border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 
+    background="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/hr1.gif"><IMG 
+      height=15 alt="" 
+      src="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/zagl1.gif" 
+      width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0><A 
+      href="http://banking.guta.ru/cb_demo/client.asp">Клиент</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/accounts.asp">Счета</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/documents.asp">Документы</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/statements.asp">Выписки</A><BR><A 
+      class=current 
+      href="http://banking.guta.ru/cb_demo/references.asp">Справочники</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/messages.asp">Сообщения</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/reports.asp">Отчеты</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/setup.asp">Настройки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/logout.asp">Выход</A><BR></TD>
+    <TD>
+      <DIV class=title>Справочники</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/validate.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Справочники Корреспондентов добавить_files/form.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript>
+function Check(theForm)
+{
+	if(theForm.BIC.value.length == 8) theForm.BIC.value = '0' + theForm.BIC.value;
+	
+	if(!field_check(theForm.Title,null,8,true)) return false;
+	if(!field_check(theForm.INN,null,8,true)) return false;
+	if(!field_check(theForm.Account,null,8,true)) return false;
+	if(!field_check(theForm.BIC,null,8,true)) return false;
+
+	if(!isINN(theForm.INN.value))
+		if(!warn_field(theForm.INN, 'Неверное значение в поле \'%title%\'.\nНеправильный ключ.'))
+			return false;
+
+	if(!isAccount(theForm.BIC.value, theForm.Account.value))
+		return alert_field(theForm.Account, 'Неверное значение в поле \'%title%\'.\nНеправильный ключ.');
+
+	return true;
+}
+
+function Save(e)
+{
+	if(Check(e.form))
+	{
+		e.form.btnaction.value = e.value;
+		e.form.submit();
+	}
+}
+
+function Delete(e)
+{
+	e.form.btnaction.value = e.value;
+	e.form.submit();
+}
+
+function Cancel(e)
+{
+	window.location.href = 'refbrowse.asp?referenceid=' + e.form.referenceid.value;
+}
+</SCRIPT>
+
+      <FORM name=detailform action=refbrowse.asp method=post>
+      <H5>Справочник Корреспондентов - Добавление</H5>
+      <TABLE class=inputbar>
+        <TBODY>
+        <TR>
+          <TD class=label>Наименование</TD>
+          <TD class=input><TEXTAREA onkeypress="if(this.value.length>80) event.returnValue=false;" title=Наименование name=Title cols=50 onchange=this.value=this.value.substr(0,80);></TEXTAREA></TD></TR>
+        <TR>
+          <TD class=label>ИНН</TD>
+          <TD class=input><INPUT title=ИНН maxLength=12 size=14 
+name=INN></TD></TR>
+        <TR>
+          <TD class=label>Расчетный счет</TD>
+          <TD class=input><INPUT title="Расчетный счет" maxLength=20 size=23 
+            name=Account></TD></TR>
+        <TR>
+          <TD class=label>БИК</TD>
+          <TD class=input><INPUT title=БИК maxLength=9 size=10 name=BIC>&nbsp;<INPUT class=ref id=bicref title="Справочник Банков" onclick="CallRef(document.detailform,1,'BIC,-bankname,-bankacc')" type=button value=">"></TD></TR>
+        <TR>
+          <TD class=label>Банк</TD>
+          <TD class=input><TEXTAREA class=disabled title=Банк name=bankname readOnly cols=50></TEXTAREA></TD></TR>
+        <TR>
+          <TD class=label>Кор. счет</TD>
+          <TD class=input><INPUT class=disabled title="Кор. счет" readOnly 
+            maxLength=20 size=23 name=bankacc></TD></TR></TBODY></TABLE><BR><INPUT onclick=Save(this) type=button value=Сохранить> 
+<INPUT onclick=Cancel(this) type=button value=Отменить> <INPUT type=hidden 
+      name=btnaction> <INPUT type=hidden value=2 name=referenceid> <INPUT 
+      type=hidden name=rowid> <INPUT type=hidden value=499619906 name=sid> 
+      </FORM><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

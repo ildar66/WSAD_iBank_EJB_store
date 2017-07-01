@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbext:EJBJarExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbext="ejbext.xmi" xmlns:ejb="ejb.xmi" xmi:id="ejb-jar_ID_Ext">
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="Customer_Ext">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+    <accessIntents xmi:id="AccessIntent_1" intentType="READ">
+      <methodElements xmi:id="MethodElement_1" name="getFirstName" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_2" name="getLastName" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_3" name="getTitle" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_4" name="getUserID" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_5" name="getPassword" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_16" name="getAddress" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_17" name="getCustomerID" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_18" name="getName" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="BankAccount_Ext">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="WhereClauseFinderDescriptor_2" whereClause="T1.balance > ?">
+      <finderMethodElements xmi:id="MethodElement_10" name="findAccountsWithBalanceGreater" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="WhereClauseFinderDescriptor_3" whereClause="T1.balance >= ? AND T1.balance &#60;= ?">
+      <finderMethodElements xmi:id="MethodElement_11" name="findAccountsWithBalanceBetween" parms="java.math.BigDecimal java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="WhereClauseFinderDescriptor_4" whereClause="1 = 1">
+      <finderMethodElements xmi:id="MethodElement_12" name="findAll" parms="" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:FullSelectFinderDescriptor" xmi:id="FullSelectFinderDescriptor_1" selectStatement="select T1.accid, T1.balance from ITSO.Account T1 where T1.balance > ?">
+      <finderMethodElements xmi:id="MethodElement_13" name="findAccountsWithBalanceGreaterThan" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <accessIntents xmi:id="AccessIntent_2" intentType="READ">
+      <methodElements xmi:id="MethodElement_6" name="getBalance" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="TransRecord_Ext">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+    <accessIntents xmi:id="AccessIntent_3" intentType="READ">
+      <methodElements xmi:id="MethodElement_8" name="getTransamt" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+      <methodElements xmi:id="MethodElement_9" name="getTranstype" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+</ejbext:EJBJarExtension>

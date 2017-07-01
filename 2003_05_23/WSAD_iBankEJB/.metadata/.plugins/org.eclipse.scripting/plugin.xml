@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="org.eclipse.scripting.userscripts" name="User Scripts" vendor-name="IBM" version="1.0">
+  <requires>
+    <import plugin="org.eclipse.scripting"/>
+  </requires>
+</plugin>

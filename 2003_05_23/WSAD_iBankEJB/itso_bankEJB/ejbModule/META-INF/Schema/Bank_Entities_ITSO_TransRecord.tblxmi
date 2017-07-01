@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TransRecord" name="TransRecord" primaryKey="TransRecordTable_key">
+  <columns xmi:id="TransRecord_transid" name="transid" allowNull="false">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1" precision="2" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V71_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="TransRecord_accid" name="accid" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1" characterSet="800" length="8">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="TransRecord_transtype" name="transtype" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_2" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="TransRecord_transamt" name="transamt" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1" precision="8" scale="2">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V71_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="TransRecordTable_key" name="TransRecord" members="TransRecord_transid" table="TransRecord" constraint="TransRecordTable_key_Constraint"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="TransRecordToAccount_ref" name="AccountTransrecord" members="TransRecord_accid" constraint="SQLConstraint_1">
+    <target href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#AccountTable_key"/>
+  </namedGroup>
+  <constraints xmi:id="TransRecordTable_key_Constraint" name="TransRecord" type="PRIMARYKEY" primaryKey="TransRecordTable_key"/>
+  <constraints xmi:id="SQLConstraint_1" name="AccountTransrecord" type="FOREIGNKEY" referenceByKey="TransRecordToAccount_ref"/>
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

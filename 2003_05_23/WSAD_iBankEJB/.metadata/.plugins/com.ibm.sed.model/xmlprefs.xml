@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<settings>
+    <formatting customstring="\t" spaces="4" style="fixed" tab="4"/>
+    <lineSplitting eachAttrOnNewLine="false" lineWidth="72"
+        style="indentAttr" useLineSplitting="no"/>
+    <contentassist auto-propose="true" auto-proposechars="&lt;"
+        separate="true" sort="false"/>
+    <cleanup attrNameCase="as-is" formatSource="true"
+        insertMissingTags="true" quoteAttrValues="true" tagNameCase="as-is"/>
+    <spaceholder/>
+    <textView lineNumbers="true"/>
+    <editor activepageindex="0"/>
+</settings>

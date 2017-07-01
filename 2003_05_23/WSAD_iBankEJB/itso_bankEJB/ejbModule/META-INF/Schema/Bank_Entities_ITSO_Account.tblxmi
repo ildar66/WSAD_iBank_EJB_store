@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="Account" name="Account" primaryKey="AccountTable_key">
+  <columns xmi:id="Account_accid" name="accid" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_12" characterSet="800" length="8">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Account_balance" name="balance" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_2" precision="8" scale="2">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V71_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="Account_acctype" name="acctype" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_13" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="AccountTable_key" name="Account" members="Account_accid" table="Account" constraint="AccountTable_key_Constraint">
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecordToAccount_ref"/>
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#SavingsToAccount_ref"/>
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#CheckingToAccount_ref"/>
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcctToAccount_ref"/>
+  </namedGroup>
+  <constraints xmi:id="AccountTable_key_Constraint" name="Account" type="PRIMARYKEY" primaryKey="AccountTable_key"/>
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

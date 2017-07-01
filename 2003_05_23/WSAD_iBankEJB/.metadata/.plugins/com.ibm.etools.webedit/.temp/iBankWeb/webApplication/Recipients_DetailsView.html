@@ -1,0 +1,192 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/Recipients_DetailsView.jsp">
+<%
+response.setHeader("Pragma", "No-cache");
+response.setHeader("Cache-Control", "no-cache");
+response.setDateHeader("Expires", 0);
+%>
+<TITLE>Детали:</TITLE>
+
+<!--Styles-->
+<STYLE TYPE="text/css">
+<!--
+BODY
+{
+background-color: #ff80c0;
+}
+H1
+{
+color: #0000ff;
+text-align: center;
+}
+TH
+{
+text-align:left;
+color: #993333;
+}
+-->
+</STYLE>
+
+<!--Style Sheet-->
+<LINK href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/theme/Master.css" rel="stylesheet" type="text/css">
+<META name="GENERATOR" content="IBM WebSphere Studio">
+
+</head>
+
+<body>
+
+<%--Get the Data Access Bean--%>
+<%@ page import="com.overstar.ildar.ibank.payment.order.Recipients_DetailsViewBean" %>
+<jsp:useBean id="detailsViewDBBean" class="com.overstar.ildar.ibank.payment.order.Recipients_DetailsViewBean" scope="session" />
+<jsp:setProperty name="detailsViewDBBean" property="username" value='<%=config.getInitParameter("username")%>'/>
+<jsp:setProperty name="detailsViewDBBean" property="password" value='<%=config.getInitParameter("password")%>'/>
+<jsp:setProperty name="detailsViewDBBean" property="dataSourceName" value='<%=config.getInitParameter("dataSourceName")%>'/>
+
+<%--Get host variables--%>
+<%
+detailsViewDBBean.setCLIENT_ID((String)session.getAttribute("CLIENT_ID"));  
+detailsViewDBBean.setILDAR_RECIPIENTS_ID(request.getParameter("ILDAR_RECIPIENTS_ID"));  
+%>
+
+<%--Execute the query--%>
+<%
+detailsViewDBBean.execute();
+%>
+
+
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function submitForm(nav){
+   document.myForm.elements["command"].value = nav
+   document.myForm.submit()
+}
+//-->
+</SCRIPT>
+
+<!--Banner-->
+<H1>Список получателей:</H1>
+      
+
+<!--Navigation-->
+<FORM name="myForm" action="Recipients_Controller" method="POST">
+<A href="javascript:submitForm('Recipients_MasterView')">Back</A>
+
+<BR><BR>	 
+
+<!--Hidden Variables-->
+<INPUT TYPE="hidden" NAME="command" VALUE="Recipients_MasterView"/>
+
+<%
+if(detailsViewDBBean.first()){
+   do{
+%>
+<hr>
+<!--Table-->
+<TABLE border="0">
+<TBODY> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.ID: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_ID()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.CLIENT_ID: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_CLIENT_ID()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.INN: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_INN()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.NAME: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_NAME()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.BIC: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_BIC()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.BILL: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_BILL()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.RECIPIENTS.COMMENTS: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_RECIPIENTS_COMMENTS()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.BANKS.BILL_CORR: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_BANKS_BILL_CORR()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.BANKS.BANK_NAME: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_BANKS_BANK_NAME()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.BANKS.CITY: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_BANKS_CITY()%> 
+     </TD>
+   </TR> 
+   <TR>
+      <TD>
+         ILDAR.BANKS.DELIVERY: 
+      </TD>
+      <TD>
+         <%=detailsViewDBBean.getILDAR_BANKS_DELIVERY()%> 
+     </TD>
+   </TR>
+</TBODY>
+</TABLE> 
+<%
+   }while(detailsViewDBBean.next());
+}
+%>
+
+<%--Close the connection--%>
+<%detailsViewDBBean.close();%>
+         
+</FORM>
+</body>
+</HTML>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://banking.guta.ru/cb_demo/reports.asp -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Отчеты.htm"><TITLE>Банк Клиент Онлайн - Отчеты</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Отчеты_files/cb.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="Банк Клиент Онлайн - Отчеты_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Отчеты_files/bgtop.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><IMG height=51 alt="ГУТА БАНК" 
+      src="Банк Клиент Онлайн - Отчеты_files/logo.gif" width=171 border=0></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • Тестовый филиал • ООО "Все в 
+      порядке"</TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Отчеты_files/hr2.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 background="Банк Клиент Онлайн - Отчеты_files/hr1.gif"><IMG 
+      height=15 alt="" src="Банк Клиент Онлайн - Отчеты_files/zagl1.gif" 
+      width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0><A 
+      href="http://banking.guta.ru/cb_demo/client.asp">Клиент</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/accounts.asp">Счета</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/documents.asp">Документы</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/statements.asp">Выписки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/references.asp">Справочники</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/messages.asp">Сообщения</A><BR><A 
+      class=current 
+      href="http://banking.guta.ru/cb_demo/reports.asp">Отчеты</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/setup.asp">Настройки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/logout.asp">Выход</A><BR></TD>
+    <TD>
+      <DIV class=title>Отчеты</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Отчеты_files/validate.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript type=text/javascript>
+function Show()
+{	
+	with(document.rptform)
+	{
+		if(!field_check(todate, null, 7, true) || !field_check(fromdate, null, 7, true)) return false;
+		var url = report(report.selectedIndex).value;
+		url += '&fromdate=' + field_get(fromdate);
+		url += '&todate=' + field_get(todate);
+		url += '&title=' + escape(report(report.selectedIndex).text);
+	}
+	var wnd = window.open(url,'report','width=660,top=0,height='+(window.screen.availHeight-100)+',resizable=yes,status=no,toolbar=no,menubar=yes,location=no,scrollbars=yes');
+	wnd.focus();
+}
+</SCRIPT>
+
+      <FORM name=rptform>
+      <P class=gridtitle>Выберите отчет</P><SELECT title="Тип отчета" 
+      name=report> <OPTION value=reestrvw.asp?statusmask=60 selected>Реестр 
+        отправленных документов</OPTION> <OPTION 
+        value=reestrvw.asp?statusmask=32>Реестр проведенных 
+      документов</OPTION></SELECT> 
+      <P class=gridtitle>Параметры отчета</P>
+      <TABLE class=inputbar>
+        <TBODY>
+        <TR>
+          <TD class=label>Период</TD>
+          <TD class=input><INPUT title="Начальная дата" type=hidden 
+            value=17/09/2002 name=fromdate><INPUT title="Начальная дата.День" 
+            maxLength=2 onchange=date_onchange(this) size=2 value=17 
+            name=fromdatedd><INPUT title="Начальная дата.Месяц" maxLength=2 
+            onchange=date_onchange(this) size=2 value=09 name=fromdatemm><INPUT 
+            title="Начальная дата.Год" maxLength=4 onchange=date_onchange(this) 
+            size=4 value=2002 name=fromdateyy>&nbsp;-&nbsp;<INPUT 
+            title="Конечная дата" type=hidden value=18/09/2002 
+            name=todate><INPUT title="Конечная дата.День" maxLength=2 
+            onchange=date_onchange(this) size=2 value=18 name=todatedd><INPUT 
+            title="Конечная дата.Месяц" maxLength=2 onchange=date_onchange(this) 
+            size=2 value=09 name=todatemm><INPUT title="Конечная дата.Год" 
+            maxLength=4 onchange=date_onchange(this) size=4 value=2002 
+            name=todateyy> &nbsp;<SELECT 
+            onchange="period_onchange(this, 'fromdate', 'todate')" name=period> 
+              <OPTION selected>( установить период )</OPTION> <OPTION 
+              value=18/09/2002,18/09/2002>за текущий день</OPTION> <OPTION 
+              value=15/09/2002,18/09/2002>за текущую неделю</OPTION> <OPTION 
+              value=01/09/2002,18/09/2002>за текущий месяц</OPTION> <OPTION 
+              value=01/07/2002,18/09/2002>за текущий квартал</OPTION></SELECT> 
+        </TD></TR></TBODY></TABLE><BR><INPUT onclick=Show() type=button value=Показать> 
+      </FORM>
+      <P class=tips>В разделе <B>Отчеты</B> Вам доступны все отчеты по системе. 
+      Для просмотра отчета выберите тип отчета, заполните необходимые параметры 
+      и нажмите <B>Показать</B>. 
+</P><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

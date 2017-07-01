@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.2//EN" "http://java.sun.com/j2ee/dtds/application_1_2.dtd">
+   <application id="Application_ID">
+      <display-name>ITSO EJB Bank EAR</display-name>
+      <module id="EjbModule_1">
+         <ejb>itso_bankEJB.jar</ejb>
+      </module>
+      <module id="EjbModule_2">
+      	<ejb>CMP_Entity.jar</ejb>
+      </module>
+      <module id="EjbModule_3">
+      	<ejb>BMP_Entity.jar</ejb>
+      </module>
+      <module id="EjbModule_4">
+      	<ejb>Stateless_Session.jar</ejb>
+      </module>
+      <module id="WebModule_1">
+      	<web>
+      		<web-uri>ITSO_EJB_Redbook_Web.war</web-uri>
+      		<context-root>itsoejb</context-root></web>  
+      </module>
+   </application>

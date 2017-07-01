@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="tree.xsl" type="text/xsl"?>
+
+<infoset id="org.eclipse.platform.doc.isv.infoset_Guide" label="%infoset_guide_title" standalone="true" >
+
+<!-- %infoview_contents_label infoview [org.eclipse.platform.doc.isv.view_Contents] -->
+<infoview id="org.eclipse.platform.doc.isv.view_Contents" label="%infoview_contents_label" >
+  <topic href="" id="org.eclipse.platform.doc.isv.guideRoot" label="%topic_guide" >
+    <topic href="/org.eclipse.platform.doc.isv/guide/int.htm" id="org.eclipse.platform.doc.isv.792" label="%topic_guide_intro" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/int_who.htm" id="org.eclipse.platform.doc.isv.793" label="%topic_guide_intro_who" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/int_goal.htm" id="org.eclipse.platform.doc.isv.794" label="%topic_guide_intro_goal" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/int_eclipse.htm" id="org.eclipse.platform.doc.isv.795" label="%topic_guide_intro_eclipse" >      </topic>
+      <topic href="http://www.eclipse.org" id="org.eclipse.platform.doc.isv.796" label="%topic_refer_to_ec" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/arch.htm" id="org.eclipse.platform.doc.isv.797" label="%topic_guide_arch" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/arch_struct.htm" id="org.eclipse.platform.doc.isv.798" label="%topic_guide_arch_structure" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/firstplugin.htm" id="org.eclipse.platform.doc.isv.799" label="%topic_guide_firstplugin" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/firstplugin_minimal.htm" id="org.eclipse.platform.doc.isv.800" label="%topic_guide_firstplugin_minimal" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/firstplugin_install.htm" id="org.eclipse.platform.doc.isv.801" label="%topic_guide_firstplugin_install" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/firstplugin_btb.htm" id="org.eclipse.platform.doc.isv.802" label="%topic_guide_btb" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/resInt.htm" id="org.eclipse.platform.doc.isv.803" label="%topic_guide_resintro" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/resInt_workspace.htm" id="org.eclipse.platform.doc.isv.804" label="%topic_guide_resintro_workspace" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resInt_filesystem.htm" id="org.eclipse.platform.doc.isv.805" label="%topic_guide_resintro_filesystem" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resInt_properties.htm" id="org.eclipse.platform.doc.isv.806" label="%topic_guide_resintro_properties" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resInt_btb.htm" id="org.eclipse.platform.doc.isv.807" label="%topic_guide_btb" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/workbench.htm" id="org.eclipse.platform.doc.isv.808" label="%topic_guide_workbench" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_structure.htm" id="org.eclipse.platform.doc.isv.809" label="%topic_guide_workbench_structure" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext.htm" id="org.eclipse.platform.doc.isv.810" label="%topic_guide_workbench_basicext" >
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_views.htm" id="org.eclipse.platform.doc.isv.811" label="org.eclipse.ui.views" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_viewActions.htm" id="org.eclipse.platform.doc.isv.812" label="org.eclipse.ui.viewActions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_editors.htm" id="org.eclipse.platform.doc.isv.813" label="org.eclipse.ui.editors" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_editorActions.htm" id="org.eclipse.platform.doc.isv.814" label="org.eclipse.ui.editorActions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_popupMenus.htm" id="org.eclipse.platform.doc.isv.815" label="org.eclipse.ui.popupMenus" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_basicext_actionSets.htm" id="org.eclipse.platform.doc.isv.816" label="org.eclipse.ui.actionSets" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_plugin.htm" id="org.eclipse.platform.doc.isv.817" label="%topic_guide_workbench_plugin" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_menus.htm" id="org.eclipse.platform.doc.isv.818" label="%topic_guide_workbench_menus" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_advext.htm" id="org.eclipse.platform.doc.isv.819" label="%topic_guide_workbench_advext" >
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_advext_perspectives.htm" id="org.eclipse.platform.doc.isv.820" label="org.eclipse.ui.perspectives" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_advext_perspectiveExtension.htm" id="org.eclipse.platform.doc.isv.821" label="org.eclipse.ui.perspectiveExtensions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_advext_elementFactories.htm" id="org.eclipse.platform.doc.isv.822" label="org.eclipse.ui.elementFactories" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/workbench_advext_resourceFilters.htm" id="org.eclipse.platform.doc.isv.823" label="org.eclipse.ui.resourceFilters" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/workbench_btb.htm" id="org.eclipse.platform.doc.isv.824" label="%topic_guide_btb" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/dialogs.htm" id="org.eclipse.platform.doc.isv.825" label="%topic_guide_dialogs" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_standard.htm" id="org.eclipse.platform.doc.isv.826" label="%topic_guide_dialogs_standard" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_applications.htm" id="org.eclipse.platform.doc.isv.827" label="%topic_guide_dialogs_application" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_settings.htm" id="org.eclipse.platform.doc.isv.828" label="%topic_guide_dialogs_settings" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards.htm" id="org.eclipse.platform.doc.isv.829" label="%topic_guide_dialogs_wizards" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_extensions.htm" id="org.eclipse.platform.doc.isv.830" label="%topic_guide_dialogs_extensions" >
+        <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_newWizards.htm" id="org.eclipse.platform.doc.isv.831" label="org.eclipse.ui.newWizards" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_importWizards.htm" id="org.eclipse.platform.doc.isv.832" label="org.eclipse.ui.importWizards" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_exportWizards.htm" id="org.eclipse.platform.doc.isv.833" label="org.eclipse.ui.exportWizards" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_wizarddialogs.htm" id="org.eclipse.platform.doc.isv.834" label="%topic_guide_dialogs_wizarddialogs" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/dialogs_wizards_multipage.htm" id="org.eclipse.platform.doc.isv.835" label="%topic_guide_dialogs_multipagewizards" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/preferences.htm" id="org.eclipse.platform.doc.isv.836" label="%topic_guide_prefs" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/preferences_prefs.htm" id="org.eclipse.platform.doc.isv.837" label="%topic_guide_prefs_preferences" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/preferences_prop.htm" id="org.eclipse.platform.doc.isv.838" label="%topic_guide_prefs_properties" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/jface.htm" id="org.eclipse.platform.doc.isv.839" label="%topic_guide_jface" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/jface_viewers.htm" id="org.eclipse.platform.doc.isv.840" label="%topic_guide_jface_viewers" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/jface_actions.htm" id="org.eclipse.platform.doc.isv.841" label="%topic_guide_jface_actions" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/jface_resources.htm" id="org.eclipse.platform.doc.isv.842" label="%topic_guide_jface_resources" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/jface_operations.htm" id="org.eclipse.platform.doc.isv.843" label="%topic_guide_jface_operations" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/swt.htm" id="org.eclipse.platform.doc.isv.844" label="%topic_guide_swt" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/swt_widgets.htm" id="org.eclipse.platform.doc.isv.845" label="%topic_guide_swt_widgets" >
+        <topic href="/org.eclipse.platform.doc.isv/guide/swt_widgets_controls.htm" id="org.eclipse.platform.doc.isv.846" label="%topic_guide_swt_widgets_controls" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/swt_widgets_events.htm" id="org.eclipse.platform.doc.isv.847" label="%topic_guide_swt_widgets_events" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/swt_widgets_custom.htm" id="org.eclipse.platform.doc.isv.848" label="%topic_guide_swt_widgets_custom" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/swt_layouts.htm" id="org.eclipse.platform.doc.isv.849" label="%topic_guide_swt_layouts" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/swt_threading.htm" id="org.eclipse.platform.doc.isv.850" label="%topic_guide_swt_threading" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/swt_error.htm" id="org.eclipse.platform.doc.isv.851" label="%topic_guide_swt_error" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/swt_graphics.htm" id="org.eclipse.platform.doc.isv.852" label="%topic_guide_swt_graphics" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/editors.htm" id="org.eclipse.platform.doc.isv.853" label="%topic_guide_editors" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/editors_workbench.htm" id="org.eclipse.platform.doc.isv.854" label="%topic_guide_editors_workbench" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/editors_jface.htm" id="org.eclipse.platform.doc.isv.855" label="%topic_guide_editors_jface" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/editors_workbench_outliner.htm" id="org.eclipse.platform.doc.isv.856" label="%topic_guide_editors_outliners" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/resAdv.htm" id="org.eclipse.platform.doc.isv.857" label="%topic_guide_resadv" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/resAdv_markers.htm" id="org.eclipse.platform.doc.isv.858" label="%topic_guide_resadv_markers" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resAdv_events.htm" id="org.eclipse.platform.doc.isv.859" label="%topic_guide_resadv_events" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resAdv_builders.htm" id="org.eclipse.platform.doc.isv.860" label="%topic_guide_resadv_builders" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resAdv_saving.htm" id="org.eclipse.platform.doc.isv.861" label="%topic_guide_resadv_saving" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/resAdv_natures.htm" id="org.eclipse.platform.doc.isv.862" label="%topic_guide_resadv_natures" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/scripting.htm" id="org.eclipse.platform.doc.isv.863" label="%topic_guide_script" >    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/guide/help.htm" id="org.eclipse.platform.doc.isv.864" label="%topic_guide_help" >
+      <topic href="/org.eclipse.platform.doc.isv/guide/help_plugin.htm" id="org.eclipse.platform.doc.isv.865" label="%topic_guide_help_plugin" >
+        <topic href="/org.eclipse.platform.doc.isv/guide/help_plugin_topics.htm" id="org.eclipse.platform.doc.isv.866" label="%topic_guide_help_plugin_topics" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/help_plugin_infoset.htm" id="org.eclipse.platform.doc.isv.867" label="%topic_guide_help_plugin_infoset" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/help_plugin_wiring.htm" id="org.eclipse.platform.doc.isv.868" label="%topic_guide_help_plugin_wiring" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/guide/help_plugin_manifest.htm" id="org.eclipse.platform.doc.isv.869" label="%topic_guide_help_plugin_manifest" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/help_integration.htm" id="org.eclipse.platform.doc.isv.870" label="%topic_guide_help_integration" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/help_nls.htm" id="org.eclipse.platform.doc.isv.871" label="%topic_guide_help_nls" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/guide/help_server.htm" id="org.eclipse.platform.doc.isv.872" label="%topic_guide_help_server" >      </topic>
+    </topic>
+  </topic>
+  <topic href="" id="org.eclipse.platform.doc.isv.referenceRoot" label="%topic_ref" >
+    <topic href="/org.eclipse.platform.doc.isv/reference/api/overview-summary.html" id="org.eclipse.platform.doc.isv.873" label="%topic_ref_javadoc" >
+      <topic href="" id="org.eclipse.platform.doc.isv.874" label="%topic_ref_ext_core" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/runtime/package-summary.html" id="org.eclipse.platform.doc.isv.875" label="org.eclipse.core.runtime" >        </topic>
+      </topic>
+      <topic href="" id="org.eclipse.platform.doc.isv.876" label="%topic_ref_ext_resources" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/resources/package-summary.html" id="org.eclipse.platform.doc.isv.877" label="org.eclipse.core.resources" >        </topic>
+      </topic>
+      <topic href="" id="org.eclipse.platform.doc.isv.878" label="%topic_ref_ext_ui" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/package-summary.html" id="org.eclipse.platform.doc.isv.879" label="org.eclipse.ui" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/actions/package-summary.html" id="org.eclipse.platform.doc.isv.880" label="org.eclipse.ui.actions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/dialogs/package-summary.html" id="org.eclipse.platform.doc.isv.881" label="org.eclipse.ui.dialogs" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/editors/text/package-summary.html" id="org.eclipse.platform.doc.isv.882" label="org.eclipse.ui.editors.text" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/help/package-summary.html" id="org.eclipse.platform.doc.isv.883" label="org.eclipse.ui.help" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/model/package-summary.html" id="org.eclipse.platform.doc.isv.884" label="org.eclipse.ui.model" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/part/package-summary.html" id="org.eclipse.platform.doc.isv.885" label="org.eclipse.ui.part" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/plugin/package-summary.html" id="org.eclipse.platform.doc.isv.886" label="org.eclipse.ui.plugin" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/package-summary.html" id="org.eclipse.platform.doc.isv.887" label="org.eclipse.ui.texteditor" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/views/bookmarkexplorer/package-summary.html" id="org.eclipse.platform.doc.isv.888" label="org.eclipse.ui.views.bookmarkexplorer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/views/contentoutline/package-summary.html" id="org.eclipse.platform.doc.isv.889" label="org.eclipse.ui.views.contentoutline" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/views/navigator/package-summary.html" id="org.eclipse.platform.doc.isv.890" label="org.eclipse.ui.views.navigator" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/views/properties/package-summary.html" id="org.eclipse.platform.doc.isv.891" label="org.eclipse.ui.views.properties" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/views/tasklist/package-summary.html" id="org.eclipse.platform.doc.isv.892" label="org.eclipse.ui.views.tasklist" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/wizards/datatransfer/package-summary.html" id="org.eclipse.platform.doc.isv.893" label="org.eclipse.ui.wizards.datatransfer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/wizards/newresource/package-summary.html" id="org.eclipse.platform.doc.isv.894" label="org.eclipse.ui.wizards.newresource" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/action/package-summary.html" id="org.eclipse.platform.doc.isv.895" label="org.eclipse.jface.action" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/dialogs/package-summary.html" id="org.eclipse.platform.doc.isv.896" label="org.eclipse.jface.dialogs" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/operation/package-summary.html" id="org.eclipse.platform.doc.isv.897" label="org.eclipse.jface.operation" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/preference/package-summary.html" id="org.eclipse.platform.doc.isv.898" label="org.eclipse.jface.preference" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/resource/package-summary.html" id="org.eclipse.platform.doc.isv.899" label="org.eclipse.jface.resource" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/package-summary.html" id="org.eclipse.platform.doc.isv.900" label="org.eclipse.jface.text" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/contentassist/package-summary.html" id="org.eclipse.platform.doc.isv.901" label="org.eclipse.jface.text.contentassist" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/formatter/package-summary.html" id="org.eclipse.platform.doc.isv.902" label="org.eclipse.jface.text.formatter" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/presentation/package-summary.html" id="org.eclipse.platform.doc.isv.903" label="org.eclipse.jface.text.presentation" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/reconciler/package-summary.html" id="org.eclipse.platform.doc.isv.904" label="org.eclipse.jface.text.reconciler" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/rules/package-summary.html" id="org.eclipse.platform.doc.isv.905" label="org.eclipse.jface.text.rules" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/text/source/package-summary.html" id="org.eclipse.platform.doc.isv.906" label="org.eclipse.jface.text.source" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/util/package-summary.html" id="org.eclipse.platform.doc.isv.907" label="org.eclipse.jface.util" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/package-summary.html" id="org.eclipse.platform.doc.isv.908" label="org.eclipse.jface.viewers" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/window/package-summary.html" id="org.eclipse.platform.doc.isv.909" label="org.eclipse.jface.window" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/wizard/package-summary.html" id="org.eclipse.platform.doc.isv.910" label="org.eclipse.jface.wizard" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" id="org.eclipse.platform.doc.isv.911" label="org.eclipse.swt" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/package-summary.html" id="org.eclipse.platform.doc.isv.912" label="org.eclipse.swt.custom" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/dnd/package-summary.html" id="org.eclipse.platform.doc.isv.913" label="org.eclipse.swt.dnd" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/events/package-summary.html" id="org.eclipse.platform.doc.isv.914" label="org.eclipse.swt.events" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/graphics/package-summary.html" id="org.eclipse.platform.doc.isv.915" label="org.eclipse.swt.graphics" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/layout/package-summary.html" id="org.eclipse.platform.doc.isv.916" label="org.eclipse.swt.layout" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/ole/win32/package-summary.html" id="org.eclipse.platform.doc.isv.917" label="org.eclipse.swt.ole.win32" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/printing/package-summary.html" id="org.eclipse.platform.doc.isv.918" label="org.eclipse.swt.printing" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/program/package-summary.html" id="org.eclipse.platform.doc.isv.919" label="org.eclipse.swt.program" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/package-summary.html" id="org.eclipse.platform.doc.isv.920" label="org.eclipse.swt.widgets" >        </topic>
+      </topic>
+      <topic href="" id="org.eclipse.platform.doc.isv.921" label="%topic_ref_ext_other" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ant/core/package-summary.html" id="org.eclipse.platform.doc.isv.922" label="org.eclipse.ant.core" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/compare/package-summary.html" id="org.eclipse.platform.doc.isv.923" label="org.eclipse.compare" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/compare/contentmergeviewer/package-summary.html" id="org.eclipse.platform.doc.isv.924" label="org.eclipse.compare.contentmergeviewer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/compare/rangedifferencer/package-summary.html" id="org.eclipse.platform.doc.isv.925" label="org.eclipse.compare.rangedifferencer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/compare/structuremergeviewer/package-summary.html" id="org.eclipse.platform.doc.isv.926" label="org.eclipse.compare.structuremergeviewer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/boot/package-summary.html" id="org.eclipse.platform.doc.isv.927" label="org.eclipse.core.boot" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/launcher/package-summary.html" id="org.eclipse.platform.doc.isv.928" label="org.eclipse.core.launcher" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/runtime/model/package-summary.html" id="org.eclipse.platform.doc.isv.929" label="org.eclipse.core.runtime.model" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/target/package-summary.html" id="org.eclipse.platform.doc.isv.930" label="org.eclipse.core.target" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/help/package-summary.html" id="org.eclipse.platform.doc.isv.931" label="org.eclipse.help" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/scripting/package-summary.html" id="org.eclipse.platform.doc.isv.932" label="org.eclipse.scripting" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/webdav/package-summary.html" id="org.eclipse.platform.doc.isv.933" label="org.eclipse.webdav" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/webdav/client/package-summary.html" id="org.eclipse.platform.doc.isv.934" label="org.eclipse.webdav.client" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/webdav/dom/package-summary.html" id="org.eclipse.platform.doc.isv.935" label="org.eclipse.webdav.dom" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/api/org/eclipse/webdav/http/client/package-summary.html" id="org.eclipse.platform.doc.isv.936" label="org.eclipse.webdav.http.client" >        </topic>
+      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/index.html" id="org.eclipse.platform.doc.isv.937" label="%topic_ref_ext" >
+      <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/index.html" id="org.eclipse.platform.doc.isv.938" label="%topic_ref_ext_core" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_runtime_applications.html" id="org.eclipse.platform.doc.isv.939" label="org.eclipse.core.runtime.applications" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_runtime_urlHandlers.html" id="org.eclipse.platform.doc.isv.940" label="org.eclipse.core.runtime.urlHandlers" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/index.html" id="org.eclipse.platform.doc.isv.941" label="%topic_ref_ext_resources" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_resources_builders.html" id="org.eclipse.platform.doc.isv.942" label="org.eclipse.core.resources.builders" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_resources_markers.html" id="org.eclipse.platform.doc.isv.943" label="org.eclipse.core.resources.markers" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_resources_natures.html" id="org.eclipse.platform.doc.isv.944" label="org.eclipse.core.resources.natures" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/index.html" id="org.eclipse.platform.doc.isv.945" label="%topic_ref_ext_ui" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_actionSets.html" id="org.eclipse.platform.doc.isv.946" label="org.eclipse.ui.actionSets" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_dropActions.html" id="org.eclipse.platform.doc.isv.947" label="org.eclipse.ui.dropActions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_editors.html" id="org.eclipse.platform.doc.isv.948" label="org.eclipse.ui.editors" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_editorActions.html" id="org.eclipse.platform.doc.isv.949" label="org.eclipse.ui.editorActions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_elementFactories.html" id="org.eclipse.platform.doc.isv.950" label="org.eclipse.ui.elementFactories" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_exportWizards.html" id="org.eclipse.platform.doc.isv.951" label="org.eclipse.ui.exportWizards" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_importWizards.html" id="org.eclipse.platform.doc.isv.952" label="org.eclipse.ui.importWizards" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_newWizards.html" id="org.eclipse.platform.doc.isv.953" label="org.eclipse.ui.newWizards" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_perspectives.html" id="org.eclipse.platform.doc.isv.954" label="org.eclipse.ui.perspectives" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_perspectiveExtensions.html" id="org.eclipse.platform.doc.isv.955" label="org.eclipse.ui.perspectiveExtensions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_popupMenus.html" id="org.eclipse.platform.doc.isv.956" label="org.eclipse.ui.popupMenus" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_preferencePages.html" id="org.eclipse.platform.doc.isv.957" label="org.eclipse.ui.preferencePages" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_propertyPages.html" id="org.eclipse.platform.doc.isv.958" label="org.eclipse.ui.propertyPages" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_viewActions.html" id="org.eclipse.platform.doc.isv.959" label="org.eclipse.ui.viewActions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_views.html" id="org.eclipse.platform.doc.isv.960" label="org.eclipse.ui.views" >        </topic>
+      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/index.html" id="org.eclipse.platform.doc.isv.961" label="%topic_ref_ext_other" >
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ant_core_antObjects.html" id="org.eclipse.platform.doc.isv.962" label="org.eclipse.ant.core.antObjects" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ant_core_antTasks.html" id="org.eclipse.platform.doc.isv.963" label="org.eclipse.ant.core.antTasks" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ant_core_antTypes.html" id="org.eclipse.platform.doc.isv.964" label="org.eclipse.ant.core.antTypes" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_compare_contentMergeViewers.html" id="org.eclipse.platform.doc.isv.965" label="org.eclipse.compare.contentMergeViewers" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_compare_contentViewers.html" id="org.eclipse.platform.doc.isv.966" label="org.eclipse.compare.contentViewers" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_compare_structureCreators.html" id="org.eclipse.platform.doc.isv.967" label="org.eclipse.compare.structureCreators" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_compare_structureMergeViewers.html" id="org.eclipse.platform.doc.isv.968" label="org.eclipse.compare.structureMergeViewers" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_core_target_targets.html" id="org.eclipse.platform.doc.isv.969" label="org.eclipse.core.target.targets" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_help_contexts.html" id="org.eclipse.platform.doc.isv.970" label="org.eclipse.help.contexts" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_help_contributions.html" id="org.eclipse.platform.doc.isv.971" label="org.eclipse.help.contributions" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_help_support.html" id="org.eclipse.platform.doc.isv.972" label="org.eclipse.help.support" >        </topic>
+      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/reference/misc/index.html" id="org.eclipse.platform.doc.isv.973" label="%topic_ref_articles" >
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/running_eclipse.htm" id="org.eclipse.platform.doc.isv.974" label="%article_running" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/api-usage-rules.html" id="org.eclipse.platform.doc.isv.975" label="%article_API_rules" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/naming.html" id="org.eclipse.platform.doc.isv.976" label="%article_naming" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/terminology.html" id="org.eclipse.platform.doc.isv.977" label="%article_terminology" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/overview-platform.html" id="org.eclipse.platform.doc.isv.978" label="%article_map" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/rplugman.html" id="org.eclipse.platform.doc.isv.979" label="%article_plugin" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/eclipse_install.html" id="org.eclipse.platform.doc.isv.980" label="%article_install" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/reference/misc/welcome.html" id="org.eclipse.platform.doc.isv.981" label="%article_welcome" >      </topic>
+    </topic>
+  </topic>
+  <topic href="" id="org.eclipse.platform.doc.isv.samplesRoot" label="%topic_samples" >
+    <topic href="/org.eclipse.platform.doc.isv/samples/samples.html" id="org.eclipse.platform.doc.isv.982" label="%topic_sample_installing" >    </topic>
+    <topic href="" id="org.eclipse.platform.doc.isv.983" label="%topic_sample_swt" >
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html" id="org.eclipse.platform.doc.isv.984" label="%topic_sample_swt_run_launcher" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html" id="org.eclipse.platform.doc.isv.985" label="%topic_sample_swt_manual_setup" >      </topic>
+      <topic href="" id="org.eclipse.platform.doc.isv.986" label="%topic_sample_swt_category_standalone" >
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_addressbook_ex.html" id="org.eclipse.platform.doc.isv.987" label="%topic_sample_swt_address_book" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_fileviewer_ex.html" id="org.eclipse.platform.doc.isv.988" label="%topic_sample_swt_file_viewer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_helloworld_ex.html" id="org.eclipse.platform.doc.isv.989" label="%topic_sample_swt_hello_world" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_hoverhelp_ex.html" id="org.eclipse.platform.doc.isv.990" label="%topic_sample_swt_hover" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_imageanalyzer_ex.html" id="org.eclipse.platform.doc.isv.991" label="%topic_sample_swt_image_analyzer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_javaviewer_ex.html" id="org.eclipse.platform.doc.isv.992" label="%topic_sample_swt_java_viewer" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_texteditor_ex.html" id="org.eclipse.platform.doc.isv.993" label="%topic_sample_swt_text_editor" >        </topic>
+      </topic>
+      <topic href="" id="org.eclipse.platform.doc.isv.994" label="%topic_sample_swt_category_eclipse_views" >
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.controls/doc-html/swt_controls_ex.html" id="org.eclipse.platform.doc.isv.995" label="%topic_sample_swt_controls" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.ole.win32/doc-html/swt_ole_ex.html" id="org.eclipse.platform.doc.isv.996" label="%topic_sample_swt_ole" >        </topic>
+        <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.paint/doc-html/swt_paint_ex.html" id="org.eclipse.platform.doc.isv.997" label="%topic_sample_swt_paint" >        </topic>
+      </topic>
+    </topic>
+    <topic href="" id="org.eclipse.platform.doc.isv.998" label="%topic_sample_workbench" >
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.javaeditor/doc-html/ui_javaeditor_ex.html" id="org.eclipse.platform.doc.isv.999" label="%topic_sample_ui_java_editor" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.multipageeditor/doc-html/ui_multipageeditor_ex.html" id="org.eclipse.platform.doc.isv.1000" label="%topic_sample_ui_multi_page" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.propertysheet/doc-html/ui_propertysheet_ex.html" id="org.eclipse.platform.doc.isv.1001" label="%topic_sample_ui_property_view" >      </topic>
+      <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.readmetool/doc-html/ui_readmetool_ex.html" id="org.eclipse.platform.doc.isv.1002" label="%topic_sample_ui_readme" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.scripting.examples/doc-html/script_ex.html" id="org.eclipse.platform.doc.isv.1003" label="%topic_sample_scripting" >    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.help.examples.ex1/doc-html/help_ex.html" id="org.eclipse.platform.doc.isv.1004" label="%topic_sample_help" >    </topic>
+    <topic href="/org.eclipse.platform.doc.isv/samples/org.eclipse.update.examples/doc-html/update_install_ex.html" id="org.eclipse.platform.doc.isv.1005" label="%topic_sample_update" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.platform.doc.isv/questions/index.html" id="org.eclipse.platform.doc.isv.questionsIndexRoot" label="%topic_FAQ" >  </topic>
+</infoview>
+<!-- End of %infoview_contents_label infoview -->
+
+</infoset>
+

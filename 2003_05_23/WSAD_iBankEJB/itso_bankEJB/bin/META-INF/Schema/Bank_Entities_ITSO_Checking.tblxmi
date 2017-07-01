@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="Checking" name="Checking" primaryKey="CheckingTable_key">
+  <columns xmi:id="Checking_accid" name="accid" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_15" characterSet="800" length="8">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Checking_overdraft" name="overdraft" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_4" precision="8" scale="2">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V71_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="CheckingTable_key" name="Checking" members="Checking_accid" table="Checking" constraint="CheckingTable_key_Constraint"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="CheckingToAccount_ref" name="CheckingAccount" members="Checking_accid" constraint="SQLConstraint_4">
+    <target href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#AccountTable_key"/>
+  </namedGroup>
+  <constraints xmi:id="CheckingTable_key_Constraint" name="Checking" type="PRIMARYKEY" primaryKey="CheckingTable_key"/>
+  <constraints xmi:id="SQLConstraint_4" name="CheckingAccount" type="FOREIGNKEY" referenceByKey="CheckingToAccount_ref"/>
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

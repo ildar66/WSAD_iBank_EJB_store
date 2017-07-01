@@ -1,0 +1,74 @@
+
+<HTML>
+<HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/refselect[4].html">
+
+<TITLE>Справочник Банков</TITLE>
+<link rel="stylesheet" type="text/css" href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/include/cb.css">
+<script language="javascript" type="text/javascript" src="include/common.js"></script>
+<script language="javascript" type="text/javascript">
+function Go(strval) {
+	var thisform = document.refform;
+	var outform = window.opener.document.forms[thisform.formname.value];
+	
+	if(outform != null)
+	{
+		var names = thisform.fieldnames.value.split('|'), values = strval.split('|');
+		for(var i in names)
+			if(names[i].length > 0)
+				outform[names[i]].value = unescape(values[i]);
+	}
+	if(outform.onrefselect)
+		outform.onrefselect(thisform.referenceid.value);
+
+	Close();
+}
+
+function Close()
+{
+	if(window.opener)
+		window.opener.focus();
+	window.close();
+}
+
+function SortBy(field)
+{
+	var e = document.refform.sort;
+	e.value = (e.value == field)?field + ' desc':field;
+	e.form.submit();
+}
+</script>
+</HEAD>
+
+<BODY>
+
+<FORM action="refselect.asp" method=post name=refform>
+
+<p class="gridtitle">Параметры поиска</p>
+<table class="inputbar">
+<TR><TD class=label>БИК</TD><TD class=input><INPUT name=bic size=10 maxlength=9 value="040009002" title="БИК"></TD>
+<TD class=button rowspan="3">
+<INPUT type=submit value="Показать" name=btnfind>&nbsp;<INPUT type=reset value="Сбросить" name=btnreset>&nbsp;<INPUT type=button value="Закрыть" onclick="Close();">
+</TD>
+</TR>
+<TR><TD class=label>Наименование</TD><TD class=input><INPUT name=bankname size=34 maxlength=30 value="" title="Наименование"></TD></TR>
+<TR><TD class=label>Кор. счет</TD><TD class=input><INPUT name=bankacc size=23 maxlength=20 value="" title="Кор. счет"></TD></TR>
+</TABLE>
+
+	<INPUT type="hidden" name="referenceid" value="1">
+	<INPUT type="hidden" name="fieldnames" value="receiverbic|receiverbank|receivercoracc">
+	<INPUT type="hidden" name="formname" value="docform">
+	<INPUT type="hidden" name="sort" value="">
+</FORM>
+
+<p class="gridtitle">Справочник Банков</p>
+<table class="grid">
+<TR><th nowrap><a href="javascript:SortBy('bic')" title="Сортировать по полю 'БИК'">БИК</a></th><th nowrap><a href="javascript:SortBy('bankname')" title="Сортировать по полю 'Наименование'">Наименование</a></th><th nowrap><a href="javascript:SortBy('bankacc')" title="Сортировать по полю 'Кор. счет'">Кор. счет</a></th><th nowrap><a href="javascript:SortBy('rkc')" title="Сортировать по полю 'РКЦ'">РКЦ</a></th></TR>
+<TR><TD><A href="javascript:Go('040009002|ПУ ЦБ РФ N 10462 Г. СЕВАСТОПОЛЬ||044587002|0')" title="Выберите запись">040009002</A></TD><TD>ПУ ЦБ РФ N 10462 Г. СЕВАСТОПОЛЬ</TD><TD></TD><TD>044587002</TD></TR>
+</TABLE>
+
+
+<P align=right>Всего записей 1.</P>
+
+</BODY>
+</HTML>

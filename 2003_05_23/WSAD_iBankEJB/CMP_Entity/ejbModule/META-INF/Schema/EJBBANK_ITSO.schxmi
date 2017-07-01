@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBSchema_1" name="ITSO">
+  <database href="CMP_Entity/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <tables href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBTable_1"/>
+  <tables href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_BANKACCOUNT.tblxmi#RDBTable_1"/>
+  <tables href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBTable_1"/>
+  <tables href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBTable_1"/>
+</RDBSchema:RDBSchema>

@@ -1,0 +1,18 @@
+#
+#Thu Aug 22 17:21:11 GMT+04:00 2002
+com.ibm.CORBA.standardClaimQOPModels=high
+com.ibm.CORBA.loginTimeout=300
+com.ibm.CORBA.delegateCredentials=methodDefined
+com.ibm.CORBA.securityActivityOutputMode=file
+com.ibm.CORBA.securityTraceOutputMode=file
+com.ibm.CORBA.securityTraceOutput=C\:\\WSAD_iBank\\.metadata\\.plugins\\com.ibm.etools.server.tools\\tmp0\\logs\\sas_server.log
+com.ibm.CORBA.securityTraceLevel=none
+com.ibm.CORBA.disableSecurityDuringBootstrap=true
+com.ibm.CORBA.securityErrorsOutputMode=both
+com.ibm.CORBA.SSLTypeIClientAssociationEnabled=true
+com.ibm.CORBA.bootstrapRepositoryLocation=C\:\\WSAD_iBank\\.metadata\\.plugins\\com.ibm.etools.server.tools\\tmp0\\etc\\secbootrep
+com.ibm.CORBA.securityExceptionsOutputMode=file
+com.ibm.CORBA.loginSource=properties
+com.ibm.CORBA.securityDebug=false
+com.ibm.CORBA.standardPerformQOPModels=high
+com.ibm.CORBA.SSLTypeIServerAssociationEnabled=true

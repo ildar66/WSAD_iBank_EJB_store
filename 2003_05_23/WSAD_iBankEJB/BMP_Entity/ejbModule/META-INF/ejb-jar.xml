@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 1.1//EN" "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd">
+<ejb-jar id="ejb-jar_ID">
+	<display-name>BMP_Entity</display-name>
+	<enterprise-beans>
+		<entity id="TransactionRecord">
+			<ejb-name>TransactionRecord</ejb-name>
+			<home>itso.ejb35.bmp.TransactionRecordHome</home>
+			<remote>itso.ejb35.bmp.TransactionRecord</remote>
+			<ejb-class>itso.ejb35.bmp.TransactionRecordBean</ejb-class>
+			<persistence-type>Bean</persistence-type>
+			<prim-key-class>itso.ejb35.bmp.TransactionRecordKey</prim-key-class>
+			<reentrant>False</reentrant>
+			<env-entry>
+				<env-entry-name>PROVIDER_URL</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>iiop:///</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<env-entry-name>DATASOURCE_NAME</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>jdbc/EJBBANK</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<env-entry-name>TABLE_NAME</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>ITSO.TRANSRECORD</env-entry-value>
+			</env-entry>
+		</entity>
+	</enterprise-beans>
+</ejb-jar>

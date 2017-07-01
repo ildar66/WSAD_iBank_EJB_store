@@ -1,0 +1,18 @@
+
+[IndexId]
+Version	= 1
+
+[GtrCreateParams]
+DisableMode	= 0
+WordRuleMode	= 1
+BlockThreshold	= -1
+BlockSize	= -1
+
+[GtrSysParams]
+PoolSize	= 33554432
+PoolSizeDelta	= 2097152
+FileMax	= 500
+DisplayLogFlag	= 'N'
+
+[Session]
+HighPerformanceFlag	= OFF

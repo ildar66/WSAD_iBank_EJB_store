@@ -1,0 +1,12 @@
+/* Set the Form elements style */
+
+textarea {font-family: Tahoma,Verdana,Arial,Helvetica; font-size: 10pt; color: Black;}
+SELECT {font-family: Tahoma,Verdana,Arial,Helvetica; font-size: 10pt; color: Black;}
+INPUT {font-family: Tahoma,Verdana,Arial, Helvetica; font-size: 10pt; color: Black;}
+pre {font-family : Tahoma,Verdana,Arial,Helvetica; font-size: 10pt; color: Black;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+th {font-family: Tahoma,Verdana,Arial,Helvetica; font-size: 10pt; color: Black;}
+td {font-family: Tahoma,Verdana,Arial,Helvetica; font-size: 10pt; color: Black;}
+.unselectedTextAnchor {color:blue; background-color:document.backgroundColor}
+.selectedTextAnchor {color:white; background-color:navy}

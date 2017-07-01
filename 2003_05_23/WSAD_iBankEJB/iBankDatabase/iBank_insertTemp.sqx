@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<Query>
+<Schema>iBankDatabase/iBank.dbxmi</Schema>
+
+<InsertStatement>
+<![CDATA[
+
+INSERT INTO 
+   ILDAR.BANKS
+   (
+      BIK, 
+      BILL_CORR, 
+      BANK_NAME, 
+      CITY, 
+      DELIVERY
+   )
+   VALUES 
+   (
+      :bik, 
+      NULL, 
+      'name5', 
+      NULL, 
+      NULL
+   )
+]]>
+</InsertStatement>
+</Query>

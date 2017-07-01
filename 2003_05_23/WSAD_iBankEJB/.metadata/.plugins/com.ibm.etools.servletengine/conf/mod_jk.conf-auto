@@ -1,0 +1,104 @@
+###################################################################
+# Auto generated configuration. Dated: Tue Apr 01 11:21:50 GMT+04:00 2003
+###################################################################
+
+#
+# The following line instructs Apache to load the jk module
+#
+LoadModule jk_module modules/mod_jk.dll
+
+JkWorkersFile "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/conf/workers.properties"
+JkLogFile "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/logs/mod_jk.log"
+
+#
+# Log level to be used by mod_jk
+#
+JkLogLevel error
+
+###################################################################
+#                     SSL configuration                           #
+# 
+# By default mod_jk is configured to collect SSL information from
+# the apache environment and send it to the Tomcat workers. The
+# problem is that there are many SSL solutions for Apache and as
+# a result the environment variable names may change.
+#
+# The following (commented out) JK related SSL configureation
+# can be used to customize mod_jk's SSL behaviour.
+# 
+# Should mod_jk send SSL information to Tomact (default is On)
+# JkExtractSSL Off
+# 
+# What is the indicator for SSL (default is HTTPS)
+# JkHTTPSIndicator HTTPS
+# 
+# What is the indicator for SSL session (default is SSL_SESSION_ID)
+# JkSESSIONIndicator SSL_SESSION_ID
+# 
+# What is the indicator for client SSL cipher suit (default is SSL_CIPHER)
+# JkCIPHERIndicator SSL_CIPHER
+# 
+# What is the indicator for the client SSL certificated (default is SSL_CLIENT_CERT)
+# JkCERTSIndicator SSL_CLIENT_CERT
+# 
+#                                                                 #
+###################################################################
+
+#
+# Root context mounts for Tomcat
+#
+JkMount /*.jsp ajp12
+JkMount /servlet/* ajp12
+
+#########################################################
+# Auto configuration for the /uddiexplorer context starts.
+#########################################################
+
+#
+# The following line makes apache aware of the location of the /uddiexplorer context
+#
+Alias /uddiexplorer "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/webapps/uddiexplorer"
+<Directory "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/webapps/uddiexplorer">
+    Options Indexes FollowSymLinks
+</Directory>
+
+#
+# The following line mounts all JSP files and the /servlet/ uri to tomcat
+#
+JkMount /uddiexplorer/servlet/* ajp12
+JkMount /uddiexplorer/*.jsp ajp12
+
+#
+# The following line prohibits users from directly accessing WEB-INF
+#
+<Location "/uddiexplorer/WEB-INF/">
+    AllowOverride None
+    deny from all
+</Location>
+#
+# Use Directory too. On Windows, Location doesn't work unless case matches
+#
+<Directory "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/webapps/uddiexplorer/WEB-INF/">
+    AllowOverride None
+    deny from all
+</Directory>
+
+#
+# The following line prohibits users from directly accessing META-INF
+#
+<Location "/uddiexplorer/META-INF/">
+    AllowOverride None
+    deny from all
+</Location>
+#
+# Use Directory too. On Windows, Location doesn't work unless case matches
+#
+<Directory "C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.servletengine/webapps/uddiexplorer/META-INF/">
+    AllowOverride None
+    deny from all
+</Directory>
+
+#######################################################
+# Auto configuration for the /uddiexplorer context ends.
+#######################################################
+

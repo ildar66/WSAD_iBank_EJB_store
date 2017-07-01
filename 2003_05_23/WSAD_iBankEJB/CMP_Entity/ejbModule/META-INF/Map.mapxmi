@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbrdbmapping:EjbRdbDocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbrdbmapping="ejbrdbmapping.xmi" xmlns:RDBSchema="RDBSchema.xmi" xmlns:Mapping="Mapping.xmi" xmlns:ejb="ejb.xmi" xmlns:java="java.xmi" xmi:id="EjbRdbDocumentRoot_1" outputReadOnly="false" topToBottom="true" commandStack="&#60;collection>&#60;command-creation-record>&#60;class name=&#34;com.ibm.etools.ejbrdbmapping.command.EJBNameMatchMappingCommand&#34;/>&#60;command-parameter>&#60;mapping>&#60;collection>&#60;ref-object href=&#34;META-INF/ejb-jar.xml#ejb-jar_ID&#34;/>&#60;ref-object href=&#34;CMP_Entity/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1&#34;/>&#60;/collection>&#60;int value=&#34;0&#34;/>&#60;/mapping>&#60;null/>&#60;null/>&#60;null/>&#60;int value=&#34;0&#34;/>&#60;/command-parameter>&#60;/command-creation-record>&#60;/collection>">
+  <helper xmi:type="ejbrdbmapping:RdbSchemaProperies" xmi:id="RdbSchemaProperies_1" primitivesDocument="DB2UDBNT_V72">
+    <vendorConfiguration href="RdbVendorConfigurations.xmi#DB2UDBNT_V72_Config"/>
+  </helper>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1">
+      <table href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBTable_1"/>
+    </helper>
+    <nested xmi:id="Mapping_1">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_1"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#int-INTEGER"/>
+    </nested>
+    <nested xmi:id="Mapping_2">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_3"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_2"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_3">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_4"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_3"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_4">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_2"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_4"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_5">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_5"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_5"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_6">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_6"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_6"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_7">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_1">
+        <targetClass href="java:/java.io#Serializable"/>
+        <transformerClass href="java:/com.ibm.vap.converters.streams#VapBinaryStreamToSerializableObjectConverter"/>
+      </helper>
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_7"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBColumn_7"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBTable_1"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_2">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_2">
+      <table href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBTable_1"/>
+    </helper>
+    <nested xmi:id="Mapping_8">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_10"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBColumn_1"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:id="Mapping_9">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_11"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBColumn_2"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#BigDecimal-DECIMAL"/>
+    </nested>
+    <nested xmi:id="Mapping_10">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_13"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBColumn_3"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <nested xmi:id="Mapping_11">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_15"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBColumn_4"/>
+      <typeMapping href="JavatoDB2UDBNT_V72TypeMaps.xmi#String-VARCHAR"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBTable_1"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_3">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_3">
+      <table href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBTable_1"/>
+    </helper>
+    <nested xmi:id="Mapping_12">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_8"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBColumn_1"/>
+    </nested>
+    <nested xmi:id="Mapping_13">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_9"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBColumn_2"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBTable_1"/>
+  </nested>
+  <inputs xmi:type="ejb:EJBJar" href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <outputs xmi:type="RDBSchema:RDBDatabase" href="CMP_Entity/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <typeMapping xmi:type="Mapping:MappingRoot" href="JavatoDB2UDBNT_V72TypeMaps.xmi#Java_to_DB2UDBNT_V72_TypeMaps"/>
+</ejbrdbmapping:EjbRdbDocumentRoot>

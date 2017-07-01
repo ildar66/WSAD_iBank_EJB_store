@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE websphere SYSTEM "product.dtd" >
+<websphere>
+	<appserver>
+		<name>IBM WebSphere Application Server</name>
+		<edition>
+			<value>AEs</value>
+			<name>Advanced Single Server Edition for Multiplatforms</name>
+		</edition>
+
+		<version>4.0.2</version>
+
+		<extensions>
+		</extensions>
+
+		<build>
+			<number>a0150.05</number>
+			<date>12/18/2001</date>
+		</build>
+	</appserver>
+</websphere>

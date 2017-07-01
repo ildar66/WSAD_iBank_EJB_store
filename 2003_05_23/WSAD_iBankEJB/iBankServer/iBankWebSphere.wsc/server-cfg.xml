@@ -1,0 +1,116 @@
+<applicationserver:Domain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:applicationserver="applicationserver.xmi" xmlns:server="server.xmi" xmlns:resources="resources.xmi" xmlns:security="security.xmi" xmi:id="Domain_1" name="iBankWebSphere">
+  <virtualHosts xmi:id="VirtualHost_1" name="default_host">
+    <aliases xmi:id="HostAlias_1" hostname="*" port="*"/>
+    <defaultMimeEntries xmi:id="MimeEntry_1" type="image">
+      <extensions>gif</extensions>
+    </defaultMimeEntries>
+    <defaultMimeEntries xmi:id="MimeEntry_2" type="text/plain">
+      <extensions>txt</extensions>
+      <extensions>java</extensions>
+      <extensions>wsdl</extensions>
+    </defaultMimeEntries>
+    <defaultMimeEntries xmi:id="MimeEntry_3" type="text/html">
+      <extensions>htm</extensions>
+      <extensions>html</extensions>
+    </defaultMimeEntries>
+    <defaultMimeEntries xmi:id="MimeEntry_4" type="x-application">
+      <extensions>exe</extensions>
+    </defaultMimeEntries>
+    <defaultMimeEntries xmi:id="MimeEntry_5" type="x-application/zip">
+      <extensions>zip</extensions>
+    </defaultMimeEntries>
+    <defaultMimeEntries xmi:id="MimeEntry_6" type="application/pdf">
+      <extensions>pdf</extensions>
+    </defaultMimeEntries>
+  </virtualHosts>
+  <nodes xmi:id="Node_1" name="localhost">
+    <installedApps xmi:id="ApplicationRef_1" name="IBMUTC" archiveURL="${PREDEFINED_EAR_ROOT}/IBMUTC/IBMUTC.ear">
+      <modules xmi:type="applicationserver:WebModuleRef" xmi:id="WebModuleRef_1" uri="UTC.war"/>
+    </installedApps>
+    <installedApps xmi:id="ApplicationRef_2" name="iBankEAR" archiveURL="${APP_INSTALL_ROOT}/iBankEAR">
+      <modules xmi:type="applicationserver:WebModuleRef" xmi:id="WebModuleRef_2" uri="iBankWeb.war"/>
+    </installedApps>
+    <installedApps xmi:id="ApplicationRef_3" name="ITSO EJB Redbook EAR" archiveURL="${APP_INSTALL_ROOT}/ITSO EJB Redbook EAR">
+      <modules xmi:type="applicationserver:EJBModuleRef" xmi:id="EJBModuleRef_1" uri="itso_bankEJB.jar"/>
+      <modules xmi:type="applicationserver:EJBModuleRef" xmi:id="EJBModuleRef_2" uri="CMP_Entity.jar"/>
+      <modules xmi:type="applicationserver:EJBModuleRef" xmi:id="EJBModuleRef_3" uri="BMP_Entity.jar"/>
+      <modules xmi:type="applicationserver:EJBModuleRef" xmi:id="EJBModuleRef_4" uri="Stateless_Session.jar"/>
+      <modules xmi:type="applicationserver:WebModuleRef" xmi:id="WebModuleRef_3" uri="ITSO_EJB_Redbook_Web.war"/>
+    </installedApps>
+    <servers xmi:type="applicationserver:ApplicationServer" xmi:id="ApplicationServer_1" desiredExecutionState="START" name="Default Server" id="-1" moduleVisibility="APPLICATION">
+      <processDefinition xmi:type="server:JavaProcessDef" xmi:id="ProcessDef_1" executableName="${JAVA_HOME}/bin/java" commandLineArguments="" workingDirectory="${WAS_ROOT}/bin" executableTargetKind="JAVA_CLASS" executableTarget="com.ibm.ws.bootstrap.WSLauncher">
+        <executionSettings xmi:id="ProcessExecution_1" processPriority="1000" umask="777" runAsUser="root"/>
+        <ioRedirect xmi:id="OutputRedirect_1" stdoutFilename="${LOG_ROOT}/default_server_stdout.log" stderrFilename="${LOG_ROOT}/default_server_stderr.log"/>
+        <jvmSettings xmi:id="JavaVirtualMachine_1" classpath="" bootClasspath="" verboseModeClass="false" verboseModeGarbageCollection="false" verboseModeJNI="false" initialHeapSize="0" maximumHeapSize="256" runHProf="false" hprofArguments="" debugMode="false" debugArgs="" genericCommandLineArgs="com.ibm.ws.runtime.StandardServer" disableJIT="false"/>
+      </processDefinition>
+      <objectLevelTraceSettings xmi:id="ObjectLevelTrace_1" enable="false" hostname="localhost" port="2102" debug="false" sourcePath=""/>
+      <webContainer xmi:id="WebContainer_1" installedWebModules="WebModuleRef_1 WebModuleRef_2 WebModuleRef_3">
+        <transports xmi:type="applicationserver:HTTPTransport" xmi:id="HttpTransport_1" hostname="*" port="8080"/>
+        <sessionManager xmi:id="SessionManager_1" enableUrlRewriting="false" enableCookies="true" enableSSLTracking="false" enableProtocolSwitchRewriting="false" enablePersistentSessions="false" enableSecurityIntegration="false">
+          <defaultCookieSettings xmi:id="Cookie_1" domain="" maximumAge="-1" path="/" secure="false"/>
+          <persistentSessions xmi:id="SessionPersistence_1" datasourceJNDIName="jdbc/Session" userId="db2admin" password="{xor}Oz1tPjsyNjF7dxoRHBAbGht2" db2RowSize="ROW_SIZE_4KB" tableSpaceName=""/>
+          <tuningParams xmi:id="TuningParams_1" usingMultiRowSchema="false" allowOverflow="true" scheduleInvalidation="false" writeFrequency="END_OF_SERVLET_SERVICE" writeInterval="120" writeContents="ONLY_UPDATED_ATTRIBUTES" invalidationTimeout="30">
+            <invalidationSchedule xmi:id="InvalidationSchedule_1" firstHour="14" secondHour="2"/>
+          </tuningParams>
+        </sessionManager>
+        <threadPool xmi:id="ThreadPool_1" minimumSize="10" maximumSize="50" inactivityTimeout="10" isGrowable="false"/>
+        <dynamicCache xmi:id="DynamicCache_1" enable="false" cacheSize="1000" defaultPriority="1"/>
+      </webContainer>
+      <ejbContainer xmi:id="EJBContainer_1" passivationDirectory="${WAS_TOOLS_PLUGIN_STATE_LOCATION}/temp" inactivePoolCleanupInterval="30000" installedEJBModules="EJBModuleRef_1 EJBModuleRef_2 EJBModuleRef_3 EJBModuleRef_4" defaultDatasource="DataSource_1">
+        <cacheSettings xmi:id="EJBCache_1" cleanupInterval="1000" cacheSize="2000"/>
+      </ejbContainer>
+      <locationServiceDaemon xmi:id="LocationServiceDaemon_1" hostname="localhost" port="9000" mode="NONE"/>
+      <orbSettings xmi:id="ORBConfig_1" enable="true" bootstrapHost="localhost" bootstrapPort="900">
+        <threadPool xmi:id="ThreadPool_2" minimumSize="10" maximumSize="50" inactivityTimeout="3500" isGrowable="false"/>
+      </orbSettings>
+      <transactionService xmi:id="TransactionService_1" transactionLogFile="${TRANLOG_ROOT}/tran1.log,${TRANLOG_ROOT}/tran2.log" totalTranLifetimeTimeout="60000" clientInactivityTimeout="30000"/>
+      <traceService xmi:id="TraceServiceConfig_1" enable="true" traceSpecification="*=all=disabled" traceOutputFilename="${LOG_ROOT}/trace.log" diagThreadPort="7000"/>
+      <customServices xmi:id="CustomService_1" enable="true" classname="com.ibm.etools.websphere.tools.internal.listener.WASServerListener" displayName="Server Listener Service" description="Server Listener Service for WebSphere Studio"/>
+      <performanceMonitoring xmi:id="PerformanceMonitor_1" enable="false" specification=""/>
+      <serverSecurityConfig xmi:id="ServerSecurityConfig_1" useDomainQualifiedUserNames="false"/>
+    </servers>
+    <pathMap xmi:id="PathMap_1">
+      <entries xmi:id="PathMapEntry_1" symbolicName="APP_INSTALL_ROOT" path="C:\WSAD_iBank" description="The filesystem path to the directory which will contain installed enterprise applications."/>
+      <entries xmi:id="PathMapEntry_2" symbolicName="LOG_ROOT" path="${WAS_TOOLS_PLUGIN_STATE_LOCATION}\logs" description="The filesystem path to the directory which will contain server log files."/>
+      <entries xmi:id="PathMapEntry_3" symbolicName="TRANLOG_ROOT" path="${WAS_TOOLS_PLUGIN_STATE_LOCATION}\tranlog" description="The filesystem path to the directory which will transaction log files."/>
+      <entries xmi:id="PathMapEntry_4" symbolicName="PRODUCT_INSTALL_ROOT" path="C:/WSAD/plugins/com.ibm.etools.websphere.runtime" description="The filesystem path to the product installation directory"/>
+      <entries xmi:id="PathMapEntry_5" symbolicName="WAS_ROOT" path="C:/WSAD/plugins/com.ibm.etools.websphere.runtime" description="The filesystem path to the product installation directory"/>
+      <entries xmi:id="PathMapEntry_6" symbolicName="JAVA_HOME" path="${WAS_ROOT}/java" description="The filesystem path to the product java home directory"/>
+      <entries xmi:id="PathMapEntry_7" symbolicName="PREDEFINED_EAR_ROOT" path="C:\WSAD_iBank\.metadata\.plugins\com.ibm.etools.server.tools\tmp0"/>
+      <entries xmi:id="PathMapEntry_8" symbolicName="WAS_TOOLS_PLUGIN_STATE_LOCATION" path="C:\WSAD_iBank\.metadata\.plugins\com.ibm.etools.websphere.tools"/>
+    </pathMap>
+    <installedResourceProviders xmi:id="ResourceProviderRef_1" classpath="C:\Program Files\SQLLIB\java\db2java.zip" resourceProvider="JDBCDriver_1"/>
+    <installedResourceProviders xmi:id="ResourceProviderRef_2" classpath="${WAS_ROOT}/lib/idb.jar" resourceProvider="JDBCDriver_2"/>
+  </nodes>
+  <security xmi:id="Security_1" cacheTimeout="30000" enabled="false" activeAuthMechanism="LocalOSAuthentication_1">
+    <authMechanisms xmi:type="security:LocalOSAuthentication" xmi:id="LocalOSAuthentication_1">
+      <userRegistry xmi:type="security:LocalOSUserRegistry" xmi:id="LocalOSUserRegistry_1" serverId="demouser" serverPassword="{xor}OzoyMC8+LCwoOw==" name="LOCALOS">
+        <properties xmi:id="UserRegProperty_1" name="myCustomProperty" value="myCustomValue"/>
+      </userRegistry>
+    </authMechanisms>
+    <defaultSSLSettings xmi:id="SecureSocketLayer_1" keyFileName="${WAS_ROOT}/etc/DummyServerKeyFile.jks" keyFilePassword="{xor}CDo9Hgw=" keyFileFormat="JKS" trustFileName="${WAS_ROOT}/etc/DummyServerTrustFile.jks" trustFilePassword="{xor}CDo9Hgw=" clientAuthentication="false" securityLevel="HIGH" enableCryptoHardwareSupport="false">
+      <cryptoHardware xmi:id="CryptoHardwareToken_1" tokenType="PKCS#11" libraryFile="" password="{xor}"/>
+    </defaultSSLSettings>
+  </security>
+  <resourceProviders xmi:type="resources:JDBCDriver" xmi:id="JDBCDriver_1" name="Db2JdbcDriver" description="DB2 JDBC Driver" implementationClassName="COM.ibm.db2.jdbc.DB2ConnectionPoolDataSource" urlPrefix="jdbc:db2">
+    <factories xmi:type="resources:DataSource" xmi:id="DataSource_1" name="Session Persistence datasource" jndiName="jdbc/Session" description="Data source for session persistence" category="Samples" jtaEnabled="false" databaseName="Session" minimumPoolSize="1" maximumPoolSize="30" connectionTimeout="180" idleTimeout="1800" orphanTimeout="1800">
+      <propertySet xmi:id="DataSource_1_ps"/>
+    </factories>
+    <factories xmi:type="resources:DataSource" xmi:id="DataSource_2" name="IBANK" jndiName="jdbc/iBank" description="Соединение с локальной DB2" category="" jtaEnabled="false" databaseName="iBank" minimumPoolSize="1" maximumPoolSize="10" connectionTimeout="180" idleTimeout="1800" orphanTimeout="1800" statementCacheSize="100" disableAutoConnectionCleanup="false">
+      <propertySet xmi:id="null_ps"/>
+    </factories>
+    <factories xmi:type="resources:DataSource" xmi:id="DataSource_3" name="EJBBANK" jndiName="jdbc/EJBBANK" description="" category="" jtaEnabled="false" databaseName="EJBBANK" minimumPoolSize="1" maximumPoolSize="10" connectionTimeout="180" idleTimeout="1800" orphanTimeout="1800" statementCacheSize="100" disableAutoConnectionCleanup="false">
+      <propertySet xmi:id="null_ps"/>
+    </factories>
+    <propertySet xmi:id="JDBCDriver_1_ps"/>
+  </resourceProviders>
+  <resourceProviders xmi:type="resources:JDBCDriver" xmi:id="JDBCDriver_2" name="idbJdbcDriver" description="instantDB JDBC Driver" implementationClassName="com.ibm.ejs.cm.portability.IDBConnectionPoolDataSource" urlPrefix="jdbc:idb">
+    <propertySet xmi:id="JDBCDriver_2_ps"/>
+  </resourceProviders>
+  <resourceProviders xmi:type="resources:URLProvider" xmi:id="URLProvider_1" name="Default URL Provider" description="The default internal URL Provider that may be used to create URL Factories. This provider's StreamHandler class name and protocol must be set to 'unused' in order for it to be valid" streamHandlerClassName="unused" protocol="unused">
+    <propertySet xmi:id="URLProvider_1_ps"/>
+  </resourceProviders>
+  <resourceProviders xmi:type="resources:MailProvider" xmi:id="MailProvider_1" name="Default Mail Provider" description="The default internal Mail Provider that may be used to create Mail Sessions">
+    <propertySet xmi:id="MailProvider_1_ps"/>
+  </resourceProviders>
+</applicationserver:Domain>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="tree.xsl" type="text/xsl"?>
+
+<infoset id="org.eclipse.pde.doc.user.infoset_Guide" label="%infoset_guide_title" standalone="true" >
+
+<!-- %infoview_contents_label infoview [org.eclipse.pde.doc.user.view_Contents] -->
+<infoview id="org.eclipse.pde.doc.user.view_Contents" label="%infoview_contents_label" >
+  <topic href="/org.eclipse.pde.doc.user/guide/pde.htm" id="org.eclipse.pde.doc.user.758" label="%topic_guide_intro" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_concepts.htm" id="org.eclipse.pde.doc.user.759" label="%topic_guide_concepts" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_configuring.htm" id="org.eclipse.pde.doc.user.760" label="%topic_guide_configuring" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_setup.htm" id="org.eclipse.pde.doc.user.761" label="%topic_guide_setup" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_creating.htm" id="org.eclipse.pde.doc.user.762" label="%topic_guide_creating" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest.htm" id="org.eclipse.pde.doc.user.763" label="%topic_guide_manifest" >
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_overview.htm" id="org.eclipse.pde.doc.user.764" label="%topic_guide_manifest_overview" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_dependencies.htm" id="org.eclipse.pde.doc.user.765" label="%topic_guide_manifest_dependencies" >
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_dependencies_buildpath.htm" id="org.eclipse.pde.doc.user.766" label="%topic_guide_manifest_dependencies_buildpath" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_runtime.htm" id="org.eclipse.pde.doc.user.767" label="%topic_guide_manifest_runtime" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_extensions.htm" id="org.eclipse.pde.doc.user.768" label="%topic_guide_manifest_extensions" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_extensionpoints.htm" id="org.eclipse.pde.doc.user.769" label="%topic_guide_manifest_extensionpoints" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_manifest_source.htm" id="org.eclipse.pde.doc.user.770" label="%topic_guide_manifest_source" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_running.htm" id="org.eclipse.pde.doc.user.771" label="%topic_guide_running" >
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_running_tracing.htm" id="org.eclipse.pde.doc.user.772" label="%topic_guide_running_tracing" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_running_debugging.htm" id="org.eclipse.pde.doc.user.773" label="%topic_guide_running_debugging" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_schema.htm" id="org.eclipse.pde.doc.user.774" label="%topic_guide_schema" >
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_schema_editor.htm" id="org.eclipse.pde.doc.user.775" label="%topic_guide_schema_editor" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_schema_using.htm" id="org.eclipse.pde.doc.user.776" label="%topic_guide_schema_using" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_convert.htm" id="org.eclipse.pde.doc.user.777" label="%topic_guide_converting" >  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_fragment.htm" id="org.eclipse.pde.doc.user.778" label="%topic_guide_fragment" >
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_fragment_example.htm" id="org.eclipse.pde.doc.user.779" label="%topic_guide_fragment_example" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_fragment_build.htm" id="org.eclipse.pde.doc.user.780" label="%topic_guide_fragment_build" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.pde.doc.user/guide/pde_deploy.htm" id="org.eclipse.pde.doc.user.781" label="%topic_guide_deploy" >
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_components.htm" id="org.eclipse.pde.doc.user.782" label="%topic_guide_component" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_component_setup.htm" id="org.eclipse.pde.doc.user.783" label="%topic_guide_component_setup" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_component_manifest.htm" id="org.eclipse.pde.doc.user.784" label="%topic_guide_component_manifest" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_component_synchronizing.htm" id="org.eclipse.pde.doc.user.785" label="%topic_guide_component_synchronizing" >    </topic>
+    <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating.htm" id="org.eclipse.pde.doc.user.786" label="%topic_guide_component_generating" >
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating_build.htm" id="org.eclipse.pde.doc.user.787" label="%topic_guide_component_generating_build" >      </topic>
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating_ant.htm" id="org.eclipse.pde.doc.user.788" label="%topic_guide_component_generating_ant" >      </topic>
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating_antcommandline.htm" id="org.eclipse.pde.doc.user.789" label="%topic_guide_component_generating_antcommandline" >      </topic>
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating_jars.htm" id="org.eclipse.pde.doc.user.790" label="%topic_guide_component_generating_jars" >      </topic>
+      <topic href="/org.eclipse.pde.doc.user/guide/pde_component_generating_publish.htm" id="org.eclipse.pde.doc.user.791" label="%topic_guide_component_generating_publish" >      </topic>
+    </topic>
+  </topic>
+</infoview>
+<!-- End of %infoview_contents_label infoview -->
+
+</infoset>
+

@@ -1,0 +1,353 @@
+<ejbext:EJBJarExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbext="ejbext.xmi" xmlns:ejb="ejb.xmi" xmlns:ecore="ecore.xmi" xmi:id="ejb-jar_ID_Ext">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="BankAccount_Ext" name="BankAccount">
+    <runAsSettings xmi:id="SecurityIdentity_1">
+      <methodElements xmi:id="MethodElement_1" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_1"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_1" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_2" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="BankAccount_findAccountsWithBalanceGreater_WhereClause_ID" whereClause="T1.balance > ?">
+      <finderMethodElements xmi:id="MethodElement_3" name="findAccountsWithBalanceGreater" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:FullSelectFinderDescriptor" xmi:id="BankAccount_findAccountsWithBalanceGreaterThanQueryString_FullSelect_ID" selectStatement="select T1.accid, T1.balance from ITSO.Account T1 where T1.balance > ? ">
+      <finderMethodElements xmi:id="MethodElement_4" name="findAccountsWithBalanceGreaterThan" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="BankAccount_findGoldAccounts_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_5" name="findGoldAccounts" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="BankAccount_findAccountsForCustomer_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_6" name="findAccountsForCustomer" parms="int" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="BankAccount_findAll_WhereClause_ID" whereClause="1 = 1">
+      <finderMethodElements xmi:id="MethodElement_7" name="findAll" parms="" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="BankAccount_findAccountsWithBalanceBetween_WhereClause_ID" whereClause="T1.balance >= ? AND T1.balance &#60;= ?">
+      <finderMethodElements xmi:id="MethodElement_8" name="findAccountsWithBalanceBetween" parms="java.math.BigDecimal java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <localRelationshipRoles xmi:id="BankAccount_custAcct" name="custAcct" sourceEjbName="CustAcct" forward="false" navigable="true" relationship="AccountToCustomer">
+      <multiplicity xmi:id="EMultiplicity_1" lower="1" upper="-1"/>
+    </localRelationshipRoles>
+    <localRelationshipRoles xmi:id="BankAccount_bankTransactions" name="bankTransactions" sourceEjbName="TransRecord" forward="false" navigable="true" relationship="AccountTransactions">
+      <multiplicity xmi:id="EMultiplicity_2" lower="1" upper="-1"/>
+    </localRelationshipRoles>
+    <accessIntents xmi:id="AccessIntent_1" intentType="READ">
+      <methodElements xmi:id="MethodElement_9" name="secondaryAddBankTransactions" parms="itso.ejb35.bank.TransRecord" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_2" intentType="READ">
+      <methodElements xmi:id="MethodElement_10" name="secondaryRemoveCustAcct" parms="itso.ejb35.bank.CustAcct" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_3" intentType="READ">
+      <methodElements xmi:id="MethodElement_11" name="getCustAcct" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_4" intentType="READ">
+      <methodElements xmi:id="MethodElement_12" name="secondaryAddCustAcct" parms="itso.ejb35.bank.CustAcct" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_5" intentType="READ">
+      <methodElements xmi:id="MethodElement_13" name="addBankTransactions" parms="itso.ejb35.bank.TransRecord" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_6" intentType="READ">
+      <methodElements xmi:id="MethodElement_14" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_7" intentType="READ">
+      <methodElements xmi:id="MethodElement_15" name="getBankTransactions" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_8" intentType="READ">
+      <methodElements xmi:id="MethodElement_16" name="secondaryRemoveBankTransactions" parms="itso.ejb35.bank.TransRecord" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="Banking_Ext" name="Banking" timeout="0">
+    <runAsSettings xmi:id="SecurityIdentity_2">
+      <methodElements xmi:id="MethodElement_17" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Banking"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_2"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_2" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_18" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Banking"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Banking"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="Checking_Ext" name="Checking">
+    <runAsSettings xmi:id="SecurityIdentity_3">
+      <methodElements xmi:id="MethodElement_19" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_3"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_3" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_20" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Checking_findAccountsWithBalanceGreater_WhereClause_ID" whereClause="T1.balance > ?">
+      <finderMethodElements xmi:id="MethodElement_21" name="findAccountsWithBalanceGreater" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:FullSelectFinderDescriptor" xmi:id="Checking_findAccountsWithBalanceGreaterThanQueryString_FullSelect_ID" selectStatement="select T1.accid, T1.balance from ITSO.Account T1 where T1.balance > ? ">
+      <finderMethodElements xmi:id="MethodElement_22" name="findAccountsWithBalanceGreaterThan" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="Checking_findGoldAccounts_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_23" name="findGoldAccounts" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="Checking_findAccountsForCustomer_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_24" name="findAccountsForCustomer" parms="int" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Checking_findAll_WhereClause_ID" whereClause="1 = 1">
+      <finderMethodElements xmi:id="MethodElement_25" name="findAll" parms="" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Checking_findAccountsWithBalanceBetween_WhereClause_ID" whereClause="T1.balance >= ? AND T1.balance &#60;= ?">
+      <finderMethodElements xmi:id="MethodElement_26" name="findAccountsWithBalanceBetween" parms="java.math.BigDecimal java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <accessIntents xmi:id="AccessIntent_9" intentType="READ">
+      <methodElements xmi:id="MethodElement_27" name="getOverdraft" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_10" intentType="READ">
+      <methodElements xmi:id="MethodElement_28" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="CustAcct_Ext" name="CustAcct">
+    <runAsSettings xmi:id="SecurityIdentity_4">
+      <methodElements xmi:id="MethodElement_29" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_4"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_4" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_30" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+    <localRelationshipRoles xmi:id="CustAcct_account" name="account" sourceEjbName="BankAccount" forward="true" navigable="true" relationship="AccountToCustomer">
+      <multiplicity xmi:id="EMultiplicity_3" lower="1" upper="1"/>
+      <attributes href="META-INF/ejb-jar.xml#CustAcct_account_accID"/>
+    </localRelationshipRoles>
+    <localRelationshipRoles xmi:id="CustAcct_customer" name="customer" sourceEjbName="Customer" forward="true" navigable="true" relationship="CustomerToAccount">
+      <multiplicity xmi:id="EMultiplicity_4" lower="1" upper="1"/>
+      <attributes href="META-INF/ejb-jar.xml#CustAcct_customer_customerID"/>
+    </localRelationshipRoles>
+    <accessIntents xmi:id="AccessIntent_11" intentType="READ">
+      <methodElements xmi:id="MethodElement_31" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_12" intentType="READ">
+      <methodElements xmi:id="MethodElement_32" name="getCustomerKey" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_13" intentType="READ">
+      <methodElements xmi:id="MethodElement_33" name="getAccount" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_14" intentType="READ">
+      <methodElements xmi:id="MethodElement_34" name="getCustomer" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_15" intentType="READ">
+      <methodElements xmi:id="MethodElement_35" name="getAccountKey" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="Customer_Ext" name="Customer">
+    <runAsSettings xmi:id="SecurityIdentity_5">
+      <methodElements xmi:id="MethodElement_36" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_5"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_5" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_37" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Customer_findByUserID_WhereClause_ID" whereClause="T2.userid = ?">
+      <finderMethodElements xmi:id="MethodElement_38" name="findByUserID" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Customer_findByLastName_WhereClause_ID" whereClause="T2.lastname like ?">
+      <finderMethodElements xmi:id="MethodElement_39" name="findByLastName" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <localRelationshipRoles xmi:id="Customer_custAcct" name="custAcct" sourceEjbName="CustAcct" forward="false" navigable="true" relationship="CustomerToAccount">
+      <multiplicity xmi:id="EMultiplicity_5" lower="1" upper="-1"/>
+    </localRelationshipRoles>
+    <accessIntents xmi:id="AccessIntent_16" intentType="READ">
+      <methodElements xmi:id="MethodElement_40" name="secondaryRemoveCustAcct" parms="itso.ejb35.bank.CustAcct" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_17" intentType="READ">
+      <methodElements xmi:id="MethodElement_41" name="getCustAcct" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_18" intentType="READ">
+      <methodElements xmi:id="MethodElement_42" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_19" intentType="READ">
+      <methodElements xmi:id="MethodElement_43" name="secondaryAddCustAcct" parms="itso.ejb35.bank.CustAcct" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="Savings_Ext" name="Savings">
+    <runAsSettings xmi:id="SecurityIdentity_6">
+      <methodElements xmi:id="MethodElement_44" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_6"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_6" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_45" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Savings_findAccountsWithBalanceGreater_WhereClause_ID" whereClause="T1.balance > ?">
+      <finderMethodElements xmi:id="MethodElement_46" name="findAccountsWithBalanceGreater" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:FullSelectFinderDescriptor" xmi:id="Savings_findAccountsWithBalanceGreaterThanQueryString_FullSelect_ID" selectStatement="select T1.accid, T1.balance from ITSO.Account T1 where T1.balance > ? ">
+      <finderMethodElements xmi:id="MethodElement_47" name="findAccountsWithBalanceGreaterThan" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="Savings_findGoldAccounts_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_48" name="findGoldAccounts" parms="java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:UserFinderDescriptor" xmi:id="Savings_findAccountsForCustomer_UserDefined_ID">
+      <finderMethodElements xmi:id="MethodElement_49" name="findAccountsForCustomer" parms="int" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Savings_findAll_WhereClause_ID" whereClause="1 = 1">
+      <finderMethodElements xmi:id="MethodElement_50" name="findAll" parms="" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <finderDescriptors xmi:type="ejbext:WhereClauseFinderDescriptor" xmi:id="Savings_findAccountsWithBalanceBetween_WhereClause_ID" whereClause="T1.balance >= ? AND T1.balance &#60;= ?">
+      <finderMethodElements xmi:id="MethodElement_51" name="findAccountsWithBalanceBetween" parms="java.math.BigDecimal java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </finderMethodElements>
+    </finderDescriptors>
+    <accessIntents xmi:id="AccessIntent_20" intentType="READ">
+      <methodElements xmi:id="MethodElement_52" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_21" intentType="READ">
+      <methodElements xmi:id="MethodElement_53" name="getMinAmount" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="TransRecord_Ext" name="TransRecord">
+    <runAsSettings xmi:id="SecurityIdentity_7">
+      <methodElements xmi:id="MethodElement_54" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+      <runAsMode xmi:type="ejbext:UseSystemIdentity" xmi:id="UseSystemIdentity_7"/>
+    </runAsSettings>
+    <isolationLevelAttributes xmi:id="IsolationLevelAttributes_7" isolationLevel="REPEATABLE_READ">
+      <methodElements xmi:id="MethodElement_55" name="*" type="Unspecified">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+    </isolationLevelAttributes>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+    <localRelationshipRoles xmi:id="TransRecord_owningAccount" name="owningAccount" sourceEjbName="BankAccount" forward="true" navigable="true" relationship="AccountTransactions">
+      <multiplicity xmi:id="EMultiplicity_6" lower="1" upper="1"/>
+      <attributes href="META-INF/ejb-jar.xml#TransRecord_owningAccount_accID"/>
+    </localRelationshipRoles>
+    <accessIntents xmi:id="AccessIntent_22" intentType="READ">
+      <methodElements xmi:id="MethodElement_56" name="_copyFromEJB" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_23" intentType="READ">
+      <methodElements xmi:id="MethodElement_57" name="getOwningAccount" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+    </accessIntents>
+    <accessIntents xmi:id="AccessIntent_24" intentType="READ">
+      <methodElements xmi:id="MethodElement_58" name="getOwningAccountKey" parms="" type="Remote">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+      </methodElements>
+    </accessIntents>
+  </ejbExtensions>
+  <generalizations xmi:id="Checking_extends_BankAccount">
+    <subtype xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+    <supertype xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+  </generalizations>
+  <generalizations xmi:id="Savings_extends_BankAccount">
+    <subtype xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+    <supertype xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+  </generalizations>
+  <ejbRelationships xmi:id="AccountToCustomer" relationshipRoles="BankAccount_custAcct CustAcct_account"/>
+  <ejbRelationships xmi:id="CustomerToAccount" relationshipRoles="CustAcct_customer Customer_custAcct"/>
+  <ejbRelationships xmi:id="AccountTransactions" relationshipRoles="BankAccount_bankTransactions TransRecord_owningAccount"/>
+</ejbext:EJBJarExtension>

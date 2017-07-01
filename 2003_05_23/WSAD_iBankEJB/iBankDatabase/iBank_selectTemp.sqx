@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<Query>
+<Schema>iBankDatabase/iBank.dbxmi</Schema>
+
+<SelectStatement>
+<![CDATA[
+
+SELECT *
+FROM
+   ILDAR.BANKS
+]]>
+</SelectStatement>
+</Query>

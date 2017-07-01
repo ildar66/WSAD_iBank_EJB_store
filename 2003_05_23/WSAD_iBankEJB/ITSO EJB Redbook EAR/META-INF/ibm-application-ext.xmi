@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applicationext:ApplicationExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:applicationext="applicationext.xmi" xmlns:application="application.xmi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:id="Application_ID_Ext">
+  <reloadInterval xsi:nil="true"/>
+  <moduleExtensions xmi:type="applicationext:EjbModuleExtension" xmi:id="EjbModule_1_Ext" absolutePath="C:\WSAD_iBank\itso_bankEJB\bin">
+    <module xmi:type="application:EjbModule" href="META-INF/application.xml#EjbModule_1"/>
+  </moduleExtensions>
+  <moduleExtensions xmi:type="applicationext:EjbModuleExtension" xmi:id="EjbModule_2_Ext" absolutePath="C:\WSAD_iBank\CMP_Entity\bin">
+    <module xmi:type="application:EjbModule" href="META-INF/application.xml#EjbModule_2"/>
+  </moduleExtensions>
+  <moduleExtensions xmi:type="applicationext:EjbModuleExtension" xmi:id="EjbModule_3_Ext" absolutePath="C:\WSAD_iBank\BMP_Entity\bin">
+    <module xmi:type="application:EjbModule" href="META-INF/application.xml#EjbModule_3"/>
+  </moduleExtensions>
+  <moduleExtensions xmi:type="applicationext:EjbModuleExtension" xmi:id="EjbModule_4_Ext" absolutePath="C:\WSAD_iBank\Stateless_Session\bin">
+    <module xmi:type="application:EjbModule" href="META-INF/application.xml#EjbModule_4"/>
+  </moduleExtensions>
+  <moduleExtensions xmi:type="applicationext:WebModuleExtension" xmi:id="WebModule_1_Ext" absolutePath="C:\WSAD_iBank\ITSO EJB Redbook Web\webApplication">
+    <module xmi:type="application:WebModule" href="META-INF/application.xml#WebModule_1"/>
+  </moduleExtensions>
+  <application href="META-INF/application.xml#Application_ID"/>
+</applicationext:ApplicationExtension>

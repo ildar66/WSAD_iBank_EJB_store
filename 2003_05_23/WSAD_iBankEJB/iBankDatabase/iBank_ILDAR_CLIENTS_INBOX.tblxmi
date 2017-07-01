@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1" name="CLIENTS_INBOX" primaryKey="SQLReference_1">
+  <columns xmi:id="RDBColumn_1" name="MSG_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1" precision="28" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_2" name="CLIENT_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_2" precision="20" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_3" name="READ_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLDate" xmi:id="SQLDate_1">
+      <originatingType xmi:type="RDBSchema:SQLDate" href="DB2UDBNT_V72_Primitives.xmi#SQLDate_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1" name="XPKCLIENTS_INBOX" members="RDBColumn_1 RDBColumn_2" table="RDBTable_1" constraint="SQLConstraint_1"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1" name="R_22" onDelete="CASCADE" members="RDBColumn_2" constraint="SQLConstraint_2">
+    <onUpdate>NO ACTION</onUpdate>
+    <target href="iBankDatabase/iBank_ILDAR_CLIENTS.tblxmi#SQLReference_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_2" name="R_11" onDelete="CASCADE" members="RDBColumn_1" constraint="SQLConstraint_3">
+    <onUpdate>NO ACTION</onUpdate>
+    <target href="iBankDatabase/iBank_ILDAR_OUTBOX.tblxmi#SQLReference_1"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1" name="XPKCLIENTS_INBOX" type="PRIMARYKEY" primaryKey="SQLReference_1"/>
+  <constraints xmi:id="SQLConstraint_2" name="R_22" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1"/>
+  <constraints xmi:id="SQLConstraint_3" name="R_11" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_2"/>
+  <database href="iBankDatabase/iBank.dbxmi#RDBDatabase_1"/>
+  <schema href="iBankDatabase/iBank_ILDAR.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

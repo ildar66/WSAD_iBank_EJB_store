@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="tree.xsl" type="text/xsl"?>
+
+<infoset id="org.eclipse.jdt.doc.isv.infoset_Guide" label="%infoset_guide_title" standalone="true" >
+
+<!-- %infoview_contents_label infoview [org.eclipse.jdt.doc.isv.view_Contents] -->
+<infoview id="org.eclipse.jdt.doc.isv.view_Contents" label="%infoview_contents_label" >
+  <topic href="" id="org.eclipse.jdt.doc.isv.guideRoot" label="%topic_guide" >
+    <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_int.htm" id="org.eclipse.jdt.doc.isv.1886" label="%topic_guide_overview" >
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_int_elements.htm" id="org.eclipse.jdt.doc.isv.1887" label="%topic_guide_overview_elements" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_int_devprocess.htm" id="org.eclipse.jdt.doc.isv.1888" label="%topic_guide_overview_dev_process" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_int_ui.htm" id="org.eclipse.jdt.doc.isv.1889" label="%topic_guide_overview_UI" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_api.htm" id="org.eclipse.jdt.doc.isv.1890" label="%topic_guide_API" >
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_api_manip.htm" id="org.eclipse.jdt.doc.isv.1891" label="%topic_guide_API_manip" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_api_compile.htm" id="org.eclipse.jdt.doc.isv.1892" label="%topic_guide_API_compile" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/guide/jdt_api_run.htm" id="org.eclipse.jdt.doc.isv.1893" label="%topic_guide_API_run" >      </topic>
+    </topic>
+  </topic>
+  <topic href="" id="org.eclipse.jdt.doc.isv.referenceRoot" label="%topic_reference" >
+    <topic href="/org.eclipse.jdt.doc.isv/reference/api/overview-summary.html" id="org.eclipse.jdt.doc.isv.1894" label="%topic_javadoc" >
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/core/package-summary.html" id="org.eclipse.jdt.doc.isv.1895" label="org.eclipse.jdt.core" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/core/eval/package-summary.html" id="org.eclipse.jdt.doc.isv.1896" label="org.eclipse.jdt.core.eval" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/core/jdom/package-summary.html" id="org.eclipse.jdt.doc.isv.1897" label="org.eclipse.jdt.core.jdom" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/core/search/package-summary.html" id="org.eclipse.jdt.doc.isv.1898" label="org.eclipse.jdt.core.search" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/launching/package-summary.html" id="org.eclipse.jdt.doc.isv.1899" label="org.eclipse.jdt.launching" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/package-summary.html" id="org.eclipse.jdt.doc.isv.1900" label="org.eclipse.jdt.ui" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/text/package-summary.html" id="org.eclipse.jdt.doc.isv.1901" label="org.eclipse.jdt.ui.text" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/wizards/package-summary.html" id="org.eclipse.jdt.doc.isv.1902" label="org.eclipse.jdt.ui.wizards" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/search/ui/package-summary.html" id="org.eclipse.jdt.doc.isv.1903" label="org.eclipse.search.ui" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/debug/core/package-summary.html" id="org.eclipse.jdt.doc.isv.1904" label="org.eclipse.debug.core" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/debug/core/model/package-summary.html" id="org.eclipse.jdt.doc.isv.1905" label="org.eclipse.debug.core.model" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/debug/ui/package-summary.html" id="org.eclipse.jdt.doc.isv.1906" label="org.eclipse.debug.ui" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/debug/core/package-summary.html" id="org.eclipse.jdt.doc.isv.1907" label="org.eclipse.jdt.debug.core" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/index.html" id="org.eclipse.jdt.doc.isv.1908" label="%topic_extension_points" >
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_jdt_launching_vmInstallTypes.html" id="org.eclipse.jdt.doc.isv.1909" label="org.eclipse.jdt.launching.vmInstallTypes" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_jdt_ui_javaElementFilters.html" id="org.eclipse.jdt.doc.isv.1910" label="org.eclipse.jdt.ui.javaElementFilters" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_search_searchPages.html" id="org.eclipse.jdt.doc.isv.1911" label="org.eclipse.search.searchPages" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_search_searchResultSorters.html" id="org.eclipse.jdt.doc.isv.1912" label="org.eclipse.search.searchResultSorters" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_debug_core_launchers.html" id="org.eclipse.jdt.doc.isv.1913" label="org.eclipse.debug.ui.core.Launchers" >      </topic>
+      <topic href="/org.eclipse.jdt.doc.isv/reference/extension-points/org_eclipse_debug_ui_debugModelPresentations.html" id="org.eclipse.jdt.doc.isv.1914" label="org.eclipse.debug.ui.debugModelPresentations" >      </topic>
+    </topic>
+    <topic href="/org.eclipse.jdt.doc.isv/reference/misc/index.html" id="org.eclipse.jdt.doc.isv.1915" label="%topic_articles" >
+      <topic href="/org.eclipse.jdt.doc.isv/reference/misc/overview-jdt.html" id="org.eclipse.jdt.doc.isv.1916" label="%article_JDT_map" >      </topic>
+    </topic>
+  </topic>
+  <topic href="" id="org.eclipse.jdt.doc.isv.samplesRoot" label="%topic_samples" >
+    <topic href="/org.eclipse.jdt.doc.isv/samples/samples.html" id="org.eclipse.jdt.doc.isv.1917" label="%topic_sample_installing" >    </topic>
+    <topic href="/org.eclipse.jdt.doc.isv/samples/org.eclipse.jdt.ui.examples.projects/doc-html/jdt_projects_ex.html" id="org.eclipse.jdt.doc.isv.1918" label="%topic_sample_jdt_proj" >    </topic>
+  </topic>
+  <topic href="/org.eclipse.jdt.doc.isv/questions/index.html" id="org.eclipse.jdt.doc.isv.questionsIndexRoot" label="%topic_FAQ" >  </topic>
+</infoview>
+<!-- End of %infoview_contents_label infoview -->
+
+</infoset>
+

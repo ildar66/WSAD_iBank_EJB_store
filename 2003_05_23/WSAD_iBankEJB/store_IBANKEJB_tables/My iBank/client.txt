@@ -1,0 +1,67 @@
+-------------------- 'Информация о клиентах' ---------------------------
+DROP TABLE ildar.clients ;
+
+CREATE TABLE ildar.clients (
+
+       client_id            NUM(20) NOT NULL,
+       ext_client_id        VARCHAR(20) ,
+party.PartyID   LONG
+       cln_type             NUM(1) NOT NULL,
+party.LegalForm INT (1-организация, 2-физ.лицо)
+       inn_cln              VARCHAR(12) ,
+       kpp                  VARCHAR(9) ,
+partcode.Code (где partcode.CodeKind == 16 и partcode.PartyID = party.PartyID)
+_если_ указан КПП, то в partcode.Code он следует после ИНН после слэша:
+"7745612112/452154785" - "ИНН/КПП"
+STRING (35)
+       name_cln             VARCHAR(160) NOT NULL,
+party.Name STRING (80)
+       name_cln_lat         VARCHAR(160) NOT NULL,
+нет
+
+   /*
+    для физиков:
+     вид документа, удостоверящего личность (российский паспорт, паспорт СССР, ...)
+     номер, серия, кем выдан, дата выдачи
+   */
+       kind_doc             NUM(1)  ,
+persn.PaperKind INT, где persn.PersonID = party.PartyID
+       numb_doc             VARCHAR(25) ,
+persn.Number STRING(25), где persn.PersonID = party.PartyID
+       ser_doc              VARCHAR(9) ,
+persn.Series STRING(9), где persn.PersonID = party.PartyID
+       vydan_doc            VARCHAR(164) ,
+persn.PaperIssuer STRING(164), где persn.PersonID = party.PartyID
+       date_doc             DATE ,
+persn.PaperIssuedDate DATE, где persn.PersonID = party.PartyID
+
+       resident_flag        NUM(1)  NOT NULL,
+party.NotResident CHAR(1)
+       country_post_code         CHAR(3)  NOT NULL,
+party.Country STRING(3)
+       /* почтовый */
+       addr_post_cln        VARCHAR(200) NOT NULL,
+adress.Adress, где adress.PartyID == party.PartyID, а adress.Type == 1
+       addr_post_cln_lat    VARCHAR(200) NOT NULL,
+нет
+       country_ur_code      CHAR(3)  NOT NULL,
+       /* юридический */
+adress.Comment, где adress.PartyID == party.PartyID, а adress.Type == 1
+       addr_ur_cln          VARCHAR(200) NOT NULL,
+party.PostIndex + party.Address
+       addr_ur_cln_lat      VARCHAR(200) NOT NULL,
+нет
+       phone_cln            VARCHAR(40) NOT NULL,
+party.PhoneNumber
+       fax_cln              VARCHAR(40) ,
+party.Fax
+       email_cln            VARCHAR(256) ,
+party.E_Mail
+
+       num_dogov            VARCHAR(10) NOT NULL,
+       reg_date             DATE NOT NULL,
+       lock_word            VARCHAR(20) NOT NULL,
+       status               NUM(1) DEFAULT 1 NOT NULL,
+
+       doc_sign_num         NUM(20) NOT NULL,
+);

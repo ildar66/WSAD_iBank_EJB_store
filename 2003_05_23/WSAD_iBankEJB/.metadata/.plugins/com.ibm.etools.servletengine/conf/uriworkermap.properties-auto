@@ -1,0 +1,34 @@
+###################################################################
+# Auto generated configuration. Dated: Tue Apr 01 11:21:50 GMT+04:00 2003
+###################################################################
+
+#
+# Default worker to be used through our mappings
+#
+default.worker=ajp12
+
+#
+# Root context mounts for Tomcat
+#
+/servlet/*=$(default.worker)
+/*.jsp=$(default.worker)
+
+#########################################################
+# Auto configuration for the /uddiexplorer context starts.
+#########################################################
+
+#
+# The following line mounts all JSP file and the /servlet/ uri to tomcat
+#
+/uddiexplorer/servlet/*=$(default.worker)
+/uddiexplorer/*.jsp=$(default.worker)
+
+#
+# If you want tomcat to serve all the resources (including static) that
+# are part of the /uddiexplorer context, uncomment the following line
+#
+# /uddiexplorer/*=$(default.worker)
+#######################################################
+# Auto configuration for the /uddiexplorer context ends.
+#######################################################
+

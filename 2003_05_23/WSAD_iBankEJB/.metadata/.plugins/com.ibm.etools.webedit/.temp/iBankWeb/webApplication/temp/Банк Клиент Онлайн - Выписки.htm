@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://banking.guta.ru/cb_demo/statements.asp -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Выписки.htm"><TITLE>Банк Клиент Онлайн - Выписки</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Выписки_files/cb.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="Банк Клиент Онлайн - Выписки_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Выписки_files/bgtop.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><IMG height=51 alt="ГУТА БАНК" 
+      src="Банк Клиент Онлайн - Выписки_files/logo.gif" width=171 border=0></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • Тестовый филиал • ООО "Все в 
+      порядке"</TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Выписки_files/hr2.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 background="Банк Клиент Онлайн - Выписки_files/hr1.gif"><IMG 
+      height=15 alt="" src="Банк Клиент Онлайн - Выписки_files/zagl1.gif" 
+      width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0><A 
+      href="http://banking.guta.ru/cb_demo/client.asp">Клиент</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/accounts.asp">Счета</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/documents.asp">Документы</A><BR><A 
+      class=current 
+      href="http://banking.guta.ru/cb_demo/statements.asp">Выписки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/references.asp">Справочники</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/messages.asp">Сообщения</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/reports.asp">Отчеты</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/setup.asp">Настройки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/logout.asp">Выход</A><BR></TD>
+    <TD>
+      <DIV class=title>Выписки</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Выписки_files/validate.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript>
+<!--
+function stateform_onsubmit(theForm)
+{
+	if(!field_check(theForm.fromdate, 'Дата с', 7, true)) return false;
+	if(!field_check(theForm.todate, 'Дата по', 7, true)) return false;
+	return true;
+}
+
+function ShowSt(theForm)
+{
+	var theForm = document.stateform;
+	var wnd = window.open('statementsvw.asp?account=' + theForm.account.value + '&fromdate=' + theForm.fromdate.value + '&todate=' + theForm.todate.value, null, "width=630,top=0,height="+(window.screen.availHeight-100)+",resizable=yes,status=no,toolbar=no,menubar=yes,location=no,scrollbars=yes");
+	wnd.focus();}
+
+function ShowDoc(docid)
+{
+	var wnd = window.open('report.asp?reporttype=1&docid=' + docid,null,"width=630,top=0,height="+(window.screen.availHeight-100)+",resizable=yes,status=no,toolbar=no,menubar=yes,location=no,scrollbars=yes");
+	wnd.focus();
+}
+//-->
+</SCRIPT>
+
+      <FORM name=stateform onsubmit="return stateform_onsubmit(this)" 
+      action=statements.asp method=post>
+      <P class=gridtitle>Параметры выписок</P>
+      <TABLE class=inputbar>
+        <TBODY>
+        <TR>
+          <TD class=label>Лицевой счет</TD>
+          <TD class=input><SELECT name=account> <OPTION value="" 
+              selected>(все)</OPTION> <OPTION 
+              value=40702810500390000113>40702810500390000113</OPTION></SELECT> 
+</TD>
+          <TD class=button rowSpan=2><INPUT type=submit value=Показать name=submit>&nbsp;<INPUT type=reset value=Сбросить name=reset> 
+          </TD></TR>
+        <TR>
+          <TD class=label>Период</TD>
+          <TD class=input><INPUT title="Начальная дата" type=hidden 
+            value=17/09/2002 name=fromdate><INPUT title="Начальная дата.День" 
+            maxLength=2 onchange=date_onchange(this) size=2 value=17 
+            name=fromdatedd><INPUT title="Начальная дата.Месяц" maxLength=2 
+            onchange=date_onchange(this) size=2 value=09 name=fromdatemm><INPUT 
+            title="Начальная дата.Год" maxLength=4 onchange=date_onchange(this) 
+            size=4 value=2002 name=fromdateyy>&nbsp;-&nbsp;<INPUT 
+            title="Конечная дата" type=hidden value=18/09/2002 
+            name=todate><INPUT title="Конечная дата.День" maxLength=2 
+            onchange=date_onchange(this) size=2 value=18 name=todatedd><INPUT 
+            title="Конечная дата.Месяц" maxLength=2 onchange=date_onchange(this) 
+            size=2 value=09 name=todatemm><INPUT title="Конечная дата.Год" 
+            maxLength=4 onchange=date_onchange(this) size=4 value=2002 
+            name=todateyy> &nbsp;<SELECT 
+            onchange="period_onchange(this, 'fromdate', 'todate')" name=period> 
+              <OPTION selected>( установить период )</OPTION> <OPTION 
+              value=18/09/2002,18/09/2002>за текущий день</OPTION> <OPTION 
+              value=15/09/2002,18/09/2002>за текущую неделю</OPTION> <OPTION 
+              value=01/09/2002,18/09/2002>за текущий месяц</OPTION> <OPTION 
+              value=01/07/2002,18/09/2002>за текущий квартал</OPTION></SELECT> 
+        </TD></TR></TBODY></TABLE></FORM>
+      <P class=gridtitle>Список выписок</P><!--<HR color=#000000 noshade size=1>-->
+      <TABLE class=grid>
+        <CAPTION><B>ВЫПИСКА</B><BR>по лицевому счету "ООО "Все в порядке"" № 
+        40702810500390000113&nbsp;(RUR)&nbsp;"расчетный счет" за период с 
+        17/09/2002 по 18/09/2002 </CAPTION>
+        <TBODY>
+        <TR>
+          <TD align=middle colSpan=8>Нет движения по 
+счету.</TD></TR></TBODY></TABLE><!--<HR color=#000000 noshade size=1>--><BR><A 
+      title="Открыть в окне для печати" href="javascript:ShowSt()">Печать 
+      выписок</A> <BR><A title="Экспорт данных" 
+      href="http://banking.guta.ru/cb_demo/docexport.asp?account=&amp;fromdate=17/09/2002&amp;todate=18/09/2002">Экспорт 
+      данных</A> 
+      <P class=tips>В разделе <B>Выписки</B> Вам доступны все выписки по всем 
+      Вашим счетам в системе. Задайте счет и период дат и нажмите 
+      <B>Показать</B> для формирования выписки. Для просмотра в отдельном окне и 
+      печати полученной выписки нажмите <B>Просмотр</B>. Для просмотра и печати 
+      нужного документа в выписке выберите его <B>Номер</B>. 
+    </P><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

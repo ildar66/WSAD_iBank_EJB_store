@@ -1,0 +1,26 @@
+
+/* Set the Properties window style and positioning */
+
+#shadow1 {position:absolute; visibility: visible; left:0px; top:26px; width:99.2%; height:94.1%; background-color:#8C8E8C; z-index:2;}
+#shadow2 {position:absolute; visibility: visible; left:0px; top:26px; width:99.5%; height:94.3%; background-color:#ADAAA5; z-index:1;}
+#container {position:absolute; visibility: visible; left:4px; top:3px; width:98%; height:94%; background-color:transparent; z-index:3;}
+#propcontent {position:absolute; visibility: visible; left:0px; top:26px; width:99%; height:94%; background-color:white; border-style: solid; border-width:1px; border-top-width:0px; border-color:#848284; z-index:3;}
+#proptoolbar {background:#848284; position:absolute; left:0px; top:0px; width:99.5%; height:26px; zindex:2;}
+
+
+/* Set the Tree window style and positioning */
+
+#treeshadow1 {position:absolute; visibility: visible; left:0px; top:26px; width:98.2%; height:96.1%; background-color:#8C8E8C; z-index:2;}
+#treeshadow2 {position:absolute; visibility: visible; left:0px; top:26px; width:98.5%; height:96.3%; background-color:#ADAAA5; z-index:1;}
+#treecontainer {position:absolute; visibility: visible; left:4px; top:3px; width:97%; height:96%; background-color:transparent; z-index:3;}
+#treecontent {position:absolute; visibility: visible; left:0px; top:26px; width:98%; height:96%; background-color:white; border-style: solid; border-width:1px; border-top-width:0px; border-color:#848284; z-index:3;}
+#treetoolbar {background:#848284; position:absolute; left:0px; top:0px; width:98.5%; height:26px; zindex:2;}
+
+
+/* Set the Status window style and positioning */
+
+#statshadow1 {position:absolute; visibility: visible; left:0px; top:26px; width:99.2%; height:76.2%; background-color:#8C8E8C; z-index:2;}
+#statshadow2 {position:absolute; visibility: visible; left:0px; top:26px; width:99.5%; height:76.4%; background-color:#ADAAA5; z-index:1;}
+#statcontainer {position:absolute; visibility: visible; left:4px; top:3px; width:98%; height:76%; background-color:transparent; z-index:3;}
+#statcontent {position:absolute; visibility: visible; left:0px; top:26px; width:99%; height:76%; background-color:white; border-style: solid; border-width:1px; border-top-width:0px; border-color:#848284; z-index:3;}
+#stattoolbar {background:#848284; position:absolute; left:0px; top:0px; width:99.5%; height:26px; zindex:2;}

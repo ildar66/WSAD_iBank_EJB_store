@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbrdbmapping:EJBComposer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbrdbmapping="ejbrdbmapping.xmi" xmlns:java="java.xmi" xmlns:ecore="ecore.xmi" xmi:id="EJBComposer_1">
+  <targetClass href="java:/itso.ejb35.util#CustomerAddress"/>
+  <transformerClass href="java:/itso.ejb35.bank#AddressComposer"/>
+  <attributes xmi:id="EAttribute_1" name="street"/>
+  <attributes xmi:id="EAttribute_2" name="city"/>
+  <attributes xmi:id="EAttribute_3" name="state"/>
+  <attributes xmi:id="EAttribute_4" name="zipcode"/>
+</ejbrdbmapping:EJBComposer>

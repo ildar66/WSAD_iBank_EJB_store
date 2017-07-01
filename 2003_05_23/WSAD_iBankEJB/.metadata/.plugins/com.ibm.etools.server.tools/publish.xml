@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publish-info>
+   <instance
+      path="C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.server.tools/publish/data1.xml" ref="/iBankServer/defaultInstance.wsi"/>
+   <instance
+      path="C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.server.tools/publish/data0.xml" ref="/iBankServer/iBankWebSphere.wsi"/>
+</publish-info>

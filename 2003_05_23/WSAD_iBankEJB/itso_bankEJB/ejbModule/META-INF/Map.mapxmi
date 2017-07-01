@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbrdbmapping:EjbRdbDocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbrdbmapping="ejbrdbmapping.xmi" xmlns:RDBSchema="RDBSchema.xmi" xmlns:Mapping="Mapping.xmi" xmlns:java="java.xmi" xmlns:ejb="ejb.xmi" xmlns:ecore="ecore.xmi" xmlns:ejbext="ejbext.xmi" xmi:id="EjbRdbDocumentRoot_1" commandStack="">
+  <helper xmi:type="ejbrdbmapping:RdbSchemaProperies" xmi:id="RdbSchemaProperies_1" primitivesDocument="DB2UDBNT_V71">
+    <vendorConfiguration href="RdbVendorConfigurations.xmi#DB2UDBNT_V71_Config"/>
+  </helper>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="Customer_EJBMap">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="Customer_PrimaryStrategy">
+      <secondaryStrategy xmi:id="Customer_SecondaryStrategy">
+        <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address"/>
+        <joinKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#AddressToCustomer_ref"/>
+      </secondaryStrategy>
+      <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer"/>
+    </helper>
+    <nested xmi:id="Customer_userID_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_1">
+        <targetClass href="java:/java.lang#String"/>
+        <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+      </helper>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_userID"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_userID"/>
+    </nested>
+    <nested xmi:id="Customer_title_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_2">
+        <targetClass href="java:/java.lang#String"/>
+        <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+      </helper>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_title"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_title"/>
+    </nested>
+    <nested xmi:id="Customer_firstName_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_firstName"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_firstName"/>
+    </nested>
+    <nested xmi:id="Customer_password_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_3">
+        <targetClass href="java:/java.lang#String"/>
+        <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+      </helper>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_password"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_password"/>
+    </nested>
+    <nested xmi:id="Customer_customerID_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_customerID"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_customerID"/>
+    </nested>
+    <nested xmi:id="Customer_lastName_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer_lastName"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_lastName"/>
+    </nested>
+    <nested xmi:id="Customer_address_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBComposer" xmi:id="EJBComposer_1">
+        <targetClass href="java:/itso.ejb35.util#CustomerAddress"/>
+        <transformerClass href="java:/itso.ejb35.bank#AddressComposer"/>
+        <attributes xmi:id="EAttribute_1" name="street"/>
+        <attributes xmi:id="EAttribute_2" name="city"/>
+        <attributes xmi:id="EAttribute_3" name="state"/>
+        <attributes xmi:id="EAttribute_4" name="zipcode"/>
+      </helper>
+      <nested xmi:id="CustomerAddress_street" outputs="EAttribute_1">
+        <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_4">
+          <targetClass href="java:/java.lang#String"/>
+          <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+        </helper>
+        <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_street"/>
+      </nested>
+      <nested xmi:id="CustomerAddress_city" outputs="EAttribute_2">
+        <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_5">
+          <targetClass href="java:/java.lang#String"/>
+          <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+        </helper>
+        <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_city"/>
+      </nested>
+      <nested xmi:id="CustomerAddress_state" outputs="EAttribute_3">
+        <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_6">
+          <targetClass href="java:/java.lang#String"/>
+          <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+        </helper>
+        <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_state"/>
+      </nested>
+      <nested xmi:id="CustomerAddress_zipcode" outputs="EAttribute_4">
+        <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_7">
+          <targetClass href="java:/java.lang#String"/>
+          <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+        </helper>
+        <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_zipcode"/>
+      </nested>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_street"/>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_city"/>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_state"/>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address_zipcode"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Customer_address"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer"/>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Customer"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="Savings_EJBMap">
+    <helper xmi:type="ejbrdbmapping:InheritedPrimaryTableStrategy" xmi:id="Savings_InheritedTableStrategy" inheritedStrategy="BankAccount_PrimaryStrategy">
+      <discriminatorValues>'SAVINGS'</discriminatorValues>
+      <secondaryStrategy xmi:id="Savings_PrimaryStrategy">
+        <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#Savings"/>
+        <joinKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#SavingsToAccount_ref"/>
+      </secondaryStrategy>
+      <table href="META-INF/Schema/Schema.dbxmi#Account"/>
+    </helper>
+    <nested xmi:id="Savings_minAmount_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#Savings_minamount"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Savings_minAmount"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#Savings"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Savings"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="CustAcct_EJBMap">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="CustAcct_PrimaryStrategy">
+      <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcct"/>
+    </helper>
+    <nested xmi:id="Mapping_4">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_4"/>
+      <inputs xmi:type="RDBSchema:RDBReferenceByKey" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcctToAccount_ref"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#CustAcct_account"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#BankAccount_custAcct"/>
+    </nested>
+    <nested xmi:id="Mapping_5">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_5"/>
+      <inputs xmi:type="RDBSchema:RDBReferenceByKey" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcctToCustomer_ref"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#CustAcct_customer"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Customer_custAcct"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcct"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#CustAcct"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="BankAccount_EJBMap">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="BankAccount_PrimaryStrategy">
+      <discriminatorValues>ACCOUNT</discriminatorValues>
+      <discriminatorMembers xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account_acctype"/>
+      <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+    </helper>
+    <nested xmi:id="BankAccount_balance_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account_balance"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#BankAccount_balance"/>
+    </nested>
+    <nested xmi:id="BankAccount_accID_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_8">
+        <targetClass href="java:/java.lang#String"/>
+        <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+      </helper>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account_accid"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#BankAccount_accID"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#BankAccount"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="TransRecord_EJBMap">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="TransRecord_PrimaryStrategy">
+      <discriminatorMembers xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord_transid"/>
+      <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord"/>
+    </helper>
+    <nested xmi:id="TransRecord_transID_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord_transid"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#TransRecord_transID"/>
+    </nested>
+    <nested xmi:id="TransRecord_transamt_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord_transamt"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#TransRecord_transamt"/>
+    </nested>
+    <nested xmi:id="TransRecord_transtype_AttributeMap">
+      <helper xmi:type="ejbrdbmapping:EJBConverter" xmi:id="EJBConverter_9">
+        <targetClass href="java:/java.lang#String"/>
+        <transformerClass href="java:/com.ibm.vap.converters#VapTrimStringConverter"/>
+      </helper>
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord_transtype"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#TransRecord_transtype"/>
+    </nested>
+    <nested xmi:id="Mapping_3">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_3"/>
+      <inputs xmi:type="RDBSchema:RDBReferenceByKey" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecordToAccount_ref"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#TransRecord_owningAccount"/>
+      <outputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#BankAccount_bankTransactions"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#TransRecord"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="Checking_EJBMap">
+    <helper xmi:type="ejbrdbmapping:InheritedPrimaryTableStrategy" xmi:id="Checking_InheritedTableStrategy" inheritedStrategy="BankAccount_PrimaryStrategy">
+      <discriminatorValues>'CHECKING'</discriminatorValues>
+      <secondaryStrategy xmi:id="Checking_PrimaryStrategy">
+        <table href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#Checking"/>
+        <joinKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#CheckingToAccount_ref"/>
+      </secondaryStrategy>
+      <table href="META-INF/Schema/Schema.dbxmi#Account"/>
+    </helper>
+    <nested xmi:id="Checking_overdraft_AttributeMap">
+      <inputs xmi:type="RDBSchema:RDBColumn" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#Checking_overdraft"/>
+      <outputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Checking_overdraft"/>
+    </nested>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+    <inputs xmi:type="RDBSchema:RDBTable" href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#Checking"/>
+    <outputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Checking"/>
+  </nested>
+  <inputs xmi:type="RDBSchema:RDBDatabase" href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <outputs xmi:type="ejb:EJBJar" href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <typeMapping xmi:type="Mapping:MappingRoot" href="JavatoDB2UDBNT_V71TypeMaps.xmi#Java_to_DB2UDBNT_V71_TypeMaps"/>
+</ejbrdbmapping:EjbRdbDocumentRoot>

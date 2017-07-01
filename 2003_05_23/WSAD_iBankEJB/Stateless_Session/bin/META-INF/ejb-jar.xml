@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 1.1//EN" "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd">
+<ejb-jar id="ejb-jar_ID">
+	<display-name>Stateless_Session</display-name>
+	<enterprise-beans>
+		<session id="Transfer">
+			<ejb-name>Transfer</ejb-name>
+			<home>itso.ejb35.session.TransferHome</home>
+			<remote>itso.ejb35.session.Transfer</remote>
+			<ejb-class>itso.ejb35.session.TransferBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+		<session id="CustomerFinder">
+			<ejb-name>CustomerFinder</ejb-name>
+			<home>itso.ejb35.session.CustomerFinderHome</home>
+			<remote>itso.ejb35.session.CustomerFinder</remote>
+			<ejb-class>itso.ejb35.session.CustomerFinderBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+	</enterprise-beans>
+</ejb-jar>

@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://banking.guta.ru/cb_demo/documents.asp -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Документы2.htm"><TITLE>Банк Клиент Онлайн - Документы</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Документы2_files/cb.css" type=text/css 
+rel=stylesheet>
+<SCRIPT language=javascript 
+src="Банк Клиент Онлайн - Документы2_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Документы2_files/bgtop.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><A href="http://www.guta.ru/" target=Gutf><IMG height=51 
+      alt="ГУТА БАНК" src="Банк Клиент Онлайн - Документы2_files/logo.gif" 
+      width=171 border=0></A></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • Тестовый филиал • ООО "Все в 
+      порядке"</TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Документы2_files/hr2.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 
+      background="Банк Клиент Онлайн - Документы2_files/hr1.gif"><IMG height=15 
+      alt="" src="Банк Клиент Онлайн - Документы2_files/zagl1.gif" width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0><A 
+      href="http://banking.guta.ru/cb_demo/client.asp">Клиент</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/accounts.asp">Счета</A><BR><A 
+      class=current 
+      href="http://banking.guta.ru/cb_demo/documents.asp">Документы</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/statements.asp">Выписки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/references.asp">Справочники</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/messages.asp">Сообщения</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/reports.asp">Отчеты</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/setup.asp">Настройки</A><BR><A 
+      href="http://banking.guta.ru/cb_demo/logout.asp">Выход</A><BR></TD>
+    <TD>
+      <DIV class=title>Документы</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript 
+      src="Банк Клиент Онлайн - Документы2_files/validate.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT language=javascript type=text/javascript>
+function ToggleStatus(n)
+{
+	var e = document.docform.status;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].value == n)
+			e[i].checked = !e[i].checked;
+}
+
+function EditDoc(id)
+{
+	var theForm = document.docform;
+	var e = theForm.elements;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].name == 'docid')
+			e[i].checked = e[i].value == id;
+	theForm.btnaction[0].click();
+}
+
+function ViewDoc(type, docid)
+{
+	var wnd = window.open('report.asp?reporttype=' + type + '&docid=' + docid,'report','width=660,top=0,height='+(window.screen.availHeight-100)+',resizable=yes,status=no,toolbar=no,menubar=yes,location=no,scrollbars=yes');
+	wnd.focus();
+}
+
+function ViewDocs(type)
+{
+	var e = document.docform.elements;
+	var docid = new Array();
+	for(var i=0, j=0; i < e.length; i++)
+		if(e[i].name=='docid' && e[i].checked==true)
+			docid[j++] = e[i].value;
+
+	if(docid.length > 0)
+		ViewDoc(type, docid.join(','));
+	else
+		alert('Документ(ы) не выбран(ы).');
+}
+
+var g_action;
+function SetAction(a)
+{
+	g_action = a;
+}
+
+function CheckDocs()
+{
+	var e = document.docform.elements;
+	for(var i=0; i < e.length; i++)
+		if(e[i].name=='docid' && e[i].checked==true)
+			return true;
+	return false;
+}
+
+function docform_onsubmit(theForm)
+{
+	switch(g_action)
+	{
+	case 'Изменить':
+	case 'Удалить':
+	case 'Подпись':
+	case 'Отправить':
+		if(!CheckDocs())
+		{
+			alert('Документ(ы) не выбран(ы).');
+			return false;
+		}
+		break;
+	default:
+		if(!field_check(theForm.todate, 'Дата по', 7, true) || !field_check(theForm.fromdate, 'Дата с', 7, true))
+			return false;
+	}
+	return true;
+}
+
+function CheckAll(flag)
+{
+	var e = document.docform.elements;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].name == 'docid')
+			e[i].checked = flag;
+}
+
+function SortBy(field) 
+{
+	var e = document.docform.sort;
+	e.value = (e.value == field)?field + ' desc':field;
+	e.form.submit();
+}
+</SCRIPT>
+
+      <FORM name=docform onsubmit="return docform_onsubmit(this)" 
+      action=documents.asp method=post>
+      <P class=gridtitle>Параметры документов</P>
+      <TABLE class=inputbar>
+        <TBODY>
+        <TR>
+          <TD class=label>Тип</TD>
+          <TD class=input><SELECT title="Тип документа" name=formid> <OPTION 
+              value=0 selected>(любой)</OPTION> <OPTION value=1>Платежное 
+              поручение</OPTION> <OPTION value=3>Аккредитив</OPTION> <OPTION 
+              value=201>Внутренний перевод</OPTION> <OPTION value=202>Кассовый 
+              документ</OPTION></SELECT> </TD>
+          <TD class=button rowSpan=2><INPUT onclick=SetAction(this.value) type=submit value=Показать name=btnsubmit>&nbsp;<INPUT type=reset value=Сбросить name=btnreset> 
+          </TD></TR>
+        <TR>
+          <TD class=label>Период</TD>
+          <TD class=input><INPUT title="Начальная дата" type=hidden 
+            value=29/08/2002 name=fromdate><INPUT title="Начальная дата.День" 
+            maxLength=2 onchange=date_onchange(this) size=2 value=29 
+            name=fromdatedd><INPUT title="Начальная дата.Месяц" maxLength=2 
+            onchange=date_onchange(this) size=2 value=08 name=fromdatemm><INPUT 
+            title="Начальная дата.Год" maxLength=4 onchange=date_onchange(this) 
+            size=4 value=2002 name=fromdateyy>&nbsp;-&nbsp;<INPUT 
+            title="Конечная дата" type=hidden value=14/10/2002 
+            name=todate><INPUT title="Конечная дата.День" maxLength=2 
+            onchange=date_onchange(this) size=2 value=14 name=todatedd><INPUT 
+            title="Конечная дата.Месяц" maxLength=2 onchange=date_onchange(this) 
+            size=2 value=10 name=todatemm><INPUT title="Конечная дата.Год" 
+            maxLength=4 onchange=date_onchange(this) size=4 value=2002 
+            name=todateyy> &nbsp;<SELECT 
+            onchange="period_onchange(this, 'fromdate', 'todate')" name=period> 
+              <OPTION selected>( установить период )</OPTION> <OPTION 
+              value=14/10/2002,14/10/2002>за текущий день</OPTION> <OPTION 
+              value=13/10/2002,14/10/2002>за текущую неделю</OPTION> <OPTION 
+              value=01/10/2002,14/10/2002>за текущий месяц</OPTION> <OPTION 
+              value=01/10/2002,14/10/2002>за текущий квартал</OPTION></SELECT> 
+        </TD></TR>
+        <TR>
+          <TD class=label>Статус</TD>
+          <TD class=input colSpan=2><NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(1)"><INPUT type=checkbox CHECKED 
+            value=1 name=status>новый</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(2)"><INPUT type=checkbox CHECKED 
+            value=2 name=status>подписан</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(4)"><INPUT type=checkbox CHECKED 
+            value=4 name=status>отправлен</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(8)"><INPUT type=checkbox CHECKED 
+            value=8 name=status>доставлен</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(16)"><INPUT type=checkbox CHECKED 
+            value=16 name=status>принят</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(32)"><INPUT type=checkbox CHECKED 
+            value=32 name=status>подтвержден</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(64)"><INPUT type=checkbox CHECKED 
+            value=64 name=status>отозван</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(256)"><INPUT type=checkbox CHECKED 
+            value=256 name=status>ошибка</A></NOBR> <NOBR>|<A 
+            style="COLOR: black; TEXT-DECORATION: none" 
+            href="javascript:ToggleStatus(512)"><INPUT type=checkbox CHECKED 
+            value=512 name=status>внешний</A></NOBR> | </TD></TR></TBODY></TABLE>
+      <P class=gridtitle>Список документов</P>
+      <TABLE class=grid>
+        <TBODY>
+        <TR>
+          <TH noWrap><A title="Сортировать по полю 'Статус'" 
+            href="javascript:SortBy('Status')">Статус</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Тип'" 
+            href="javascript:SortBy('FormID')">Тип</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Дата'" 
+            href="javascript:SortBy('DocDate')">Дата</A><IMG height=7 
+            alt="по возрастанию" hspace=3 
+            src="Банк Клиент Онлайн - Документы2_files/up.gif" width=8></TH>
+          <TH noWrap><A title="Сортировать по полю 'Номер'" 
+            href="javascript:SortBy('DocNum')">Номер</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Корреспондент'" 
+            href="javascript:SortBy('Receiver')">Корреспондент</A></TH>
+          <TH noWrap><A title="Сортировать по полю 'Сумма'" 
+            href="javascript:SortBy('DocSum')">Сумма</A></TH></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377313 
+          name=docid>отправлен</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377313)">акк.</A></TD>
+          <TD width=64>29/08/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377313)">2</A></TD>
+          <TD>jjj1</TD>
+          <TD align=right>10.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377305 name=docid>новый</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377305)">п/п</A></TD>
+          <TD width=64>29/08/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377305)">12</A></TD>
+          <TD>Подвинье ООО</TD>
+          <TD align=right>10&nbsp;000.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377304 
+          name=docid>отправлен</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377304)">п/п</A></TD>
+          <TD width=64>29/08/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377304)">663</A></TD>
+          <TD>Отделение Федерального Казначейства</TD>
+          <TD align=right>220.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377303 
+          name=docid>отправлен</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377303)">п/п</A></TD>
+          <TD width=64>29/08/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377303)">662</A></TD>
+          <TD>Подвинье ООО</TD>
+          <TD align=right>8&nbsp;000&nbsp;000.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377320 name=docid>новый</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377320)">п/п</A></TD>
+          <TD width=64>09/09/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377320)">663</A></TD>
+          <TD>ООО"Витаком"</TD>
+          <TD align=right>563.25</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377321 name=docid>новый</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377321)">п/п</A></TD>
+          <TD width=64>07/10/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377321)">664</A></TD>
+          <TD>Подвинье ООО</TD>
+          <TD align=right>123&nbsp;000.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377323 
+          name=docid>отправлен</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377323)">п/п</A></TD>
+          <TD width=64>07/10/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377323)">665</A></TD>
+          <TD>Отделение Федерального Казначейства</TD>
+          <TD align=right>220.00</TD></TR>
+        <TR>
+          <TD width=102><INPUT type=checkbox value=377324 
+          name=docid>отправлен</TD>
+          <TD width=32><A title="Редактирование документа" 
+            href="javascript:EditDoc(377324)">п/п</A></TD>
+          <TD width=64>09/10/2002</TD>
+          <TD align=right width=48><A title="Просмотр документа" 
+            href="javascript:ViewDoc(1,377324)">666</A></TD>
+          <TD>Подвинье ООО</TD>
+          <TD align=right>3&nbsp;251.55</TD></TR></TBODY></TABLE>
+      <TABLE class=gridfoot>
+        <TBODY>
+        <TR>
+          <TD width=12><INPUT onclick=CheckAll(this.checked) type=checkbox 
+            name=allbox></TD>
+          <TD align=left>Выбрать все документы</TD>
+          <TD align=right>Всего 8 документ(ов).</TD></TR></TBODY></TABLE><BR><INPUT class=0actionbutton onclick="window.location.href='docnew.asp';return;" type=button value=Создать name=btnaddnew> 
+<INPUT class=0actionbutton onclick=SetAction(this.value) type=submit value=Изменить name=btnaction> 
+<INPUT class=0actionbutton onclick=SetAction(this.value) type=submit value=Удалить name=btnaction> 
+<INPUT class=0actionbutton onclick=SetAction(this.value) type=submit value=Подпись name=btnaction> 
+<INPUT class=0actionbutton onclick=SetAction(this.value) type=submit value=Отправить name=btnaction> 
+<INPUT class=0actionbutton onclick=SetAction(this.value) type=submit value=Отозвать name=btnaction> 
+<INPUT class=0actionbutton onclick=ViewDocs(1) type=button value=Просмотр name=btnview> 
+      <INPUT type=hidden value=DocDate name=sort> </FORM>
+      <P></P><A 
+      href="http://banking.guta.ru/cb_demo/docexport.asp?formid=0&amp;fromdate=29/08/2002&amp;todate=14/10/2002&amp;statusmask=2047&amp;sort=DocDate">Экспорт 
+      данных</A> 
+      <P class=tips>В разделе <B>Документы</B> Вам доступны все Ваши документы 
+      за всю историю обслуживания в системе. Для просмотра списка документов 
+      выберите тип документа, его статус и период дат и нажмите <B>Показать</B>. 
+      Вы можете <B>Создать</B> новый документ, <B>Изменить</B> существующий 
+      документ, <B>Удалить</B> документ, сформировать его <B>Подпись</B>, 
+      <B>Отправить</B> в банк. Для печати документа (реестра) выберите отчет и 
+      нажмите <B>Просмотр</B>. Для работы с группой документов выберите 
+      несколько документов. </P><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

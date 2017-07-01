@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBConnection_1" name="ConTemp" userid="" url="jdbc:db2:iBank" host="" driver="COM.ibm.db2.jdbc.app.DB2Driver" otherDriver="COM.ibm.db2.jdbc.app.DB2Driver" dbName="iBank">
+  <classLocation>C:\Program Files\SQLLIB\java\db2java.zip</classLocation>
+  <database href="iBankDatabase/iBank.dbxmi#RDBDatabase_1"/>
+  <filter xmi:id="RDBConnectionFilter_1" schemaFilter="true"/>
+  <jdbcDriver href="DB2UDBNT_V72_Domain.xmi#JDBCDriver_2"/>
+</RDBSchema:RDBConnection>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBDatabase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBDatabase_1" name="EJBBANK">
+  <schemata href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO.schxmi#RDBSchema_1"/>
+  <tableGroup href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#RDBTable_1"/>
+  <tableGroup href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_BANKACCOUNT.tblxmi#RDBTable_1"/>
+  <tableGroup href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_TRANSRECORD.tblxmi#RDBTable_1"/>
+  <tableGroup href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_ACCOUNT.tblxmi#RDBTable_1"/>
+  <domain href="DB2UDBNT_V72_Domain.xmi#SQLVendor_1"/>
+</RDBSchema:RDBDatabase>

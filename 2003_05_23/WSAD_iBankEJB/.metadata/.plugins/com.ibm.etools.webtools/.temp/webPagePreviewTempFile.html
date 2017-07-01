@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Result Form</TITLE>
+</HEAD>
+
+<!--Styles-->
+<STYLE>
+BODY
+{
+background-color: #f8f7cd;
+}
+H1
+{
+color: #0000ff;
+text-align: center;
+}
+TH
+{
+text-align:left;
+color: #993333;
+}
+</STYLE>
+
+<!--Style Sheet-->
+<LINK href="file://C:\WSAD_iBank\iBankWeb\webApplication\theme\Master.css" rel="stylesheet" type="text/css">
+
+<BODY>
+
+<!--Banner-->
+<H1>Result Form</H1>
+
+<FORM name="myForm" method="POST" action="">
+
+<BR><BR>
+
+<TABLE border="0"> 
+
+  <TR>
+  <input type="hidden" id="selected" name="selected" value="selected"></input>
+  <TH>
+     getBanks: 
+  </TH>
+  <TD>
+      
+  </TD></TR>
+
+</TABLE>
+</FORM>
+<SCRIPT>
+if(document.myForm.elements['selected'] != null){
+document.myForm.elements['selected'].scrollIntoView(true)
+}
+</SCRIPT>
+</BODY>
+</HTML>

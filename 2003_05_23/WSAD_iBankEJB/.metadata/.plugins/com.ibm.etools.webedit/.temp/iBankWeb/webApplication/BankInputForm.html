@@ -1,0 +1,36 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01 Transitional//EN">
+<HTML>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/BankInputForm.html">
+<TITLE>Input Form</TITLE>
+
+<LINK href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/theme/Master.css" rel="stylesheet" type="text/css">
+
+<META name="GENERATOR" content="IBM WebSphere Studio">
+</head>
+
+<body>
+
+<H2>Фильтр для Справочника &quot;Российские банки&quot;</H2>
+<FORM name="myForm" method="POST" action="BankController"><INPUT TYPE="hidden" NAME="command" VALUE="BankResults">
+<TABLE border="1">
+    <CAPTION><B>Фильтр для Справочника &quot;Российские банки&quot;</B></CAPTION>
+    <TBODY>
+        <TR>
+            <TH align="left">Бик содержит:</TH>
+            <TD><INPUT NAME="anBik" TYPE="text" SIZE="20" MAXLENGTH="40" tabindex="1"></TD>
+            <TD align="right"><B>и</B><INPUT type="radio" name="isAnd" checked value=" and " tabindex="3"></TD>
+            <TD rowspan="2"></TD>
+            <TD rowspan="2"><INPUT type="submit" value="Применить фильтр"></TD>
+        </TR>
+        <TR>
+            <TH align="left">Наименование содержит:</TH>
+            <TD><INPUT NAME="anBank_name" TYPE="text" SIZE="20" MAXLENGTH="40" tabindex="2"></TD>
+            <TD align="right"><B>или</B><INPUT type="radio" name="isAnd" value=" or "></TD>
+        </TR>
+    </TBODY>
+</TABLE>
+</FORM>
+</body>
+</HTML>

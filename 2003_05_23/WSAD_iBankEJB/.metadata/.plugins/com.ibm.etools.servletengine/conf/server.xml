@@ -1,0 +1,41 @@
+<Server name="TomcatServer">
+  <xmlmapper:debug level="0" />
+  <Logger name="tc_log" path="logs/tomcat.log" verbosityLevel="INFORMATION" />
+  <Logger name="servlet_log" path="logs/servlet.log" />
+  <Logger name="JASPER_LOG" path="logs/jasper.log" verbosityLevel="INFORMATION" />
+
+  <ContextManager debug="0" showDebugInfo="true" workDir="work" >
+
+    <ContextInterceptor className="org.apache.tomcat.context.AutoSetup"/>
+    <ContextInterceptor className="org.apache.tomcat.context.WebXmlReader"/>
+    <ContextInterceptor className="org.apache.tomcat.context.LoaderInterceptor"/>
+    <ContextInterceptor className="org.apache.tomcat.context.DefaultCMSetter"/>
+    <ContextInterceptor className="org.apache.tomcat.context.WorkDirInterceptor"/>
+
+    <!-- Request processing -->
+
+    <RequestInterceptor className="org.apache.tomcat.request.SessionInterceptor" noCookies="false"/>
+    <RequestInterceptor className="org.apache.tomcat.request.SimpleMapper1" debug="0"/>
+    <RequestInterceptor className="org.apache.tomcat.request.InvokerInterceptor" debug="0" prefix="/servlet/"/>
+    <RequestInterceptor className="org.apache.tomcat.request.StaticInterceptor" debug="0" suppress="false"/>
+    <RequestInterceptor className="org.apache.tomcat.session.StandardSessionInterceptor"/>
+    <RequestInterceptor className="org.apache.tomcat.request.AccessInterceptor" debug="0"/>
+    <RequestInterceptor className="org.apache.tomcat.request.SimpleRealm" debug="0"/>
+    <ContextInterceptor className="org.apache.tomcat.context.LoadOnStartupInterceptor"/>
+
+    <!-- ==================== Connectors ==================== -->
+
+    <!-- Normal HTTP -->
+    <Connector className="org.apache.tomcat.service.PoolTcpConnector">
+      <Parameter name="handler" value="org.apache.tomcat.service.http.HttpConnectionHandler"/>
+      <Parameter name="port" value="1240"/>
+    </Connector>
+
+    <!-- Apache AJP12 support. This is also used to shut down tomcat. -->
+    <Connector className="org.apache.tomcat.service.PoolTcpConnector">
+    <Parameter name="handler" value="org.apache.tomcat.service.connector.Ajp12ConnectionHandler"/>
+    <Parameter name="port" value="1241"/>
+    </Connector>
+
+  </ContextManager>
+</Server>

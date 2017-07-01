@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 1.1//EN" "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd">
+<ejb-jar id="ejb-jar_ID">
+	<display-name>CMP_Entity</display-name>
+	<enterprise-beans>
+		<entity id="Customer">
+			<ejb-name>Customer</ejb-name>
+			<home>itso.ejb35.cmp.CustomerHome</home>
+			<remote>itso.ejb35.cmp.Customer</remote>
+			<ejb-class>itso.ejb35.cmp.CustomerBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>itso.ejb35.cmp.CustomerKey</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-field id="CMPAttribute_1">
+				<field-name>customerID</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_3">
+				<field-name>firstName</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_4">
+				<field-name>lastName</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_2">
+				<field-name>title</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_5">
+				<field-name>userID</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_6">
+				<field-name>password</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_7">
+				<field-name>address</field-name>
+			</cmp-field>
+		</entity>
+		<entity id="BankAccount">
+			<ejb-name>BankAccount</ejb-name>
+			<home>itso.ejb35.cmp.BankAccountHome</home>
+			<remote>itso.ejb35.cmp.BankAccount</remote>
+			<ejb-class>itso.ejb35.cmp.BankAccountBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>itso.ejb35.cmp.BankAccountKey</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-field id="CMPAttribute_8">
+				<field-name>accID</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_9">
+				<field-name>balance</field-name>
+			</cmp-field>
+			<ejb-ref>
+				<description></description>
+				<ejb-ref-name>ejb/TransRecord</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<home>itso.ejb35.cmp.TransRecordHome</home>
+				<remote>itso.ejb35.cmp.TransRecord</remote>
+			</ejb-ref>
+		</entity>
+		<entity id="TransRecord">
+			<ejb-name>TransRecord</ejb-name>
+			<home>itso.ejb35.cmp.TransRecordHome</home>
+			<remote>itso.ejb35.cmp.TransRecord</remote>
+			<ejb-class>itso.ejb35.cmp.TransRecordBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>itso.ejb35.cmp.TransRecordKey</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-field id="CMPAttribute_10">
+				<field-name>transID</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_11">
+				<field-name>transamt</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_13">
+				<field-name>transtype</field-name>
+			</cmp-field>
+			<cmp-field id="CMPAttribute_15">
+				<field-name>accID</field-name>
+			</cmp-field>
+		</entity>
+	</enterprise-beans>
+</ejb-jar>

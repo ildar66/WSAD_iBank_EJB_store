@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1" name="ADDRESS" comments="" primaryKey="SQLReference_1">
+  <columns xmi:id="RDBColumn_1" name="CUSTOMERID" allowNull="false" defaultValue="">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_2" name="STREET" allowNull="true" defaultValue="">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_3" name="CITY" allowNull="true" defaultValue="">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_2" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_4" name="STATE" allowNull="true" defaultValue="">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_3" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="RDBColumn_5" name="ZIPCODE" allowNull="true" defaultValue="">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_4" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1" name="CUSTOMERADDRESS" onDelete="NO ACTION" onUpdate="NO ACTION" members="RDBColumn_1" constraint="SQLConstraint_1">
+    <target href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO_CUSTOMER.tblxmi#SQLReference_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1" name="C1831773" members="RDBColumn_1" table="RDBTable_1" constraint="SQLConstraint_2"/>
+  <constraints xmi:id="SQLConstraint_1" name="CUSTOMERADDRESS" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1"/>
+  <constraints xmi:id="SQLConstraint_2" name="C1831773" type="PRIMARYKEY" primaryKey="SQLReference_1"/>
+  <database href="CMP_Entity/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="CMP_Entity/ejbModule/META-INF/Schema/EJBBANK_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

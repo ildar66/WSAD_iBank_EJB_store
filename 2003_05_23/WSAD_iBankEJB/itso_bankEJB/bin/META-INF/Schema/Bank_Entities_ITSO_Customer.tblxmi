@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="Customer" name="Customer" primaryKey="CustomerTable_key">
+  <columns xmi:id="Customer_customerID" name="customerID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V71_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Customer_firstName" name="firstName" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_3" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="Customer_lastName" name="lastName" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_4" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:id="Customer_title" name="title" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_5" characterSet="800" length="3">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Customer_userID" name="userID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_6" characterSet="800" length="8">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Customer_password" name="password" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_7" characterSet="800" length="8">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="CustomerTable_key" name="Customer" members="Customer_customerID" table="Customer" constraint="CustomerTable_key_Constraint">
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#AddressToCustomer_ref"/>
+    <referenceByKey href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcctToCustomer_ref"/>
+  </namedGroup>
+  <constraints xmi:id="CustomerTable_key_Constraint" name="Customer" type="PRIMARYKEY" primaryKey="CustomerTable_key"/>
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>

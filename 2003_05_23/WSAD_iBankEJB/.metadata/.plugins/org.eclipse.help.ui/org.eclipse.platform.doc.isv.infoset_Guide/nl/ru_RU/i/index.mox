@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HTMLModel>
+<HTMLFieldDefinition name="h1" tag="h1"/>
+<HTMLFieldDefinition name="h2" tag="h2"/>
+<HTMLFieldDefinition name="h3" tag="h3"/>
+<HTMLFieldDefinition name="keyword" tag="meta" meta-qualifier="keyword"/>
+<HTMLFieldDefinition name="role" tag="meta" meta-qualifier="role"/>
+<HTMLFieldDefinition name="solution" tag="meta" meta-qualifier="solution"/>
+<HTMLFieldDefinition name="technology" tag="meta" meta-qualifier="technology"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Generator"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="GENERATOR"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="ProgId"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Author"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="AUTHOR"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="content-type"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-type"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-Type"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-Length"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-Location"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-Language"/>
+<HTMLFieldDefinition name="excluded" exclude="YES" tag="meta" meta-qualifier="Content-Encoding"/>
+</HTMLModel>

@@ -1,0 +1,152 @@
+
+<html>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Справочники Корреспондентов postADD.htm">
+
+<title>Банк Клиент Онлайн - Справочники</title>
+<link rel="stylesheet" type="text/css" href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/include/cb.css">
+<script language="javascript" type="text/javascript" src="include/common.js"></script>
+
+<script language="JavaScript1.2" type="text/javascript">
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</script>
+
+</head>
+<body>
+
+<table background="images/bgtop.gif" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td width="171"><img border=0 height=51 src="images/logo.gif" width=171 alt="ГУТА БАНК"></td>
+	<td class="toptitle">&bull; Банк Клиент Онлайн &bull; Тестовый филиал &bull; ООО &quot;Все в порядке&quot;</td>
+	<td align="right" class="toptitle">
+		&bull; <a class="topmenu" href="javascript:openHelp(window.location,'');">справка</a>&nbsp;
+	</td>
+</tr>
+</table>
+
+<table background="images/hr2.gif" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td width="120" background="images/hr1.gif"><img height=15 src="images/zagl1.gif" alt="" width=18></td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+<tr valign="top">
+	<td width="10" bgcolor="#dcdee0">&nbsp;</td>
+	<td width="110" bgcolor="#dcdee0" class="menu">
+	<a href="client.asp">Клиент</a><br>
+<a href="accounts.asp">Счета</a><br>
+<a href="documents.asp">Документы</a><br>
+<a href="statements.asp">Выписки</a><br>
+<a class="current" href="references.asp">Справочники</a><br>
+<a href="messages.asp">Сообщения</a><br>
+<a href="reports.asp">Отчеты</a><br>
+<a href="setup.asp">Настройки</a><br>
+<a href="logout.asp">Выход</a><br>
+
+	</td>
+	<td>
+		<div class="title">Справочники</div>
+		<div class="body">
+<!-- -->
+
+
+<SCRIPT language=javascript type="text/javascript" src="include/validate.js"></SCRIPT>
+<SCRIPT language=javascript>
+function MoveTo(n)
+{ 
+	var theForm = document.navform;
+	theForm.pagenumber.value = n;
+	theForm.submit();
+}
+
+function SortBy(field)
+{
+	var theForm = document.navform;
+	theForm.sort.value = theForm.sort.value == field ? field + ' desc' : field;
+	theForm.submit();
+}
+
+function AddNew()
+{
+	window.navigate('receiver.asp?referenceid=' + document.navform.referenceid.value);
+}	
+
+function Edit(id)
+{
+	window.navigate('receiver.asp?referenceid=' + document.navform.referenceid.value + '&rowid=' + escape(id));
+}
+
+function EditSel()
+{
+	var id, e = document.navform.elements;
+	for(var i=0; i < e.length && id == null; i++)
+		if(e[i].name=='rowid' && e[i].checked==true)
+			id = e[i].value;
+	if(id != null)
+		Edit(id);
+	else
+		alert('Выберите строку для изменения.');
+}
+</SCRIPT>
+
+<FORM action="refbrowse.asp" method="post" name="navform">
+
+
+<p class="gridtitle">Справочник Корреспондентов</p>
+<table class="grid">
+<TR><th nowrap><a href="javascript:SortBy('Title')" title="Сортировать по полю 'Наименование'">Наименование</a></th><th nowrap><a href="javascript:SortBy('INN')" title="Сортировать по полю 'ИНН'">ИНН</a></th><th nowrap><a href="javascript:SortBy('Account')" title="Сортировать по полю 'Расчетный счет'">Расчетный счет</a></th><th nowrap><a href="javascript:SortBy('BIC')" title="Сортировать по полю 'БИК'">БИК</a></th></TR>
+<TR><TD><INPUT type=checkbox name=rowid value="1943"><A href="javascript:Edit('1943')" title="Выбрать">kkkkk</A></TD><TD>123456789012</TD><TD>86587658765876576489</TD><TD>040037470</TD></TR>
+<TR><TD><INPUT type=checkbox name=rowid value="1946"><A href="javascript:Edit('1946')" title="Выбрать">wqr`134</A></TD><TD>345678124</TD><TD>45712323457685394769</TD><TD>040113000</TD></TR>
+<TR><TD><INPUT type=checkbox name=rowid value="1944"><A href="javascript:Edit('1944')" title="Выбрать">Подвинье ООО</A></TD><TD>2901069795</TD><TD>40702810004022467345</TD><TD>041117601</TD></TR>
+</TABLE>
+
+
+<BR>
+
+<TABLE class="gridfoot">
+<TR>
+<TD>
+	
+	<INPUT type=button value="Добавить" onclick="AddNew()">
+	
+	<INPUT type=button value="Изменить" onclick="EditSel()">
+	
+	<INPUT type=submit value="Удалить" name=btnaction>
+	
+	<INPUT type=submit name=btnrefresh value="Обновить">
+	
+	<INPUT type=hidden name=pagenumber value="1">
+	<INPUT type=hidden name=pagecount value="1">
+	<INPUT type=hidden name=filter value="">
+	<INPUT type=hidden name=sort value="">
+	<INPUT type=hidden name=referenceid value="2">
+</TD>
+<TD align=right>
+	
+	Всего записей 3.
+	
+</TD>
+</TR>
+</TABLE>
+</FORM>
+
+<P>Обьект успешно сохранен.</P>
+
+<!-- -->
+		</div>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

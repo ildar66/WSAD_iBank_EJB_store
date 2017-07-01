@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/index1.html">
+
+<META name="GENERATOR" content="IBM WebSphere Studio">
+<title>Банк Клиент Онлайн - Документы</title>
+<link rel="stylesheet" type="text/css" href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/include/cb.css">
+<script language="javascript" type="text/javascript" src="include/common.js"></script>
+
+<script language="JavaScript1.2" type="text/javascript">
+window.onbeforeunload = unloadCheck;
+window.setTimeout('window.onbeforeunload=null', 60000 * 10);
+function unloadCheck()
+{
+	if(event.clientX > document.body.clientWidth && event.clientY < 0)
+		return 'Внимание!\nДля выхода из системы \'Банк Клиент Онлайн\' воспользуйтесь пунктом меню \'Выход\'.';
+	else
+		return;
+}
+</script>
+
+</head>
+<body>
+
+<table background="images/bgtop.gif" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td width="171"><img border=0 height=51 src="images/logo.gif" width=171 alt="ГУТА БАНК"></td>
+	<td class="toptitle">&bull; Банк Клиент Онлайн &bull; Тестовый филиал &bull; ООО &quot;Все в порядке&quot;</td>
+	<td align="right" class="toptitle">
+		&bull; <a class="topmenu" href="javascript:openHelp(window.location,'');">справка</a>&nbsp;
+	</td>
+</tr>
+</table>
+
+<table background="images/hr2.gif" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td width="120" background="images/hr1.gif"><img height=15 src="images/zagl1.gif" alt="" width=18></td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+<tr valign="top">
+	<td width="10" bgcolor="#dcdee0">&nbsp;</td>
+	<td width="110" bgcolor="#dcdee0" class="menu">
+	<a href="client.asp">Клиент</a><br>
+<a href="accounts.asp">Счета</a><br>
+<a class="current" href="documents.asp">Документы</a><br>
+<a href="statements.asp">Выписки</a><br>
+<a href="references.asp">Справочники</a><br>
+<a href="messages.asp">Сообщения</a><br>
+<a href="reports.asp">Отчеты</a><br>
+<a href="setup.asp">Настройки</a><br>
+<a href="logout.asp">Выход</a><br>
+
+	</td>
+	<td>
+		<div class="title">Документы</div>
+		<div class="body">
+<!-- -->
+
+
+<SCRIPT language="javascript" type="text/javascript" src="include/validate.js"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+function ToggleStatus(n)
+{
+	var e = document.docform.status;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].value == n)
+			e[i].checked = !e[i].checked;
+}
+
+function EditDoc(id)
+{
+	var theForm = document.docform;
+	var e = theForm.elements;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].name == 'docid')
+			e[i].checked = e[i].value == id;
+	theForm.btnaction[0].click();
+}
+
+function ViewDoc(type, docid)
+{
+	var wnd = window.open('report.asp?reporttype=' + type + '&docid=' + docid,'report','width=660,top=0,height='+(window.screen.availHeight-100)+',resizable=yes,status=no,toolbar=no,menubar=yes,location=no,scrollbars=yes');
+	wnd.focus();
+}
+
+function ViewDocs(type)
+{
+	var e = document.docform.elements;
+	var docid = new Array();
+	for(var i=0, j=0; i < e.length; i++)
+		if(e[i].name=='docid' && e[i].checked==true)
+			docid[j++] = e[i].value;
+
+	if(docid.length > 0)
+		ViewDoc(type, docid.join(','));
+	else
+		alert('Документ(ы) не выбран(ы).');
+}
+
+var g_action;
+function SetAction(a)
+{
+	g_action = a;
+}
+
+function CheckDocs()
+{
+	var e = document.docform.elements;
+	for(var i=0; i < e.length; i++)
+		if(e[i].name=='docid' && e[i].checked==true)
+			return true;
+	return false;
+}
+
+function docform_onsubmit(theForm)
+{
+	switch(g_action)
+	{
+	case 'Изменить':
+	case 'Удалить':
+	case 'Подпись':
+	case 'Отправить':
+		if(!CheckDocs())
+		{
+			alert('Документ(ы) не выбран(ы).');
+			return false;
+		}
+		break;
+	default:
+		if(!field_check(theForm.todate, 'Дата по', 7, true) || !field_check(theForm.fromdate, 'Дата с', 7, true))
+			return false;
+	}
+	return true;
+}
+
+function CheckAll(flag)
+{
+	var e = document.docform.elements;
+	for(var i = 0; i < e.length; i++)
+		if(e[i].name == 'docid')
+			e[i].checked = flag;
+}
+
+function SortBy(field) 
+{
+	var e = document.docform.sort;
+	e.value = (e.value == field)?field + ' desc':field;
+	e.form.submit();
+}
+</SCRIPT>
+
+<FORM name=docform method=post action="documents.asp" onsubmit="return docform_onsubmit(this)">
+
+<p class="gridtitle">Параметры документов</p>
+
+<TABLE class="inputbar">
+<TR>
+	<TD class=label>Тип</TD>
+	<TD class=input>
+		<SELECT name="formid" title="Тип документа">
+			<OPTION value="0" selected>(любой)</OPTION>
+			<OPTION value="1">Платежное поручение</OPTION>
+<OPTION value="3">Аккредитив</OPTION>
+<OPTION value="201">Внутренний перевод</OPTION>
+<OPTION value="202">Кассовый документ</OPTION>
+
+		</SELECT>
+	</TD>
+	<TD class=button rowspan="2">
+		<INPUT type="submit" value="Показать" name=btnsubmit onclick="SetAction(this.value)">&nbsp;<INPUT type="reset" value="Сбросить" name="btnreset">
+	</TD>
+</TR>
+<TR>
+	<TD class=label>Период</TD>
+	<TD class=input>
+		<INPUT type=hidden name=fromdate value="17/09/2002" title="Начальная дата"><INPUT name=fromdatedd size=2 maxlength=2 onchange="date_onchange(this)" value="17" title="Начальная дата.День"><INPUT name=fromdatemm size=2 maxlength=2 onchange="date_onchange(this)" value="09" title="Начальная дата.Месяц"><INPUT name=fromdateyy size=4 maxlength=4 onchange="date_onchange(this)" value="2002" title="Начальная дата.Год">&nbsp;-&nbsp;<INPUT type=hidden name=todate value="18/09/2002" title="Конечная дата"><INPUT name=todatedd size=2 maxlength=2 onchange="date_onchange(this)" value="18" title="Конечная дата.День"><INPUT name=todatemm size=2 maxlength=2 onchange="date_onchange(this)" value="09" title="Конечная дата.Месяц"><INPUT name=todateyy size=4 maxlength=4 onchange="date_onchange(this)" value="2002" title="Конечная дата.Год">
+		&nbsp;<SELECT name=period onchange="period_onchange(this, 'fromdate', 'todate')">
+<OPTION>( установить период )</OPTION>
+<OPTION value="18/09/2002,18/09/2002">за текущий день</OPTION>
+<OPTION value="15/09/2002,18/09/2002">за текущую неделю</OPTION>
+<OPTION value="01/09/2002,18/09/2002">за текущий месяц</OPTION>
+<OPTION value="01/07/2002,18/09/2002">за текущий квартал</OPTION>
+</SELECT>
+
+	</TD>
+</TR>
+<TR>
+	<TD class=label>Статус</TD>
+	<TD class=input colspan="2">
+<NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(1)"><INPUT type=checkbox name=status value=1 checked>новый</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(2)"><INPUT type=checkbox name=status value=2 checked>подписан</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(4)"><INPUT type=checkbox name=status value=4 checked>отправлен</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(8)"><INPUT type=checkbox name=status value=8 checked>доставлен</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(16)"><INPUT type=checkbox name=status value=16 checked>принят</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(32)"><INPUT type=checkbox name=status value=32 checked>подтвержден</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(64)"><INPUT type=checkbox name=status value=64 checked>отозван</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(256)"><INPUT type=checkbox name=status value=256 checked>ошибка</A></NOBR> <NOBR>|<A style="text-decoration:none;color:black" href="javascript:ToggleStatus(512)"><INPUT type=checkbox name=status value=512 checked>внешний</A></NOBR> 
+		|
+	</TD>
+</TR>
+</TABLE>
+
+<p class="gridtitle">Список документов</p>
+
+<TABLE class="grid">
+<TR>
+<th nowrap><a href="javascript:SortBy('Status')" title="Сортировать по полю 'Статус'">Статус</a></th><th nowrap><a href="javascript:SortBy('FormID')" title="Сортировать по полю 'Тип'">Тип</a></th><th nowrap><a href="javascript:SortBy('DocDate')" title="Сортировать по полю 'Дата'">Дата</a><img width=8 height=7 hspace=3 src="images/up.gif" alt="по возрастанию"></th><th nowrap><a href="javascript:SortBy('DocNum')" title="Сортировать по полю 'Номер'">Номер</a></th><th nowrap><a href="javascript:SortBy('Receiver')" title="Сортировать по полю 'Корреспондент'">Корреспондент</a></th><th nowrap><a href="javascript:SortBy('DocSum')" title="Сортировать по полю 'Сумма'">Сумма</a></th>
+</TR>
+<TR><TD width=102><INPUT type=checkbox name=docid value=377321>новый</TD><TD width=32><A href="javascript:EditDoc(377321)" title="Редактирование документа">п/п</A></TD><TD width=64>18/09/2002</TD><TD width=48 align=right><A href="javascript:ViewDoc(1,377321)" title="Просмотр документа">664</A></TD><TD>Подвинье ООО</TD><TD align=right>123 000.00</TD></TR>
+</TABLE>
+
+
+<TABLE class="gridfoot">
+<TR>
+	<TD width=12><INPUT type="checkbox" name=allbox onclick="CheckAll(this.checked)"></TD>
+	<TD align=left>Выбрать все документы</TD>
+	<TD align=right>Всего 1 документ(ов).</TD>
+</TR>
+</TABLE>
+
+
+<BR>
+
+<INPUT type="button" value="Создать" name=btnaddnew onclick="window.location.href='docnew.asp';return;" class=0actionbutton>
+<INPUT type="submit" value="Изменить" name=btnaction onclick="SetAction(this.value)" class=0actionbutton>
+<INPUT type="submit" value="Удалить" name=btnaction onclick="SetAction(this.value)" class=0actionbutton>
+<INPUT type="submit" value="Подпись" name=btnaction onclick="SetAction(this.value)" class=0actionbutton>
+<INPUT type="submit" value="Отправить" name=btnaction onclick="SetAction(this.value)" class=0actionbutton>
+<INPUT type="submit" value="Отозвать" name=btnaction onclick="SetAction(this.value)" class=0actionbutton>
+
+<INPUT type="button" value="Просмотр" name=btnview onclick="ViewDocs(1)" class=0actionbutton>
+
+<INPUT type="hidden" name="sort" value="DocDate">
+	
+</FORM>
+
+<P></P>
+
+<A href="docexport.asp?formid=0&fromdate=17/09/2002&todate=18/09/2002&statusmask=2047&sort=DocDate">Экспорт данных</A>
+
+<P class=tips>
+В разделе <B>Документы</B> Вам доступны все Ваши документы за всю историю обслуживания в системе. Для просмотра списка документов выберите тип документа, его статус и период дат и нажмите <B>Показать</B>. Вы можете <B>Создать</B> новый документ, <B>Изменить</B> существующий документ, <B>Удалить</B> документ, сформировать его <B>Подпись</B>, <B>Отправить</B> в банк. Для печати документа (реестра) выберите отчет и нажмите <B>Просмотр</B>. Для работы с группой документов выберите несколько документов.
+</P>
+
+<!-- -->
+		</div>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* Set the Form elements style */
+body {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; background-color: White; }
+body.header {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; background-color: D6D3CE; }
+
+table.border {background-color: 555555;}
+tr.alternating {background-color: E0E0E0;}
+tr.header {background-color: D6D3CE;}
+tr.separator {background-color: Black;}
+td.header {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; font-weight: bold;}
+td.toolbar {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+td {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+td.info {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+
+textarea {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+select {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+input {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+input.button {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; border-width: 1; }
+
+div.title {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; font-weight: bold;}
+div.title2 {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; font-weight: bold;}
+td.home {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; font-weight: bold; text-align: center;}
+td.homeinfo {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black; }
+
+span.info {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Black;}
+span.error {font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 10pt; color: Red;}
+
+#invoke {background-image: url(/UTC/images/action_invoke.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#cancel {background-image: url(/UTC/images/action_cancel.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#work {background-image: url(/UTC/images/action_work.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 200px; padding-top: 2px; padding-bottom: 1px;}
+#workAll {background-image: url(/UTC/images/action_work_all.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 200px; padding-top: 2px; padding-bottom: 1px;}
+#set {background-image: url(/UTC/images/action_set.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#add {background-image: url(/UTC/images/action_add.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}#load {background-image: url(/UTC/images/add_class.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#remove {background-image: url(/UTC/images/action_remove.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#lookup {background-image: url(/UTC/images/action_lookup.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#visibility {background-image: url(/UTC/images/action_hierarchy.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+
+#begin {background-image: url(/UTC/images/action_transaction_begin.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#commit {background-image: url(/UTC/images/action_transaction_commit.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#rollback {background-image: url(/UTC/images/action_transaction_rollback.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+#rollbackonly {background-image: url(/UTC/images/action_transaction_rollback_only.gif); background-repeat: no-repeat; background-position: 2px 2px; width: 100px; padding-top: 2px; padding-bottom: 1px;}
+
+
+div.home {position: absolute; align: center; left: 5%; right: 5%; top: 4%; }
+div.help {margin-left: 3%; margin-right: 4%; margin-top: 20px; padding-bottom: 175px; }
+
+div.jndiPage {position: absolute; left: 3%; top: 4%; right: 10%; width: 65%; }
+div.lookup {border-width: 1px; border-color: Black; border-style: solid;}
+
+div.datasource {margin-left: 6px; margin-right: 6px; margin-top: 10px; }
+
+div.properties {position: absolute; left: 3%; top: 3%; border-width: 1px; border-color: Black; border-style: solid;}
+
+div.parameters { width: 60%; border-width: 1px; border-color: Black; border-style: solid;}
+
+div.hierarchy {margin-left: 6px; margin-top: 5px; margin-right: 20px; border-width: 1px; border-color: Black; border-style: solid;}
+
+div.parameterPage {position: relative; margin-left: 1%; margin-top: 1%; margin-right: 2%; }
+div.resultSource {font-size: 10pt; }
+pre.exception {font-size: 10pt; }

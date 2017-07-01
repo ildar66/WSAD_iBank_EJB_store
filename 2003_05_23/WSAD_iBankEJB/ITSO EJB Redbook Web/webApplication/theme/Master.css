@@ -1,0 +1,30 @@
+BODY
+{
+    BACKGROUND-COLOR: #FFE4B5;
+    COLOR: black;
+    FONT-FAMILY: 'Times New Roman'
+}
+H1
+{
+    COLOR: navy;
+    FONT-FAMILY: 'Times New Roman';
+    FONT-SIZE: x-large;
+    FONT-WEIGHT: bolder;
+    TEXT-TRANSFORM: capitalize
+}
+H2
+{
+    COLOR: navy;
+    FONT-FAMILY: 'Times New Roman';
+    FONT-SIZE: large;
+    FONT-WEIGHT: bolder;
+    TEXT-TRANSFORM: capitalize
+}
+H3
+{
+    COLOR: navy;
+    FONT-FAMILY: 'Times New Roman';
+    FONT-SIZE: large;
+    FONT-WEIGHT: lighter;
+    TEXT-TRANSFORM: capitalize
+}

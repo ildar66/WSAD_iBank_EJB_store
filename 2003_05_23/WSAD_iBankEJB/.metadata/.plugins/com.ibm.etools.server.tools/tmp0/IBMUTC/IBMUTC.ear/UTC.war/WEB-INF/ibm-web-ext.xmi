@@ -1,0 +1,10 @@
+<webappext:WebAppExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:webappext="webappext.xmi" xmlns:webapplication="webapplication.xmi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:id="WebAppExtension_1"
+  reloadInterval="3"
+  reloadingEnabled="false"
+  defaultErrorPage="error.jsp"
+  additionalClassPath="C:\WSAD_iBank\iBankWeb\webApplication\WEB-INF\classes;C:\WSAD_iBank\BMP_Entity\bin;C:\WSAD_iBank\CMP_Entity\bin;C:\WSAD_iBank\itso_bankEJB\bin;C:\WSAD_iBank\ITSO EJB Redbook Web\webApplication\WEB-INF\classes;C:\WSAD_iBank\Stateless_Session\bin"
+  fileServingEnabled="true"
+  directoryBrowsingEnabled="false"
+  serveServletsByClassnameEnabled="false">
+	<webApp href="WEB-INF/web.xml#WebApp"/>
+</webappext:WebAppExtension>

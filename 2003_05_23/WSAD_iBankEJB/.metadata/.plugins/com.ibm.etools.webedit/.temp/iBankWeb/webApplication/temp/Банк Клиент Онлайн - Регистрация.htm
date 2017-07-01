@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://banking.guta.ru/cb_demo/Login.asp -->
+<HTML><HEAD>
+<BASE href="file:///C:/WSAD_iBank/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Регистрация.htm"><TITLE>Банк Клиент Онлайн - Регистрация</TITLE>
+<LINK 
+href="file:///C:/WSAD_iBank/.metadata/.plugins/com.ibm.etools.webedit/.temp/iBankWeb/webApplication/temp/Банк Клиент Онлайн - Регистрация_files/cb.css" type=text/css 
+rel=stylesheet>
+<SCRIPT language=javascript 
+src="Банк Клиент Онлайн - Регистрация_files/common.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2712.300" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Регистрация_files/bgtop.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=171><IMG height=51 alt="ГУТА БАНК" 
+      src="Банк Клиент Онлайн - Регистрация_files/logo.gif" width=171 
+    border=0></TD>
+    <TD class=toptitle>• Банк Клиент Онлайн • </TD>
+    <TD class=toptitle align=right>• <A class=topmenu 
+      href="javascript:openHelp(window.location,'');">справка</A>&nbsp; 
+  </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="Банк Клиент Онлайн - Регистрация_files/hr2.gif" border=0>
+  <TBODY>
+  <TR>
+    <TD width=120 
+      background="Банк Клиент Онлайн - Регистрация_files/hr1.gif"><IMG 
+      style="VISIBILITY: hidden" height=15 alt="" 
+      src="Банк Клиент Онлайн - Регистрация_files/zagl1.gif" width=18></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=10 bgColor=#dcdee0>&nbsp;</TD>
+    <TD class=menu width=110 bgColor=#dcdee0></TD>
+    <TD>
+      <DIV class=title>Регистрация</DIV>
+      <DIV class=body><!-- -->
+      <SCRIPT language=javascript>
+function loginform_onsubmit(e) 
+{
+	if(e.login.value.length == 0)
+	{
+		alert("Пожалуйста введите свое 'Имя'.");
+		e.login.focus();
+		return false;
+	}
+	if(e.password.value.length == 0)
+	{
+		e.password.focus();
+		alert("Пожалуйста введите свой 'Пароль'.");
+		return false;
+	}
+	return true;
+}
+
+window.onload = window_onload;
+
+function window_onload()
+{
+	if(document.loginform.login != null)
+		document.loginform.login.focus();
+}
+</SCRIPT>
+      <BR><BR><BR><BR>
+      <H5>Регистрация в cистеме Банк Клиент Онлайн</H5>
+      <FORM name=loginform onsubmit="return loginform_onsubmit(this);" 
+      action=loginaction.asp method=post>
+      <TABLE cellSpacing=1 cellPadding=1 border=0>
+        <TBODY>
+        <TR>
+          <TD align=right><B>Пользователь:</B>&nbsp;</TD>
+          <TD><INPUT maxLength=50 size=21 name=login></TD></TR>
+        <TR>
+          <TD align=right><B>Пароль:</B>&nbsp;</TD>
+          <TD><INPUT type=password maxLength=50 size=21 name=password></TD></TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><INPUT type=submit value=Регистрация name=submit></TD></TR></TBODY></TABLE><INPUT 
+      type=hidden name=starturl> </FORM>
+      <P class=tips>Для регистрации введите имя пользователя и его 
+      пароль.<BR>После нескольких неудачных попыток ввод будет заблокирован. 
+</P><!-- --></DIV></TD></TR></TBODY></TABLE></BODY></HTML>

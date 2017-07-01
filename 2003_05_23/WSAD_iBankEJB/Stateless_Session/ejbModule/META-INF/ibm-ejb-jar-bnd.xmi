@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbbnd:EJBJarBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbbnd="ejbbnd.xmi" xmlns:ejb="ejb.xmi" xmi:id="ejb-jar_ID_Bnd">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbBindings xmi:id="Transfer_Bnd" jndiName="ejb/itso/ejb35/session/TransferHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Transfer"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="CustomerFinder_Bnd" jndiName="ejb/itso/ejb35/session/CustomerFinderHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#CustomerFinder"/>
+  </ejbBindings>
+</ejbbnd:EJBJarBinding>

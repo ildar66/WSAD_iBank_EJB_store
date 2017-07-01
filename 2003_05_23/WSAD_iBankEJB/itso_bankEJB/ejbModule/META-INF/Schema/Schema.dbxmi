@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBDatabase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBDatabase_1" name="Bank_Entities">
+  <schemata href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_TransRecord.tblxmi#TransRecord"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#Customer"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Address.tblxmi#Address"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Account.tblxmi#Account"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Savings.tblxmi#Savings"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Checking.tblxmi#Checking"/>
+  <tableGroup href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_CustAcct.tblxmi#CustAcct"/>
+  <domain href="DB2UDBNT_V71_Domain.xmi#SQLVendor_1"/>
+</RDBSchema:RDBDatabase>

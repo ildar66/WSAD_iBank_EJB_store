@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="Address" name="Address" primaryKey="AddressTable_key">
+  <columns xmi:id="Address_customerID" name="customerID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_2">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V71_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Address_street" name="street" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_8" characterSet="800" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Address_city" name="city" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_9" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Address_state" name="state" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_10" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:id="Address_zipcode" name="zipcode" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_11" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V71_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="AddressTable_key" name="Address" members="Address_customerID" table="Address" constraint="AddressTable_key_Constraint"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="AddressToCustomer_ref" name="CustomerAddress" members="Address_customerID" constraint="SQLConstraint_2">
+    <target href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO_Customer.tblxmi#CustomerTable_key"/>
+  </namedGroup>
+  <constraints xmi:id="AddressTable_key_Constraint" name="Address" type="PRIMARYKEY" primaryKey="AddressTable_key"/>
+  <constraints xmi:id="SQLConstraint_2" name="CustomerAddress" type="FOREIGNKEY" referenceByKey="AddressToCustomer_ref"/>
+  <database href="itso_bankEJB/ejbModule/META-INF/Schema/Schema.dbxmi#RDBDatabase_1"/>
+  <schema href="itso_bankEJB/ejbModule/META-INF/Schema/Bank_Entities_ITSO.schxmi#RDBSchema_1"/>
+</RDBSchema:RDBTable>
